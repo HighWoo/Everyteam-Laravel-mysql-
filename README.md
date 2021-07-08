@@ -1,62 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# TeamMatching-v2
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### 기존에 만들었던 TeamMatching 을 더 전문적인 개발도구를 활용하여 최종적으로 서버까지 열어 관리 해보는것이 목표  
+### 개발언어는 php사용 프레임워크는 라라벨 사용 매일 라라벨에 대한 학습과 개발을 진행  
+### 백엔드와 프론트엔드 전부 도구를 이용하여 직접 개발  
+### laravel,phpStorm,Zeplin,mysql,figma,css,php  
+### 먼저 프론트앤드 개발 후 백엔드는 Laravel학습이 완료되면 진행  
 
-## About Laravel
+## Day1(2021/07/07)
+## 개발Part
+설계전 adobe컬러에서 색 조합을 검색
+![AdobeColor-My Color Theme](https://user-images.githubusercontent.com/75231868/124706030-9a4c1100-df31-11eb-9883-3e378ee971da.jpeg)  
+검색한 색 조합으로 figma를 이용하여 main 인터페이스 설계
+![Figma 사용 Ui설계](https://user-images.githubusercontent.com/75231868/124705418-9b307300-df30-11eb-9b97-a7064c149636.png)  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+figma로 설계한것을 zeplin으로 연동
+![zeplin 연동한 모습](https://user-images.githubusercontent.com/75231868/124705519-bd29f580-df30-11eb-9168-445b21154469.png)  
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 학습Part
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 라라벨 설치와 프로젝트생성,라라벨 실행방법 학습  
 
-## Learning Laravel
+프로젝트 생성법-  
+cmd에서 
+cd c:\xampp\htdocs
+laravel new 프로젝트이름  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+라라벨 실행하기-  
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+cd c:\xampp\htdocs\프로젝트이름  
+php artisan serve  
 
-## Laravel Sponsors
+![image](https://user-images.githubusercontent.com/75231868/124710408-b5218400-df37-11eb-9122-e64218413570.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+포트번호 8000으로 인터넷 창에서 localhost:8000 입력
 
-### Premium Partners
+![image](https://user-images.githubusercontent.com/75231868/124710570-eb5f0380-df37-11eb-8e40-39b4256ecb5b.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+실행되었다면 이런화면이 나온다 종료시에는 cmd창에서 ctrl+c 누르면 종료
 
-## Contributing
+### 파일 열기 
+파일은 vscode에서 열기로 xampp\htdosc\TeamMatchingv2  
+폴더를 열기하면 된다
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### css파일 적용법
+css파일을 public 밑에 놓은 후 불러올 php파일에서  
+link rel="stylesheet" href="/main.css"  
+ 식으로 불러온다 css이름은 main.css이다.
+ <hr>
+ 
+## Day2(2021/07/08)
+## 개발Part
 
-## Code of Conduct
+Day1에 만든 기본틀을 이용하여 더욱 자세한 인터페이스 완성  
+![image](https://user-images.githubusercontent.com/75231868/124861945-7949f580-dfef-11eb-9ffc-e1b96ae45bf5.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+기존에는 로그인을 메인에 구현하려 했으나 새로운창으로 로그인이 가능하도록 수정  
+![image](https://user-images.githubusercontent.com/75231868/124861822-3be56800-dfef-11eb-89ae-8fb7eb697cf4.png)  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+css와 html을 이용하여 메인화면 일부 구현
+![image](https://user-images.githubusercontent.com/75231868/124921249-27c35a00-e033-11eb-8c35-7e4ed1e4952a.png)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 학습Part  
+개발전에는 div태그로 레이아웃 부터 잡아주고 시작한다  
+margin은 외부여백 padding은 내부여백을 의미한다  
+
+margin: 20px 같은 표현은 상하좌우 모두 20px을 의미  
+margin: 30px 10px은 상하 30px, 좌우 10px을 의미  
+margin: 30px 10px 20px 50px은 위 30px, 오른쪽 10px, 아래 20px, 왼쪽 50px을 의미  
+margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미  
+
+라라벨 기본 로그인 기능 학습 window에 대한 자료가 부족하다 데이터 베이스 연동은 더 찾아보아야 한다  
+라우터:페이지간의 이동  
+리소시스->뷰:실제 보여지는 php페이지  
+
+로그인페이지와 메인페이지 완성 후 라라벨을 통해 데이터베이스와 페이지간의 이동을 시험해 볼 예정이다  
+<hr>
