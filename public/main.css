@@ -1,0 +1,136 @@
+* {/*상단공백제거(화면전체) */
+	margin: 0 ;
+	padding: 0;
+}
+
+a{
+	text-decoration:none; /*파란줄 속성없게*/
+}
+.header {
+    margin-left: 256px;
+    width: 1409px;
+    height: max-content;
+    background-color: #588055;
+
+  }
+   
+  
+  
+.Naviation {
+  width: 1409px;
+  height: 60px;
+  object-fit: contain;
+
+  background-color: #f2d2b6;
+
+
+  
+
+}
+
+.Logo {
+    width: 100px;
+    height: 60px;
+    font-family:Georgia;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    text-shadow: 2px 1px 1px rgb(255, 255, 255);
+    line-height: 2.5;
+    margin-left:32px;
+    margin-right: 1110px;
+  
+  }
+  .Logo:hover{/*마우스 위에 올리면*/	
+	background:#f28d77;
+}
+.Loginbutton{
+    width: 140px;
+    height:37.5px;
+	font-size:18px;
+	font-weight: bold;
+	background:#f2d2b6;
+	color:#000000;
+    border-radius:5px;
+    border: solid 1px #000000;
+    text-align: center;
+    line-height: 1.9;
+    padding: 7px 40px 7px 40px;
+ 
+  
+}
+.Loginbutton:hover{/*홈 화면 봉사 시작하기 버튼*/	
+    
+	background:#f28d77;
+}
+
+   
+  
+  
+.searchl {
+  width: 1409px;
+  height: max-content;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+.search{
+  width: 613px;
+  height: 52px;
+  margin: 25px 24px 25px 334px;
+  border-radius: 3px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #f2ad94;
+  font-size:20px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.searchbutton{
+  
+	font-size:18px;
+	font-weight: bold;
+	background:#f28d77;
+	color:#000000;
+    border-radius:5px;
+    border: solid 1px #000000;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 14px 24px 16px 24px;
+   
+
+}
+.searchbutton:hover{/*홈 화면 봉사 시작하기 버튼*/	
+	background:#f2d2b6;
+}
+
+.menul {
+    width: 1409px;
+    height: 62px;
+    object-fit: contain;
+    background-color: #f2d2b6;
+  }
+
+.menu {
+    width: 137px;
+    height: 62px;
+    background-color: #f2d2b6;
+    float: left;
+    margin-right: 40px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 2.5;
+    border:0;
+    outline: 0;
+}
+.menu.first {
+    margin-left:286px;
+}
+.menu:hover{/*홈 화면 봉사 시작하기 버튼*/	
+    
+	background:#f28d77;
+}
