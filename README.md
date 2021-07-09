@@ -1,6 +1,6 @@
 # TeamMatching-v2
 
-### 기존에 만들었던 TeamMatching 을 더 전문적인 개발도구를 활용하여 최종적으로 서버까지 열어 관리 해보는것이 목표  
+### 기존에 만들었던 [TeamMatching](https://github.com/highcowoo/TeamMatching-project) 을 더 전문적인 개발도구를 활용하여 최종적으로 서버까지 열어 관리 해보는것이 목표  
 ### 개발언어는 php사용 프레임워크는 라라벨 사용 매일 라라벨에 대한 학습과 개발을 진행  
 ### 백엔드와 프론트엔드 전부 도구를 이용하여 직접 개발  
 ### laravel,phpStorm,Zeplin,mysql,figma,css,php  
@@ -65,7 +65,7 @@ css와 html을 이용하여 메인화면 일부 구현
 ## 학습Part  
 개발전에는 div태그로 레이아웃 부터 잡아주고 시작한다  
 margin은 외부여백 padding은 내부여백을 의미한다  
-
+ 
 margin: 20px 같은 표현은 상하좌우 모두 20px을 의미  
 margin: 30px 10px은 상하 30px, 좌우 10px을 의미  
 margin: 30px 10px 20px 50px은 위 30px, 오른쪽 10px, 아래 20px, 왼쪽 50px을 의미  
@@ -76,4 +76,27 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 리소시스->뷰:실제 보여지는 php페이지  
 
 로그인페이지와 메인페이지 완성 후 라라벨을 통해 데이터베이스와 페이지간의 이동을 시험해 볼 예정이다  
+<hr>
+
+## Day3(2021/07/09)
+## 개발Part  
+만든 Header.php를 main.php에 상속  
+상속에는 성공했으나 부모가 자식보다 밑에뜨는 현상을 발견  
+![image](https://user-images.githubusercontent.com/75231868/125020373-b1b30780-e0b3-11eb-8d8a-a7bad2ac8410.png)  
+해결->간단하게 @include('header') 이라고 하면된다 header.blade.php일때  
+
+새로운 메뉴버튼 디자인과 현재 공고를 출력할 테이블 작성  
+![image](https://user-images.githubusercontent.com/75231868/125048186-a0c9bc80-e0da-11eb-9ffa-d1853389bc82.png)
+
+
+## 학습part  
+상속  
+@extends : 특정 파일의 레이아웃을 상속받는다. (상속받을 php에 작성)  
+@yield : 상속한다.(상속할 php에 작성)  
+@include :기존 php에서 사용하던 상속 
+
+라라벨을 사용하는 이유를 잘 모르겠어서 라라벨 코리아 사이트에서 라라벨의 장점을 정독  
+라라벨을 사용하면 더욱 간단한 코드를 구성할 수 있다는것을 이해  
+추후 적용해보며 추가 학습을 해야할 것 같음  
+
 <hr>
