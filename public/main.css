@@ -4,30 +4,26 @@
 }
 
 a{
-	text-decoration:none; /*파란줄 속성없게*/
+	text-decoration:none; 
 }
-.header {
+/* 헤더 레이어 */
+.headerl {
     margin-left: 256px;
     width: 1409px;
     height: max-content;
-    background-color: #588055;
+    background-color: #ffffff;
 
   }
    
   
-  
+/* 네비게이션 바 */
 .Naviation {
   width: 1409px;
   height: 60px;
   object-fit: contain;
-
   background-color: #f2d2b6;
-
-
-  
-
 }
-
+/* 로고 */
 .Logo {
     width: 100px;
     height: 60px;
@@ -46,7 +42,7 @@ a{
     margin-right: 1110px;
   
   }
-  .Logo:hover{/*마우스 위에 올리면*/	
+  .Logo:hover{
 	background:#f28d77;
 }
 .Loginbutton{
@@ -71,13 +67,14 @@ a{
 
    
   
-  
+/* 검색창 레이어 */
 .searchl {
   width: 1409px;
   height: max-content;
   object-fit: contain;
   background-color: #ffffff;
 }
+/* 검색창 */
 .search{
   width: 613px;
   height: 52px;
@@ -89,9 +86,8 @@ a{
   font-weight: bold;
   padding-left: 15px;
 }
-
+/* 검색 버튼 */
 .searchbutton{
-  
 	font-size:18px;
 	font-weight: bold;
 	background:#f28d77;
@@ -101,36 +97,209 @@ a{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     text-align: center;
     padding: 14px 24px 16px 24px;
-   
-
 }
-.searchbutton:hover{/*홈 화면 봉사 시작하기 버튼*/	
+.searchbutton:hover{
 	background:#f2d2b6;
 }
 
-.menul {
+
+/* 메뉴레이어 */
+.menul { 
     width: 1409px;
     height: 62px;
     object-fit: contain;
     background-color: #f2d2b6;
   }
+/* 메뉴버튼 레이어 */
+  button {
+    margin:0;
+    }
+    .custom-btn {
+      float: none;
+      margin-right: 40px;
+      border:0;
+      outline: 0;
+      width: 137px;
+      height: 62px;
+      color: rgb(0, 0, 0);
+      border-radius: 5px;
+      font-family: 'Lato', sans-serif;
+      font-size: 25px;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+    }
+    .btn-3 {
+      background:#f2d2b6;
+      width: 137px;
+      height: 62px;
+      line-height: 55px;
+      padding: 0;
+      border: none;
+      
+    }
+    .btn-3.left {
+      background:#f2d2b6;
+      width: 137px;
+      height: 62px;
+      margin-left: 286px;
+      line-height: 55px;
+      padding: 0;
+      border: none;
+      
+    }
+    .btn-3 span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      
+    }
+    .btn-3:before,
+    .btn-3:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      background: #000000;
+      transition: all 0.3s ease;
+    }
+    .btn-3:before {
+      height: 0%;
+      width: 2px;
+    }
+    .btn-3:after {
+      width: 0%;
+      height: 2px;
+    }
+    .btn-3:hover{
+      background: transparent;
+      box-shadow: none;
+      font-weight: bold;
+     }
+    .btn-3:hover:before {
+      height: 100%;
+    }
+    .btn-3:hover:after {
+      width: 100%;
+    }
+    .btn-3 span:hover{
+       color: rgb(3, 3, 3);
+    }
+    .btn-3 span:before,
+    .btn-3 span:after {
+      position: absolute;
+      content: "  ";
+      left: 0;
+      bottom: 0;
+      background: #000000;
+      transition: all 0.3s ease;
+    }
+    .btn-3 span:before {
+      width: 2px;
+      height: 0%;
+    }
+    .btn-3 span:after {
+      width: 0%;
+      height: 2px;
+    }
+    .btn-3 span:hover:before {
+      height: 100%;
+    }
+    .btn-3 span:hover:after {
+      width: 100%;
+    }
 
-.menu {
-    width: 137px;
-    height: 62px;
-    background-color: #f2d2b6;
-    float: left;
-    margin-right: 40px;
-    font-size: 25px;
-    text-align: center;
-    line-height: 2.5;
-    border:0;
-    outline: 0;
+
+.mainl{ /*메인프레임 레이어*/
+  width: 934px;
+  height: max-content;
+  
 }
-.menu.first {
-    margin-left:286px;
+.mainl.imagel {/*메인프레임 사진레이어*/
+  margin: 13px 493px 15px 493px;
+  object-fit: contain;
 }
-.menu:hover{/*홈 화면 봉사 시작하기 버튼*/	
-    
-	background:#f28d77;
+.mainl.annmainl{/*메인프레임 공고레이어*/
+    margin: 13px 493px 15px 493px;
 }
+
+
+
+.annl { /* 공고 출력 테이블 레이어 */
+  
+  width: 439px;
+  height: 400px;
+  object-fit: contain;
+  background-color: #ffffff;
+  float: left;
+}
+.annl.left {
+  margin-right:56px;
+}
+.annl:hover{
+  background:#f2d2b6;
+}
+.annl.bar {
+  height:60px;
+}
+.annl.bar.left {
+  margin-right:56px;
+}
+
+.ann_plusbtn{  /*공고출력창 더보기 버튼*/
+  width: 50px;
+  height: 30px;
+  background-color: #f2d2b6;
+  float:right;
+  margin-top: 25px;
+  margin-right: 2px;
+  font-size: 12px;
+  text-align: center;
+  /* line-height: 2.5; */
+  border:0;
+  outline: 0;
+}
+.ann_title {/*공고출력창 제목*/
+  width: 80px;
+  height: 60px;
+  font-family:Georgia;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  text-shadow: 2px 1px 1px rgb(255, 255, 255);
+  line-height: 3;
+
+
+
+}
+
+
+/*공고출력 테이블 디자인*/
+#board_area { 
+	width: 400px;
+	position: relative;
+}
+.list-table {
+	margin-top: 0px;
+}
+.list-table thead th{
+	height:40px;
+	border-top:2px solid #09C;
+	border-bottom:1px solid #CCC;
+	font-weight: bold;
+	font-size: 17px;
+}
+.list-table tbody td{
+	text-align:center;
+	padding:10px 0;
+	border-bottom:1px solid #CCC; height:20px;
+	font-size: 14px 
+}
+
+
+
+
