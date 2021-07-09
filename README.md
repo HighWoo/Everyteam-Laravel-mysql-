@@ -77,3 +77,15 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 
 로그인페이지와 메인페이지 완성 후 라라벨을 통해 데이터베이스와 페이지간의 이동을 시험해 볼 예정이다  
 <hr>
+
+## Day3(2021/07/09)
+## 개발Part  
+상속에는 성공했으나 부모가 자식보다 밑에뜨는 현상을 발견
+![image](https://user-images.githubusercontent.com/75231868/125020373-b1b30780-e0b3-11eb-8d8a-a7bad2ac8410.png)
+
+
+## 학습part  
+레이아웃(layouts)
+
+@extends : 특정 파일의 레이아웃을 상속받는다. (상속받을 php에 작성)  
+@yield : 상속한다.(상속할 php에 작성)  
