@@ -83,10 +83,11 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 만든 Header.php를 main.php에 상속  
 상속에는 성공했으나 부모가 자식보다 밑에뜨는 현상을 발견  
 ![image](https://user-images.githubusercontent.com/75231868/125020373-b1b30780-e0b3-11eb-8d8a-a7bad2ac8410.png)  
-해결->간단하게 @extend('header') 이라고 하면된다 header.blade.php일때  
+해결->간단하게 @include('header') 이라고 하면된다 header.blade.php일때  
 
 
 ## 학습part  
 상속  
 @extends : 특정 파일의 레이아웃을 상속받는다. (상속받을 php에 작성)  
 @yield : 상속한다.(상속할 php에 작성)  
+@include :기존 php에서 사용하
