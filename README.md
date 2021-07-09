@@ -90,4 +90,4 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 상속  
 @extends : 특정 파일의 레이아웃을 상속받는다. (상속받을 php에 작성)  
 @yield : 상속한다.(상속할 php에 작성)  
-@include :기존 php에서 사용하
+@include :기존 php에서 사용하던 상속  
