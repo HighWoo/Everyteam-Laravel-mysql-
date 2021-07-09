@@ -85,9 +85,18 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 ![image](https://user-images.githubusercontent.com/75231868/125020373-b1b30780-e0b3-11eb-8d8a-a7bad2ac8410.png)  
 해결->간단하게 @include('header') 이라고 하면된다 header.blade.php일때  
 
+새로운 메뉴버튼 디자인과 현재 공고를 출력할 테이블 작성  
+![image](https://user-images.githubusercontent.com/75231868/125048186-a0c9bc80-e0da-11eb-9ffa-d1853389bc82.png)
+
 
 ## 학습part  
 상속  
 @extends : 특정 파일의 레이아웃을 상속받는다. (상속받을 php에 작성)  
 @yield : 상속한다.(상속할 php에 작성)  
-@include :기존 php에서 사용하던 상속  
+@include :기존 php에서 사용하던 상속 
+
+라라벨을 사용하는 이유를 잘 모르겠어서 라라벨 코리아 사이트에서 라라벨의 장점을 정독  
+라라벨을 사용하면 더욱 간단한 코드를 구성할 수 있다는것을 이해  
+추후 적용해보며 추가 학습을 해야할 것 같음  
+
+<hr>
