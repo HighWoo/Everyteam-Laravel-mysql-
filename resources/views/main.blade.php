@@ -12,13 +12,13 @@
     <img src ="/image/mainimage.png" alt="faild">
 </div>
 <div id="annl" class="mainl annmainl">
-    <div id="annl" class="annl bar left">
-        <a  class="ann_title" href="">새로 올라온 팀을 확인하세요!</a>
+    <div id="annl" class="annlbar left">
+        <a  class="ann_title" href="">&nbsp;&nbsp;새로 올라온 팀을 확인하세요!</a>
         <input type="button" class="ann_plusbtn" onclick="location.href='aa.php'" value="더보기+">
     </div>
     
-    <div id="annl" class="annl bar">
-        <a  class="ann_title" href="">사용자님께 딱 맞는 팀만 보여드릴게요!</a>
+    <div id="annl" class="annlbar">
+        <a  class="ann_title" href="">&nbsp;&nbsp;사용자님께 딱 맞는 팀만 보여드릴게요!</a>
         <input type="button" class="ann_plusbtn" onclick="location.href='aa.php'" value="더보기+">
     </div>
 
