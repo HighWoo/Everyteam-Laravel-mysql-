@@ -113,5 +113,5 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 다음 사진과 같이 오른쪽 표가 밑으로 밀리는 문제점 발견  
 해결하지 못하여 관련 자료나 도서 검색이 필요함  
 ![image](https://user-images.githubusercontent.com/75231868/125153534-53f3ed80-e18f-11eb-895e-d91acf251b68.png)
-
+즉 A를 Hover했을때 B자료가 삭제되는 코드를 구현해야한다   
 <hr>
