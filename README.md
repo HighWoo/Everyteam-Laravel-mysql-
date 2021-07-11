@@ -115,3 +115,13 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 ![image](https://user-images.githubusercontent.com/75231868/125153534-53f3ed80-e18f-11eb-895e-d91acf251b68.png)
 즉 A를 Hover했을때 B자료가 삭제되는 코드를 구현해야한다   
 <hr>
+
+## Day5(2021/07/11)
+## 개발Part
+
+로그인 화면과 로그인 기능 구현  
+현재는 회원가입과 로그인 로그아웃 기능으로만 구현  
+![image](https://user-images.githubusercontent.com/75231868/125184850-f8436600-e25b-11eb-9a06-7e00d2b30659.png)  
+
+라라벨의 자동 구현 시스템을 이용하여 회원관리 프로그램을 구현하였음  
+
