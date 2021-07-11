@@ -17,7 +17,7 @@
     <div id="navi" class="Naviation">
  
             <a  class="Logo" href="">에브리팀</a>
-            <a  class="Loginbutton" href="">Login</a>
+            <a  class="Loginbutton" href="{{ route('login') }}">Login</a>
   
     </div>
   
