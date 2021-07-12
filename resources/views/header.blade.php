@@ -12,14 +12,40 @@
 
 <body>
     <div id="headerl" class="headerl">
-    
+      <div id="Naviation" class="Naviation">
+      <a  class="Logo" href="">에브리팀</a>
+        @guest
+        @if (Route::has('login'))
+        <a class="neviusertext fake">===============</a>
+                <a class="Loginbutton" href="{{ route('login') }}">로그인</a>
+               
+        @endif
 
-    <div id="navi" class="Naviation">
+    @else
+     
+            <a id="neviusertext"  href="#" >
+                {{ Auth::user()->name}}{{'님 안녕하세요' }}
+            </a>
+
+           
+                <a class="Loginbutton" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+               로그아웃
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
  
-            <a  class="Logo" href="">에브리팀</a>
-            <a  class="Loginbutton" href="{{ route('login') }}">Login</a>
+
+    @endguest
+      </div>
+
+   
+            {{-- <a  class="Loginbutton" href="{{ route('login') }}">Login</a> --}}
   
-    </div>
+
   
     <div id="searchlayout" class="searchl">
     <INPUT type="text" name="Searchtext" placeholder="검색어를 입력하세요" class="search">

@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('main'); //로그인 뒤에 메인으로 가라
     }
 }

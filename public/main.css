@@ -35,11 +35,16 @@ a{
     text-shadow: 2px 1px 1px rgb(255, 255, 255);
     line-height: 2.5;
     margin-left:32px;
-    margin-right: 1150px;
+    margin-right: 1000px;
     
     
   }
-
+.neviusertext{
+  color: #000000;
+}
+.neviusertext.fake{
+  color: #f2d2b6;
+}
 
 .Loginbutton{
     width: 140px;
