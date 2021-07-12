@@ -29,7 +29,7 @@
         <br><strong>{{ $message }}</strong>
     </span>
     @enderror
-    <br><br><br><br><br><br>
+    <br><br><br><br><br>
     <button type="submit" class="loginbutton register">
         {{ __('회원가입') }}
     </button>

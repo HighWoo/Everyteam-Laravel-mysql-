@@ -19,7 +19,7 @@
     @enderror --}}
     @error('email')
     <span class="invalid-feedback" role="alert">
-        <br><strong>{{ "입력된 정보가 맞지 않습니다" }}</strong><br>
+        <br><strong>{{ "$message" }}</strong><br>
     </span>
     @enderror
 
