@@ -1,7 +1,44 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<link rel="stylesheet" type="text/css" href="login.css" />
+
+<div class="loginl">
+
+    <a class="loginLogo" href="{{ url('/') }}">에브리팀</a><br>
+    <a class="logintext">회원가입</a><br><br>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
+    <input id="name" type="text" placeholder="이름" class="logintextbox @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+    @error('name')
+            <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+         </span>
+      @enderror
+    <input id="email" type="email" placeholder="이메일" class="logintextbox bottom @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+    @error('email')
+      <span class="invalid-feedback" role="alert">
+      <br><strong>{{ $message }}</strong>
+     </span>
+    @enderror
+    <input id="password" type="password" placeholder="비밀번호" class="logintextbox bottom @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+   
+    <input id="password-confirm" type="password" placeholder="비밀번호 재입력" class="logintextbox bottom" name="password_confirmation" required autocomplete="new-password">
+    @error('password')
+    <span class="invalid-feedback" role="alert">
+        <br><strong>{{ $message }}</strong>
+    </span>
+    @enderror
+    <br><br><br><br><br><br>
+    <button type="submit" class="loginbutton register">
+        {{ __('회원가입') }}
+    </button>
+</form>
+</div>
+@endsection
+
+
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -73,5 +110,5 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div> --}}
+

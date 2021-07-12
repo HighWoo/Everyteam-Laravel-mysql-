@@ -9,19 +9,20 @@
     <br><br><br><a class="logintext">계정로그인</a>
     <form method="POST" action="{{ route('login') }}">
         @csrf
-    <input id="email" type="email" placeholder="계정을 입력하세요"class="logintextbox @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-    @error('email')
-    <span class="invalid-feedback" role="alert">
-        <strong>{{ $message }}</strong>
-    </span>
-    @enderror
-
+    <input id="email" type="email" placeholder="이메일을 입력하세요"class="logintextbox @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+  
     <input id="password" type="password" placeholder="비밀번호를 입력하세요" class="logintextbox bottom @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-    @error('password')
+    {{-- @error('password')
         <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
         </span>
+    @enderror --}}
+    @error('email')
+    <span class="invalid-feedback" role="alert">
+        <br><strong>{{ "입력된 정보가 맞지 않습니다" }}</strong><br>
+    </span>
     @enderror
+
 
     <a class="findpass" href="{{ route('password.request') }}">
         비밀번호를 잊으셨나요?

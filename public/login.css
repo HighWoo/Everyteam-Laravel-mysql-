@@ -42,6 +42,7 @@
     border: none;
     margin-left: 30px;
     background-color: #f2d2b6;
+    cursor: pointer;
     
 }
 .easyloginbutton.bottom{
@@ -81,7 +82,14 @@
   padding: 20px 200px 18.5px 200    px;
   border-radius: 5px;
   background-color: #f28d77;
-  font-size: 20px
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+.loginbutton.register
+{
+    width: 490px;
 }
 
 
