@@ -173,7 +173,7 @@ php artisan migrate:refresh
 https://youtu.be/N2GUmRaKqzQ  
 
 라라벨 테이블에 대한 공식홈페이지의 설명  
-https://laravel.kr/docs/5.1/quickstart  
+https://laravel.kr/docs/5.1/quickstart   
 오늘 연습으로 컨트롤러,라우트 사용이 어느정도 이해되었지만 꾸준한 연습이 필요해보임  
 
 
