@@ -13,7 +13,7 @@
 <body>
     <div id="headerl" class="headerl">
       <div id="Naviation" class="Naviation">
-      <a  class="Logo" href="">에브리팀</a>
+      <a  class="Logo" href="{{ url('/') }}">에브리팀</a>
         @guest
         @if (Route::has('login'))
         <a class="neviusertext fake">===============</a>
@@ -53,11 +53,11 @@
     </div>
     
     <div id="menul" class="menul">
-               <button class="custom-btn btn-3 left" onclick="location.href='aa.php'"><span>Study</span></button> 
-               <button class="custom-btn btn-3 " onclick="location.href='aa.php'"><span>Sport</span></button> 
-               <button class="custom-btn btn-3 " onclick="location.href='aa.php'"><span>Club</span></button> 
-               <button class="custom-btn btn-3 " onclick="location.href='aa.php'"><span>Game</span></button> 
-               <button class="custom-btn btn-3 " onclick="location.href='aa.php'"><span>Others</span></button> 
+               <a class="custom-btn btn-3 left" href="{{ url('/') }}"><span>Study</span></a> 
+               <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Sport</span></a> 
+               <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Club</span></a> 
+               <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Game</span></a> 
+               <a class="custom-btn btn-3 " href="{{ url('/create') }}"><span>Create</span></a> 
          
              
         

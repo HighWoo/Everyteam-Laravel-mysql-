@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/create',[App\Http\Controllers\TeamController::class ,'create'])->name('teams.create');
+Route::post('/create',[App\Http\Controllers\TeamController::class ,'store'])->name('teams.store');

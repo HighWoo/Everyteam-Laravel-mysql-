@@ -135,6 +135,7 @@ a{
       cursor: pointer;
       position: relative;
       display: inline-block;
+      text-align: center;
     }
     .btn-3 {
       background:#f2d2b6;
@@ -221,14 +222,26 @@ a{
 .mainl{ /*메인프레임 레이어*/
   width: 934px;
   height: max-content;
-  
+
 }
 .mainl.imagel {/*메인프레임 사진레이어*/
   margin: 13px 493px 15px 493px;
   object-fit: contain;
+
 }
 .mainl.annmainl{/*메인프레임 공고레이어*/
     margin: 13px 493px 15px 493px;
+}
+.mainl.basicl{/*모든 기본레이어*/
+  margin: 0px 493px 15px 493px;
+
+  text-align:center;
+  /* border: solid 5px #f2d2b6; */
+  border-bottom:5px solid #f2d2b6;
+  border-left:5px solid #f2d2b6;
+  border-right:5px solid #f2d2b6;
+
+
 }
 
 
@@ -326,6 +339,70 @@ a{
 	font-size: 14px 
 }
 
+/* 
+기본제목디자인 */
+
+.titletext{
+  
+  color: #000000;
+  font-size: 35px;
 
 
+  
+
+}
+
+.create_team_textbox{
+  width:500px;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius:4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 5px #f2d2b6;
+}
+.create_team_textarea{
+  width:500px;
+  height: 50px;
+  font-size: 20px;
+  font-family:Georgia;
+  margin-top: 15px;
+  border-radius:4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 5px #f2d2b6;
+}
+.create_team_textarea:hover{
+  height: 300px;
+  transition: all 1.5s ease;
+}
+
+
+
+
+.create_team_button{
+  width:100px;
+  height: 60px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border-radius:4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #f2ad94;
+  border :0;
+  
+
+}
+.create_team_button:hover{
+  background-color: #f28d77;
+  width:504px;
+  transition: all 1.5s ease;
+}
+.create_team_select{
+  width:510px;
+  height: 58px;
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius:4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 5px #f2d2b6;
+}
 
