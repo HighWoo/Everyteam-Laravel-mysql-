@@ -7,7 +7,20 @@
 ### 먼저 프론트앤드 개발 후 백엔드는 Laravel학습이 완료되면 진행  
 ### 주말에는 간단한 개발정도만 진행  
 
-## Day1(2021/07/07)
+ 
+## 목차  
+[Day1](#Day1)-색조합,디자인/라라벨 설치,실행방법  
+[Day2](#Day2)-메인화면 디자인/라라벨 기본폴더 학습  
+[Day3](#day3)-헤더파일개발,자식에게 상속/블레이드코드 학습    
+[Day4](#day4)-hover기능 구현    
+[Day5](#day5)-로그인 기능 구현  
+[Day6](#day6)-회원가입 기능 구현/컨트롤러와 라우트에 대한 이해  
+[Day7](#Day7)-팀을 생성하여 데이터베이스 내에 삽입/데이터베이스 이용방법과 MVC모델에 대한 이해    
+
+<hr>
+
+# Day1 
+(2021/07/07)
 ## 개발Part
 설계전 adobe컬러에서 색 조합을 검색
 ![AdobeColor-My Color Theme](https://user-images.githubusercontent.com/75231868/124706030-9a4c1100-df31-11eb-9883-3e378ee971da.jpeg)  
@@ -49,7 +62,8 @@ link rel="stylesheet" href="/main.css"
  식으로 불러온다 css이름은 main.css이다.
  <hr>
  
-## Day2(2021/07/08)
+# Day2
+(2021/07/08)
 ## 개발Part
 
 Day1에 만든 기본틀을 이용하여 더욱 자세한 인터페이스 완성  
@@ -79,7 +93,8 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 로그인페이지와 메인페이지 완성 후 라라벨을 통해 데이터베이스와 페이지간의 이동을 시험해 볼 예정이다  
 <hr>
 
-## Day3(2021/07/09)
+# Day3
+(2021/07/09)
 ## 개발Part  
 만든 Header.php를 main.php에 상속  
 상속에는 성공했으나 부모가 자식보다 밑에뜨는 현상을 발견  
@@ -102,7 +117,8 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 
 <hr>
 
-## Day4(2021/07/10)
+# Day4
+(2021/07/10)
 ## 개발Part
 
 버튼과 인터페이스에 Hover효과를 적용하여 마우스 올릴시 반응하게 개발  
@@ -116,7 +132,8 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 즉 A를 Hover했을때 B자료가 삭제되는 코드를 구현해야한다   
 <hr>
 
-## Day5(2021/07/11)
+# Day5
+(2021/07/11)
 ## 개발Part
 
 로그인 화면과 로그인 기능 구현  
@@ -127,7 +144,8 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 
 <hr>
 
-## Day6(2021/07/12)
+# Day6
+(2021/07/12)
 ## 개발Part
 
 회원가입 화면 구현
@@ -148,16 +166,33 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 
 <hr>
 
-## Day7(2021/07/13)
+# Day7
+(2021/07/13)
 ## 개발Part
+내가 직접 나의 팀을 만드는 페이지를 구현  
+![image](https://user-images.githubusercontent.com/75231868/125404942-2a86cc00-e3f2-11eb-8782-a207043c9ca8.png)
+
+이곳에 입력한 정보들이 Team 테이블에 현재 시간과 함께 입력된다  
+
+문제점:    
+현재 시간이 2시간 정도 차이가 나서 관련 자료를 찾아보아야 한다  
+추후 css에서 hover한뒤에 변경사항을 계속 유지할 수 있는 방법도 찾아보아야 한다  
+
+
 ## 학습part
 
 모델은 무겁게 컨트롤러는 가볍게 코딩해야한다  
 
-컨트롤러  
-    public function show($id)  
-    {  
-        return view('user.profile', ['user' => User::findOrFail($id)]);  
-    }  
-라우트  
-    Route::get('user/{id}', [UserController::class, 'show']);  
+데이터를 받아 데이터베이스 안에 입력하는방법을 학습하고 개발에 응용하였음  
+테이블을 변경 수정할때는  
+php artisan migrate:refresh  
+이용하면 되지만 테이블의 모든 정보가 사라진다  
+
+데이터베이스 적용하는데 도움이 많이 된 영상  
+https://youtu.be/N2GUmRaKqzQ  
+
+라라벨 테이블에 대한 공식홈페이지의 설명  
+https://laravel.kr/docs/5.1/quickstart   
+오늘 연습으로 컨트롤러,라우트 사용이 어느정도 이해되었지만 꾸준한 연습이 필요해보임  
+
+
