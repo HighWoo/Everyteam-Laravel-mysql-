@@ -9,13 +9,13 @@
 
  
 ## 목차  
-### [Day1](#Day1)  
-### [Day2](#Day2)  
-### [Day3](#day3)  
-### [Day4](#day4)  
-### [Day5](#day5)  
-### [Day6](#day6)  
-### [Day7](#Day7)  
+ [Day1](#Day1)  
+[Day2](#Day2)  
+ [Day3](#day3)  
+[Day4](#day4)  
+ [Day5](#day5)  
+ [Day6](#day6)  
+ [Day7](#Day7)  
 
 <hr>
 
