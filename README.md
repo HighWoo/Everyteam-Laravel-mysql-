@@ -162,12 +162,11 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 라우트  
     Route::get('user/{id}', [UserController::class, 'show']);  
 <hr>
+
     뷰  
     form action="/task/{{ $task->id }}" method="POST"  
     서브밋 버튼  
     
     라우트  
-    Route::delete('/task/{id}', function ($id) {
-    //
-});
+    Route::delete('/task/{id}', function ($id) {  });
 
