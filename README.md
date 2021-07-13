@@ -6,7 +6,7 @@
 ### laravel,phpStorm,Zeplin,mysql,figma,css,php  
 ### 먼저 프론트앤드 개발 후 백엔드는 Laravel학습이 완료되면 진행  
 ### 주말에는 간단한 개발정도만 진행  
-
+<hr>
  
 ## 목차  
 ### [Day1](#day1)  
