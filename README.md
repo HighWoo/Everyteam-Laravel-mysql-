@@ -150,18 +150,30 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 
 ## Day7(2021/07/13)
 ## 개발Part
+내가 직접 나의 팀을 만드는 페이지를 구현  
+![image](https://user-images.githubusercontent.com/75231868/125404942-2a86cc00-e3f2-11eb-8782-a207043c9ca8.png)
+
+이곳에 입력한 정보들이 Team 테이블에 현재 시간과 함께 입력된다  
+
+문제점:    
+현재 시간이 2시간 정도 차이가 나서 관련 자료를 찾아보아야 한다  
+추후 css에서 hover한뒤에 변경사항을 계속 유지할 수 있는 방법도 찾아보아야 한다  
+
+
 ## 학습part
 
 모델은 무겁게 컨트롤러는 가볍게 코딩해야한다  
 
-컨트롤러  
-    public function show($id)  
-    {  
-        return view('user.profile', ['user' => User::findOrFail($id)]);  
-    }  
-라우트  
-    Route::get('user/{id}', [UserController::class, 'show']);  
-<hr>
+데이터를 받아 데이터베이스 안에 입력하는방법을 학습하고 개발에 응용하였음  
+테이블을 변경 수정할때는  
+php artisan migrate:refresh  
+이용하면 되지만 테이블의 모든 정보가 사라진다  
 
-https://laravel.kr/docs/5.1/quickstart
+데이터베이스 적용하는데 도움이 많이 된 영상  
+https://youtu.be/N2GUmRaKqzQ  
+
+라라벨 테이블에 대한 공식홈페이지의 설명  
+https://laravel.kr/docs/5.1/quickstart  
+오늘 연습으로 컨트롤러,라우트 사용이 어느정도 이해되었지만 꾸준한 연습이 필요해보임  
+
 
