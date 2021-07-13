@@ -150,4 +150,14 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
 
 ## Day7(2021/07/13)
 ## 개발Part
+## 학습part
 
+모델은 무겁게 컨트롤러는 가볍게 코딩해야한다  
+
+컨트롤러  
+    public function show($id)  
+    {  
+        return view('user.profile', ['user' => User::findOrFail($id)]);  
+    }  
+라우트  
+    Route::get('user/{id}', [UserController::class, 'show']);  
