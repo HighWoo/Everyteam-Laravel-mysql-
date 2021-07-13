@@ -8,9 +8,11 @@
 ### 주말에는 간단한 개발정도만 진행  
 <hr>
 ### 목차  
-[Day1](##Day1(2021/07/07))
+[Day1](#Day1(2021/07/07))
+
 <hr>
-## Day1(2021/07/07)
+
+# Day1(2021/07/07)
 ## 개발Part
 설계전 adobe컬러에서 색 조합을 검색
 ![AdobeColor-My Color Theme](https://user-images.githubusercontent.com/75231868/124706030-9a4c1100-df31-11eb-9883-3e378ee971da.jpeg)  
