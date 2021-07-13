@@ -9,7 +9,7 @@
 
  
 ## 목차  
-### [Day1](#day1)  
+### [Day1](#Day1)  
 ### [Day2](#day2)  
 ### [Day3](#day3)  
 ### [Day4](#day4)  
