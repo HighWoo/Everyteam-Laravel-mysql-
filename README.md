@@ -161,3 +161,10 @@ margin: 30px 10px 40px은 위 30px, 좌우 10px, 아래 40px을 의미
     }  
 라우트  
     Route::get('user/{id}', [UserController::class, 'show']);  
+<hr>
+    <form action="/task/{{ $task->id }}" method="POST">
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+
+            <button>Delete Task</button>
+        </form>
