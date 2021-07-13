@@ -1,5 +1,5 @@
 # TeamMatching-v2
-
+[Day1](#day1)
 ### 기존에 만들었던 [TeamMatching](https://github.com/highcowoo/TeamMatching-project) 을 더 전문적인 개발도구를 활용하여 최종적으로 서버까지 열어 관리 해보는것이 목표  
 ### 개발언어는 php사용 프레임워크는 라라벨 사용 매일 라라벨에 대한 학습과 개발을 진행  
 ### 백엔드와 프론트엔드 전부 도구를 이용하여 직접 개발  
@@ -7,7 +7,7 @@
 ### 먼저 프론트앤드 개발 후 백엔드는 Laravel학습이 완료되면 진행  
 ### 주말에는 간단한 개발정도만 진행  
 <hr>
-[Day1](#day1)
+
 
 <hr>
 
