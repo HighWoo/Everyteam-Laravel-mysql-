@@ -9,8 +9,8 @@
 
  
 ## 목차  
- [Day1](#Day1)  
-[Day2](#Day2)  
+ [Day1](#Day1)-색조합,디자인/라라벨 설치,실행방법 
+[Day2](#Day2)-메인화면 디자인 
  [Day3](#day3)  
 [Day4](#day4)  
  [Day5](#day5)  
