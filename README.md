@@ -243,7 +243,7 @@ Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);
 지금까지 학습하며 느낀정보  
 
 라우트:너가 이 주소로 오면 컨트롤러를 만나게 해줄게 or 선물을 줄게(리턴값)  
-컨트롤러:일하는 회사(return view('A',compact('B')); A로 B를 보내줄게) 
+컨트롤러:일하는 회사(return view('A',compact('B')); A로 B를 보내줄게)  
 뷰:보여지는 결과물  
 
 <hr
