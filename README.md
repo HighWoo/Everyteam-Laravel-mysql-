@@ -216,7 +216,7 @@ public function view(){
 Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);  
 
 블레이드  
- @foreach ($team as $item)
-     {{$item -> title}}<br>
+ @foreach ($team as $item)  
+     {{$item -> title}}    
  @endforeach
 
