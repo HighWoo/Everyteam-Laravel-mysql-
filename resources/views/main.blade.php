@@ -34,17 +34,15 @@
             
                   </tr>
               </thead>
-    
+             
             <tbody>
-              <tr>
           
-            
-                <td width="500">{{ viewteam() }}</td>
-                
-     
-    
-      
-              </tr>
+            @foreach ($team as $item)
+              <tr><td width="500">
+                {{$item -> title}}</a>
+            <br>
+             </td></tr>
+              @endforeach 
             </tbody>
         
           </table>

@@ -32,9 +32,11 @@ class TeamController extends Controller
 
   
 }
-public function viewteam(){
-    $teams = DB::table('teams')->select('title')->get();
-    return $teams;
-}
+public function viewtable(){
 
+  $team = \App\Models\Team::all(); 
+
+
+  return view('main',compact('team'));
+}
 }
