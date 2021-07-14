@@ -215,7 +215,7 @@ css입력부분에 문제가 있다고 판단하여 코드수정
 <link rel="stylesheet" type="text/css" href="/main.css" />  
 main.css 앞에 / 를 넣어주니 정상적으로 작동  
 
-팀 모집글 출력페이지 작성 엔터를 입력하지 않으면 내용이 쭉 나와버리는 오류발견 7/15 수정예정  
+팀 모집글 출력페이지 작성 엔터를 입력하지 않으면 내용이 쭉 나와버리는 오류발견 (7/15 수정예정)  
 ![image](https://user-images.githubusercontent.com/75231868/125595466-0ccefa7a-570a-4f6a-9fa8-6afa5573816f.png)
 
 ## 학습part  
