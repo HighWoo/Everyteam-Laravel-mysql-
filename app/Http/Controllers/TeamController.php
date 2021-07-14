@@ -39,4 +39,18 @@ public function viewtable(){
 
   return view('main',compact('team'));
 }
+
+public function bviewtable(){
+
+    $team = \App\Models\Team::all(); 
+  
+  
+    return view('team.allteams',compact('team'));
+  }
+  
+
+public function show(Team $team){
+
+    return view('team.teaminfo',compact('team'));
+  }
 }

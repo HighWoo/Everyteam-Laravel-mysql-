@@ -39,7 +39,10 @@
           
             @foreach ($team as $item)
               <tr><td width="500">
-                {{$item -> title}}</a>
+                <a href="/teaminfo/{{$item -> id}}">
+                  {{$item -> title}}
+              </a>
+                
             <br>
              </td></tr>
               @endforeach 

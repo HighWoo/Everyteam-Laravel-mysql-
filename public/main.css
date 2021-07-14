@@ -261,8 +261,7 @@ a{
 .annl:hover{
   background:#f2d2b6;
   transition: all 1.5s ease;
-  width: 934px;
-  height: 400px;
+
 }
 .annlbar {
   width: 439px;
@@ -318,12 +317,9 @@ a{
 
 
 /*공고출력 테이블 디자인*/
-#board_area { 
-	width: 400px;
-	position: relative;
-}
+
 .list-table {
-	margin-top: 12px;
+	margin-top: 40px;
 }
 .list-table thead th{
 	height:40px;
@@ -331,12 +327,34 @@ a{
 	border-bottom:1px solid rgb(0, 0, 0);
 	font-weight: bold;
 	font-size: 17px;
+
 }
 .list-table tbody td{
 	text-align:center;
 	padding:10px 0;
 	border-bottom:1px solid rgb(0, 0, 0); height:20px;
-	font-size: 14px 
+	font-size: 14px ;
+ 
+}
+
+
+/* 텍스트 출력창(내용) */
+.teaminfotextboxl{
+  width: 934px;
+  height: max-content;
+
+  text-align: center;
+
+}
+.teaminfotextbox{
+  width: max-content;
+  height: max-content;
+  text-align:left;
+  font-family:dotum;
+  font-size: 28px ;
+  background-color: rgb(255, 255, 255);
+  padding: 15px 30px;
+  display: inline-block;
 }
 
 /* 
@@ -405,4 +423,6 @@ a{
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 5px #f2d2b6;
 }
+
+
 
