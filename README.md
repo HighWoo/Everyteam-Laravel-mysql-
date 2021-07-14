@@ -16,6 +16,7 @@
 [Day5](#day5)-로그인 기능 구현  
 [Day6](#day6)-회원가입 기능 구현/컨트롤러와 라우트에 대한 이해  
 [Day7](#Day7)-팀을 생성하여 데이터베이스 내에 삽입/데이터베이스 이용방법과 MVC모델에 대한 이해    
+[Day8](#Day8)-테이블을 출력구현,get메소드 활용 구현/라라벨의 기본구조MVC에 대해 더 심도있게 학습  
 
 <hr>
 
@@ -199,7 +200,24 @@ https://laravel.kr/docs/5.1/quickstart
 
 # Day8
 (2021/07/14)
-## 개발Part
+## 개발Part  
+입력한 정보를 출력해주는 페이지와  
+출력된 테이블의 제목을 클릭하면 상세 페이지로 넘어가게 구현  
+
+특별한 조건문 없이 get에서 받은 숫자를 자동으로 테이블의 primary키와 비교하여 출력하는 방식인것 같다  
+get문장을 여러 숫자로 바꾸고 문자로 바꾸어도 자동적으로 Team테이블의 id와 비교하는 모습을 볼 수 있었다  
+
+### 문제해결  
+get을 전달받고 출력하는 페이지에서 css가 적용이 제대로 안되는 것을 발견  
+다른 메뉴들이 제대로 출력되는 것을 보고 include 문제는 아니라고 판단  
+![image](https://user-images.githubusercontent.com/75231868/125586575-ee560b04-3242-403e-b046-583fe281e9c4.png)  
+css입력부분에 문제가 있다고 판단하여 코드수정  
+<link rel="stylesheet" type="text/css" href="/main.css" />  
+main.css 앞에 / 를 넣어주니 정상적으로 작동  
+
+팀 모집글 출력페이지 작성 엔터를 입력하지 않으면 내용이 쭉 나와버리는 오류발견 (7/15 수정예정)  
+![image](https://user-images.githubusercontent.com/75231868/125595466-0ccefa7a-570a-4f6a-9fa8-6afa5573816f.png)
+
 ## 학습part  
 평소 듣던 유튜브 강의가 끝나 이제부터는 홈페이지나 도서를 직접 찾아보며 학습해야 한다  
 
@@ -220,3 +238,12 @@ Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);
      {{$item -> title}}    
  @endforeach
 
+테이블을 출력하는 부분을 학습하고 개발단계에 적용  
+
+지금까지 학습하며 느낀정보  
+
+라우트:너가 이 주소로 오면 컨트롤러를 만나게 해줄게 or 선물을 줄게(리턴값)  
+컨트롤러:일하는 회사(return view('A',compact('B')); A로 B를 보내줄게)  
+뷰:보여지는 결과물  
+
+<hr
