@@ -25,4 +25,6 @@ class HomeController extends Controller
     {
         return view('main'); //로그인 뒤에 메인으로 가라
     }
+
+   
 }

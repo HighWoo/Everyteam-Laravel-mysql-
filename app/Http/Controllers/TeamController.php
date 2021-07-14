@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Team;
+use App\Models\Team; // 추가
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -32,4 +32,9 @@ class TeamController extends Controller
 
   
 }
+public function viewteam(){
+    $teams = DB::table('teams')->select('title')->get();
+    return $teams;
+}
+
 }

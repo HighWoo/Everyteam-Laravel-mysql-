@@ -37,11 +37,11 @@
     
             <tbody>
               <tr>
+          
+            
+                <td width="500">{{ viewteam() }}</td>
                 
-               
-                <td width="500"></td>
-                
-
+     
     
       
               </tr>
