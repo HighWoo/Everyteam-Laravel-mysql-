@@ -195,4 +195,29 @@ https://youtu.be/N2GUmRaKqzQ
 https://laravel.kr/docs/5.1/quickstart   
 오늘 연습으로 컨트롤러,라우트 사용이 어느정도 이해되었지만 꾸준한 연습이 필요해보임  
 
+<hr>
+
+# Day8
+(2021/07/14)
+## 개발Part
+## 학습part  
+평소 듣던 유튜브 강의가 끝나 이제부터는 홈페이지나 도서를 직접 찾아보며 학습해야 한다  
+
+모델-컨트롤러->라우트(web.php)->뷰
+
+테이블을 출력하는법  
+컨트롤러  
+public function view(){
+    $team = \App\Models\Team::all();
+    return view('main',compact('team'));
+}  
+
+라우트  
+Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);  
+
+블레이드  
+ @foreach ($team as $item)
+        {{$item -> title}}<br>
+    
+    @endforeach
 
