@@ -246,4 +246,17 @@ Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);
 컨트롤러:일하는 회사(return view('A',compact('B')); A로 B를 보내줄게)  
 뷰:보여지는 결과물  
 
-<hr
+<hr>
+
+# Day9
+(2021/07/15)
+## 개발Part  
+레이어들을 화면 변화에도 적합하게 반응할 수 있도록 재설계  
+주요 사이트 들을 참조하여 흰색배경에 특징색을 잘 살려 새로 디자인  
+
+### 메인화면 레이아웃 지도  
+![image](https://user-images.githubusercontent.com/75231868/125760138-143aefe8-e59b-4039-88fb-98de75ccdedc.png)  
+빨강 Naviation.left / 주황 Naviation.right /노랑 searchl / 노랑 안쪽 보이지 않는 레이어 searchsl  
+초록 menul / 파랑 menubuttonsl /보라 mainl.imagel / 검정 mainl.annmainl / 회색 annsmalll  
+
+
