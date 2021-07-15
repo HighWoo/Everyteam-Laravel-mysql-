@@ -251,7 +251,7 @@ Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);
 # Day9
 (2021/07/15)
 ## 개발Part  
-레이어들을 화면 변화에도 적합하게 반응할 수 있도록 재설계  
+레이어들을 화면 크기 변화에도 적합하게 반응할 수 있도록 재설계  
 주요 사이트 들을 참조하여 흰색배경에 특징색을 잘 살려 새로 디자인  
 ![image](https://user-images.githubusercontent.com/75231868/125764041-7471bf71-3438-48e8-add4-dd74bd7ba8a3.png)
 
