@@ -12,60 +12,72 @@
 
 <body>
     <div id="headerl" class="headerl">
-      <div id="Naviation" class="Naviation">
-      <a  class="Logo" href="{{ url('/') }}">에브리팀</a>
+
+      <div id="Naviationl" class="Naviation left">
+      <a  class="Logo" href="{{ url('/') }}">EveryTeam</a>
+    </div>
+      <div id="Naviationr" class="Naviation right">
         @guest
         @if (Route::has('login'))
-        <a class="neviusertext fake">===============</a>
+        <a class="neviusertext fake">=============</a>
                 <a class="Loginbutton" href="{{ route('login') }}">로그인</a>
+                <a class="Loginbutton" href="{{ route('login') }}">회원가입</a>
                
         @endif
 
     @else
-     
-            <a id="neviusertext"   >
+            
+            <a id="neviusertext" class="neviusertext"   >
                 {{ Auth::user()->name}}{{'님 안녕하세요' }}
             </a>
 
-           
+            <a class="Loginbutton" href="">내정보</a>
                 <a class="Loginbutton" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                로그아웃
                 </a>
-
+                
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
- 
-
+       
+                
     @endguest
       </div>
-
+    </div>
    
             {{-- <a  class="Loginbutton" href="{{ route('login') }}">Login</a> --}}
   
 
-  
+    
     <div id="searchlayout" class="searchl">
-    <INPUT type="text" name="Searchtext" placeholder="검색어를 입력하세요" class="search">
-    <a  class="searchbutton" href="">Search</a>
+    <form>
+        <div id="smallsearchlayout" class="searchsl">
+    <INPUT type="text" name="Searchtext" placeholder="검색어를 입력하세요" class="search"/>
+
+    {{-- <input type="submit" class="searchbutton" value=""> --}}
+     <a  class="searchbutton" href=""></a>
+        </div>
+    </form>
+        {{-- <a  class="searchbutton" href="">Search</a> --}}
+        {{-- <img src="image/sbutton.png"> --}}
     </div>
     
     <div id="menul" class="menul">
-               <a class="custom-btn btn-3 left" href="{{ url('/') }}"><span>Study</span></a> 
-               <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Sport</span></a> 
+        <div id="menubl" class="menubuttonsl">
+               <a class="custom-btn btn-3" href="{{ url('/') }}"><span>Study</span></a> 
+               <a class="custom-btn btn-3" href="{{ url('/') }}"><span>Sport</span></a> 
                <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Club</span></a> 
                <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Game</span></a> 
-               <a class="custom-btn btn-3 " href="{{ url('/create') }}"><span>Create</span></a> 
-         
+               <a class="custom-btn btn-3 right" href="{{ url('/create') }}"><span>Create</span></a> 
+        </div>
              
         
         
     </div>
     
 
-</div>
 
 
 

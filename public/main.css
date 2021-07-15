@@ -2,69 +2,85 @@
 	margin: 0 ;
 	padding: 0;
 }
-
+input:focus{
+  outline: none;
+}
 a{
 	text-decoration:none; 
 }
 /* 헤더 레이어 */
 .headerl {
-    margin-left: 256px;
-    width: 1409px;
-    height: max-content;
-    background-color: #ffffff;
+    /* margin-left: 256px; */
+    width: 100%;
+    height: 60px;
+  
+    /* border: solid 2px #f2d2b6; */
+    border-top:solid 2px #f2ad94;
+    border-bottom:solid 2px #f2ad94;
 
   }
    
   
 /* 네비게이션 바 */
 .Naviation {
-  width: 1409px;
+  float: left;
+}
+.Naviation.left{
+ height: 60px;
+ width: 50%;
+ background-color: rgb(250, 52, 52);
+}
+.Naviation.right{
   height: 60px;
-  object-fit: contain;
-  background-color: #f2d2b6;
+  width: 50%;
+  background-color: rgb(241, 154, 23);
+  text-align: right;
 }
 /* 로고 */
 .Logo {
-    width: 100px;
-    height: 60px;
-    font-family:Georgia;
-    font-size: 24px;
+
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
-    color: #000000;
+    
+    color: #f2ad94;
     text-shadow: 2px 1px 1px rgb(255, 255, 255);
     line-height: 2.5;
-    margin-left:32px;
-    margin-right: 1000px;
-    
-    
+    margin-left:1%;
+    margin-right: 35%;
   }
+.Logo:hover{
+  color:#fd7070;
+}
 .neviusertext{
+  margin-right: 15px;
   color: #000000;
+
 }
 .neviusertext.fake{
-  color: #f2d2b6;
+  color: #ffffff;
+
 }
 
 .Loginbutton{
-    width: 140px;
+    width: 80px;
     height:37.5px;
 	font-size:18px;
 	font-weight: bold;
-	background:#f2d2b6;
+  
 	color:#000000;
   border-radius:1000px;
     border: solid 1px #ffffff;
     text-align: center;
-    line-height: 1.9;
-    padding: 7px 20px 7px 20px;
+    line-height: 3;
+ 
+    margin-right: 20px;
  
   
 }
-.Loginbutton:hover{/*홈 화면 봉사 시작하기 버튼*/	
+.Loginbutton:hover{
   cursor: pointer;
-	background:#f28d77;
-  transition: all 1.0s ease;
+	color:#f28d77;
   
 }
 
@@ -72,50 +88,80 @@ a{
   
 /* 검색창 레이어 */
 .searchl {
-  width: 1409px;
+  width: 100%;
   height: max-content;
+  padding: 20px 0;
+  background-color: rgb(217, 255, 0);
   object-fit: contain;
-  background-color: #ffffff;
+  text-align: center;
+}
+.searchsl{
+  width:max-content;
+  height: max-content;
+  display:inline-block;
+
+  text-align: center;
+  border: solid 3px #f2ad94 ;
+
+  border-right: none;
+
 }
 /* 검색창 */
 .search{
-  width: 613px;
-  height: 52px;
-  margin: 25px 24px 25px 334px;
-  border-radius: 3px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  background-color: #f2ad94;
+  border:none;
+  width: 700px;
+  height: 60px;
+  margin: 0px 0px 0px 0px;
+  background-color: #ffffff;
   font-size:20px;
   font-weight: bold;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 /* 검색 버튼 */
 .searchbutton{
-	font-size:18px;
-	font-weight: bold;
-	background:#f2ad94;
-	color:#000000;
-    border-radius:5px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    text-align: center;
-    padding: 14px 24px 16px 24px;
-    
+
+  border-right:solid 3px #f28d77;
+ 
+  background: url( "image/sbutton.png" ) no-repeat; 
+
+  cursor: pointer;
+  padding: 19.2px 27px 19.2px 27px;
+  background-color: #ffffff;
+
 }
-.searchbutton:hover{
-  transition: all 10s ease;
-  border-radius:1000px;
+
+/* .searchbutton{
+  background-image: 'public/image/sbutton.png';
+  width: max-content;
+  height: max-content;
+  margin: 0px 0px 0px 0px;
+  padding:50px 0 0 0;
+	background:#ffffff;
+
   
-}
+} */
+
 
 
 
 /* 메뉴레이어 */
 .menul { 
-    width: 1409px;
+    width: 100%;
     height: 62px;
     object-fit: contain;
-    background-color: #f2d2b6;
+    background-color:rgb(0, 255, 76);
+    border-top: solid 2px #f2ad94 ;
+    border-bottom: solid 2px #f2ad94 ;
+    text-align: center;
   }
+.menubuttonsl{
+width: max-content;
+height: 62px;
+background-color:rgb(19, 2, 255);
+
+display:inline-block;
+}
+
 /* 메뉴버튼 레이어 */
   button {
     margin:0;
@@ -126,8 +172,9 @@ a{
       border:0;
       outline: 0;
       width: 137px;
-      height: 62px;
-      color: rgb(0, 0, 0);
+      height: 100%;
+      color: #f2ad94;
+      
       border-radius: 5px;
       font-family: 'Lato', sans-serif;
       font-size: 25px;
@@ -138,7 +185,7 @@ a{
       text-align: center;
     }
     .btn-3 {
-      background:#f2d2b6;
+      background-color: rgb(248, 248, 248);
       width: 137px;
       height: 62px;
       line-height: 55px;
@@ -146,11 +193,11 @@ a{
       border: none;
       
     }
-    .btn-3.left {
-      background:#f2d2b6;
+    .btn-3.right {
+      background-color: rgb(248, 248, 248);
       width: 137px;
       height: 62px;
-      margin-left: 286px;
+      margin-right: 0;
       line-height: 55px;
       padding: 0;
       border: none;
@@ -169,21 +216,23 @@ a{
       content: "";
       right: 0;
       top: 0;
-      background: #000000;
+      background: #f2ad94;
       transition: all 0.8s ease;
+      
     }
     .btn-3:before {
       height: 0%;
-      width: 2px;
+      width: 2%;
     }
     .btn-3:after {
       width: 0%;
-      height: 2px;
+      height: 2%;
     }
     .btn-3:hover{
       background: transparent;
       box-shadow: none;
       font-weight: bold;
+
      }
     .btn-3:hover:before {
       height: 100%;
@@ -192,7 +241,7 @@ a{
       width: 100%;
     }
     .btn-3 span:hover{
-       color: rgb(3, 3, 3);
+       color: #fd7070;
     }
     .btn-3 span:before,
     .btn-3 span:after {
@@ -200,8 +249,9 @@ a{
       content: "  ";
       left: 0;
       bottom: 0;
-      background: #000000;
+      background: #f2ad94;
       transition: all 0.8s ease;
+  
     }
     .btn-3 span:before {
       width: 2px;
@@ -220,17 +270,26 @@ a{
 
 
 .mainl{ /*메인프레임 레이어*/
-  width: 934px;
+  width: 100%;
   height: max-content;
+  text-align: center;
 
 }
 .mainl.imagel {/*메인프레임 사진레이어*/
-  margin: 13px 493px 15px 493px;
+  display:inline-block;
   object-fit: contain;
+  background-color: #ff06c9;
 
 }
 .mainl.annmainl{/*메인프레임 공고레이어*/
-    margin: 13px 493px 15px 493px;
+  background-color: #000000;
+
+}
+.annsmalll{
+  width: max-content;
+  height: max-content;
+  background-color: #ffffff88;
+  display:inline-block;
 }
 .mainl.basicl{/*모든 기본레이어*/
   margin: 0px 493px 15px 493px;
@@ -248,32 +307,38 @@ a{
 
 .annl { /* 공고 출력 테이블 레이어 */
   
-  width: 439px;
+  width: 435px;
   height: 400px;
   object-fit: contain;
   background-color: #ffffff;
+  border:2px solid #f2ad94;
   float: left;
-  border-radius:15px;
 }
 .annl.left {
   margin-right:56px;
 }
 .annl:hover{
-  background:#f2d2b6;
+  background:#ebded5;
   transition: all 1.5s ease;
+  
 
 }
+
 .annlbar {
-  width: 439px;
+  width: 435px;
   height:55px;
   object-fit: contain;
-  background-color: #f2d2b6;
+  background-color: #ffffff;
+  border-left:2px solid #f2ad94;
+  border-right:2px solid #f2ad94;
+  border-top: 2px solid#f2ad94;
   float: left;
   cursor: pointer;
-  border-radius:15px;
+
   
   
 }
+
 .annlbar.left {
   margin-right:56px;
 }
