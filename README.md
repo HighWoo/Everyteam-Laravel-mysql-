@@ -255,6 +255,7 @@ Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);
 주요 사이트 들을 참조하여 흰색배경에 특징색을 잘 살려 새로 디자인  
 ![image](https://user-images.githubusercontent.com/75231868/125764041-7471bf71-3438-48e8-add4-dd74bd7ba8a3.png)
 
+게시글 상세보기화면(teaminfo.blade.php)도 크키변화에 적응할 수 있도록 재설계  
 
 ### 메인화면 레이아웃 지도  
 ![image](https://user-images.githubusercontent.com/75231868/125760138-143aefe8-e59b-4039-88fb-98de75ccdedc.png)  
