@@ -17,7 +17,7 @@
 [Day6](#day6)-회원가입 기능 구현/컨트롤러와 라우트에 대한 이해  
 [Day7](#Day7)-팀을 생성하여 데이터베이스 내에 삽입/데이터베이스 이용방법과 MVC모델에 대한 이해    
 [Day8](#Day8)-테이블을 출력구현,get메소드 활용 구현/라라벨의 기본구조MVC에 대해 더 심도있게 학습  
-
+[Day9](#Day9)-메인화면 재 디자인,화면 사이즈에 구애받지 않는 방식으로 메인화면 재설계/라라벨 내에서의 select,update등의 문장 사용법을 학습   
 <hr>
 
 # Day1 
@@ -215,7 +215,7 @@ css입력부분에 문제가 있다고 판단하여 코드수정
 <link rel="stylesheet" type="text/css" href="/main.css" />  
 main.css 앞에 / 를 넣어주니 정상적으로 작동  
 
-팀 모집글 출력페이지 작성 엔터를 입력하지 않으면 내용이 쭉 나와버리는 오류발견 (7/15 수정예정)  
+팀 모집글 출력페이지 작성 엔터를 입력하지 않으면 내용이 쭉 나와버리는 오류발견 (수정예정)  
 ![image](https://user-images.githubusercontent.com/75231868/125595466-0ccefa7a-570a-4f6a-9fa8-6afa5573816f.png)
 
 ## 학습part  
@@ -253,10 +253,24 @@ Route::get('/', [App\Http\Controllers\TeamController::class ,'view']);
 ## 개발Part  
 레이어들을 화면 변화에도 적합하게 반응할 수 있도록 재설계  
 주요 사이트 들을 참조하여 흰색배경에 특징색을 잘 살려 새로 디자인  
+![image](https://user-images.githubusercontent.com/75231868/125764041-7471bf71-3438-48e8-add4-dd74bd7ba8a3.png)
+
 
 ### 메인화면 레이아웃 지도  
 ![image](https://user-images.githubusercontent.com/75231868/125760138-143aefe8-e59b-4039-88fb-98de75ccdedc.png)  
 빨강 Naviation.left / 주황 Naviation.right /노랑 searchl / 노랑 안쪽 보이지 않는 레이어 searchsl  
 초록 menul / 파랑 menubuttonsl /보라 mainl.imagel / 검정 mainl.annmainl / 회색 annsmalll  
 
+### 문제사항  
+hover 효과 사용시 화면이 떨리는 증상 발견(객체의 사이즈가 변하는 hover효과)  
+-> 화면밖으로 1px의 테두리가 넘어가 있는것을 수정하자 화면 떨림 사라짐  
 
+로그인 후 메인화면으로 넘어올 때 $team 변수를 받지 못하는 오류 발견  
+->라우트에서 메인화면으로 왔을때도 변수를 전달받을 수 있도록 선언  
+
+## 학습part  
+테이블 자료로 select update 등을 활용하는 방법을 학습  
+sql문장은 쉽지만 라우트와 컨트롤러를 이용해 적용하는 것이 어려웠음  
+라우트와 컨트롤러는 지속적인 연습이 필요해 보임  
+
+<hr>
