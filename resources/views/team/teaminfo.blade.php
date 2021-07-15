@@ -11,13 +11,14 @@
 <body>   
 
 <div class="mainl basicl">
+    <div class="infosmalll">
     <br> <a class="titletext">조회하신 팀 목록입니다</a>
     
     <table class="list-table">
         <thead>
             <tr>
                  <th width="100">분류</th>
-                 <th width="550">제목</th>
+                 <th width="500">제목</th>
                  <th width="200">모임위치</th>
                  <th width="80">모집인원</th>
                
@@ -47,8 +48,8 @@
       <table class="list-table">
         <thead>
             <tr>
-                 <th width="500">공고 게시일</th>
-                 <th width="500">최종 수정일</th>
+                 <th width="442">공고 게시일</th>
+                 <th width="442">최종 수정일</th>
               
                
         
@@ -58,8 +59,8 @@
         <tbody>
         
             <tr>
-                <td width="500">{{$team -> created_at}}</td>
-                <td width="500">{{$team -> updated_at}}</td>
+                <td width="442">{{$team -> created_at}}</td>
+                <td width="442">{{$team -> updated_at}}</td>
                
  
    
@@ -77,7 +78,7 @@
       <table class="list-table">
         <thead>
             <tr>
-                 <th width="1000">상세내용</th>
+                 <th width="886">상세내용</th>
               
                
         
@@ -100,6 +101,7 @@
         
     
       </table>
+    </div>
 </div>
 </div>
 
