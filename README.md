@@ -282,7 +282,9 @@ sql문장은 쉽지만 라우트와 컨트롤러를 이용해 적용하는 것�
 ## 개발Part    
 
 ### 줄바꿈에러해결  
-day8에 해결하지 못했던 자동 줄바꿈을 처리했습니다 이제는 줄바꿈을 하지 않아도 칸수를 넘어가면 자동으로 줄바꿈이 됩니다  
-![image](https://user-images.githubusercontent.com/75231868/125891908-9db5b00a-2d54-4782-aa20-b70c1298f3c3.png)
+day8에 해결하지 못했던 자동 줄바꿈을 처리했습니다 이제는 줄바꿈을 하지 않아도 칸수를 넘어가면 자동으로 줄바꿈이 됨  
+![image](https://user-images.githubusercontent.com/75231868/125891908-9db5b00a-2d54-4782-aa20-b70c1298f3c3.png)  
+
+하단 레이어 제작(모든 페이지에 header처럼 include해서 사용할 예정)  
 
 ## 학습part
