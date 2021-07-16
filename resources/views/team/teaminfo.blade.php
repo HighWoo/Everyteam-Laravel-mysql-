@@ -89,7 +89,7 @@
               
             <tr>
              
-               <td><pre><div class="teaminfotextbox">{{$team -> content}}</div></pre></td> 
+               <td><div class="teaminfotextbox">{{$team -> content}}</div></td> 
               
         
         

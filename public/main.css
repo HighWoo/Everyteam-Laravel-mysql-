@@ -5,8 +5,14 @@
 input:focus{
   outline: none;
 }
+hr {
+  background-color: #f2ad94;
+  height: 2px;
+  margin-top: 30px;
+}
 a{
-	text-decoration:none; 
+	text-decoration:none;
+  color: black;
 }
 /* 헤더 레이어 */
 .headerl {
@@ -282,6 +288,29 @@ display:inline-block;
   margin-top:20px;
 
 }
+/* 메인프레임 숫자출력 레이어 */
+.mainl.figure{ 
+
+  object-fit: contain;
+  background-color: #ffffff;
+  margin-top:20px;
+  
+
+}
+.figuresmalll{
+  width: 303.5px;
+  height: 100px;
+  background-color: white;
+  display:inline-block;
+  border:2px solid #f2ad94;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 4;
+  cursor: pointer;
+}
+.figuresmalll:hover{
+  background-color: #f8f8f8;
+}
 .mainl.annmainl{/*메인프레임 공고레이어*/
   background-color: white;
   margin-top:20px;
@@ -296,13 +325,8 @@ display:inline-block;
 .mainl.basicl{/*모든 기본레이어*/
   
 
-  text-align:center;
-  /* border: solid 5px #f2d2b6; */
-  border-bottom:5px solid #f2d2b6;
-  border-left:5px solid #f2d2b6;
-  border-right:5px solid #f2d2b6;
-
-
+  text-align:center; 
+  padding-top: 30px;
 }
 .infosmalll{
   width: max-content;
@@ -326,9 +350,7 @@ display:inline-block;
   margin-right:56px;
 }
 .annl:hover{
-  background:#ebded5;
-  transition: all 1.5s ease;
-  
+  background-color: #f8f8f8;
 
 }
 
@@ -429,6 +451,7 @@ display:inline-block;
   background-color: rgb(255, 255, 255);
   padding: 15px 30px;
   display: inline-block;
+  white-space: pre-wrap;
 }
 
 /* 
@@ -462,10 +485,12 @@ display:inline-block;
   border-radius:4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 5px #f2d2b6;
+
 }
 .create_team_textarea:hover{
   height: 300px;
   transition: all 1.5s ease;
+ 
 }
 
 
@@ -497,6 +522,41 @@ display:inline-block;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 5px #f2d2b6;
 }
+/* 사이트 하단 화면  */
+.bottoml{
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f8f8f8;
+  margin-top:20px;
+  text-align: center;
+  border-top: solid 2px #f2d2b6;
+}
 
+.bottomsmalll{
+  width: max-content;
+  height: max-content;
+  background-color: white;
+  display:inline-block;
 
+  text-align: center;
+  background-color: #f8f8f8;
+  margin-top: 60px;
+}
 
+.bottomtext{
+   margin-right: 50px;
+   font-size: 1em;
+   margin-bottom: 30px;
+}
+.bottomtext.right{
+  margin-right: 0;
+}
+.emailtext{
+  font-size: 0.8em;
+  margin-right: 30px;
+
+}
+.bottomtext:hover{
+  color: #f28d77;
+}

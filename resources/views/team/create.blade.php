@@ -27,11 +27,11 @@
 </select><br>
 <input type="text" name="address" class="create_team_textbox" placeholder="모임장소(온라인은 '온라인'으로 작성해주세요)"><br>
 <input type="text" name="countm" class="create_team_textbox" placeholder="모집인원"><br>
-<textarea name="content" class="create_team_textarea"placeholder="상세내용을 입력해주세요" ></textarea><br>
+<textarea name="content" class="create_team_textarea"placeholder="상세내용을 입력해주세요" wrap="hard" ></textarea><br>
 
 <input type="submit" class="create_team_button" value="저장">
 </form>
 </div>
-
+@include("bottom")
 </body>
 </html>

@@ -11,6 +11,28 @@
 <div id="mainimagel" class="mainl imagel">
     <img src ="/image/mainimage.png" alt="faild">
 </div>
+<div class="mainl figure">
+  <a class="figuresmalll" href="{{ url('/') }}">
+    EveryTeam 도우미
+  </a>
+  <a class="figuresmalll" href="{{ url('/create') }}">
+    팀 생성하기
+  </a>
+  <a class="figuresmalll" href="{{ url('/') }}">
+    팀찾기
+  </a>
+  </div>
+<div class="mainl figure">
+<a class="figuresmalll" href="{{ url('/') }}">
+회원수:00 
+</a>
+<a class="figuresmalll" href="{{ url('/') }}">
+ 전체팀:00 
+</a>
+  <a class="figuresmalll" href="{{ url('/') }}">
+오늘의팀:00
+  </a>
+</div>
 <div id="annl" class="mainl annmainl">
 <div id="annsml" class="annsmalll">
     <div id="newann" class="annl left">
@@ -70,6 +92,6 @@
   </div>
 </div>
 
-
+@include('bottom')
 </body>
 </html>
