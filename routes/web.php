@@ -19,13 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\TeamController::class ,'viewtable']);
-
-
 Route::get('/create',[App\Http\Controllers\TeamController::class ,'create'])->name('teams.create');
 Route::post('/create',[App\Http\Controllers\TeamController::class ,'store'])->name('teams.store');
-Route::get('/', [App\Http\Controllers\TeamController::class ,'viewtable']);
+Route::get('/', [App\Http\Controllers\TeamController::class ,'maintable']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/allteams', [App\Http\Controllers\TeamController::class ,'bviewtable']);
 Route::get('/teaminfo/{team}', [App\Http\Controllers\TeamController::class ,'show']);
+
 

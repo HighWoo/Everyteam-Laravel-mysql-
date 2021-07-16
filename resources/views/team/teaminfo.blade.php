@@ -104,6 +104,6 @@
     </div>
 </div>
 </div>
-
+@include("bottom")
 </body>
 </html>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Team; // 추가
 use Illuminate\Http\Request;
-
+use DB;
 class TeamController extends Controller
 {
   public function create(){
@@ -32,12 +32,21 @@ class TeamController extends Controller
 
   
 }
-public function viewtable(){
+public function maintable(){
 
-  $team = \App\Models\Team::all(); 
+  //$team = \App\Models\Team::all(); 
+  $ateam=DB::table('teams')
+  ->select('title','id')
+  ->orderBy('created_at','desc')
+  ->limit(6)
+  ->get();
+  $countuser=DB::table('users')
+  ->count();
+  $countteam=DB::table('teams')
+  ->count();
+ 
+  return view('main',compact('ateam','countuser','countteam'));
 
-
-  return view('main',compact('team'));
 }
 
 public function bviewtable(){

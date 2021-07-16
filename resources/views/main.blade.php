@@ -24,10 +24,10 @@
   </div>
 <div class="mainl figure">
 <a class="figuresmalll" href="{{ url('/') }}">
-회원수:00 
+{{ $countuser }}명의 회원
 </a>
 <a class="figuresmalll" href="{{ url('/') }}">
- 전체팀:00 
+모집중인 {{ $countteam }}개의 팀
 </a>
   <a class="figuresmalll" href="{{ url('/') }}">
 오늘의팀:00
@@ -36,7 +36,7 @@
 <div id="annl" class="mainl annmainl">
 <div id="annsml" class="annsmalll">
     <div id="newann" class="annl left">
-      <a  class="ann_title" href="">&nbsp;&nbsp;새로 올라온 팀을 확인하세요!</a>
+      <a  class="ann_title" href="{{ url('/allteams') }}">&nbsp;&nbsp;새로 올라온 팀을 확인하세요!</a>
       <input type="button" class="ann_plusbtn" onclick="location.href='aa.php'" value="더보기+">
         <table class="list-table">
             <thead>
@@ -50,11 +50,10 @@
               </thead>
              
             <tbody>
-          
-            @foreach ($team as $item)
+            @foreach ($ateam as $item)
               <tr><td width="500">
                 <a href="/teaminfo/{{$item -> id}}">
-                  {{$item -> title}}
+                  {{$item-> title}}
               </a>
                 
             <br>

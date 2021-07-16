@@ -45,6 +45,6 @@
     
       </table>
 </div>
-
+@include("bottom")
 </body>
 </html>

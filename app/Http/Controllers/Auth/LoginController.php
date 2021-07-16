@@ -37,4 +37,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    
+
+    //로그인시 전 화면으로 돌아가기
+    public function showLoginForm(){
+    if(!session()->has('url.intended'))
+    {
+        session(['url.intended' => url()->previous()]);
+    }
+    return view('auth.login');    
+}
 }
