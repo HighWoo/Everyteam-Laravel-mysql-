@@ -342,7 +342,9 @@ allteams 테이블이 가운데 정렬이 안되는 문제 해결
 분류에 Mentor 추가  
 여러 단순 문제사항 수정(사이즈,깨짐현상)  
 7/20부터 매칭시스템 개발 시작 금일은 외래키에 대해 학습    
-
+메인화면 추가 변경  
+![image](https://user-images.githubusercontent.com/75231868/126111329-d2aa9a47-7da5-476f-a4ef-1d2cb4a9f42b.png)
+  
 ## 학습Part
 @if (Route::has('login')) 로그인이 안되었을때  
 @else 로그인이 되었을 때 
