@@ -34,7 +34,7 @@
             <a class="Loginbutton" href="">내정보</a>
                 <a class="Loginbutton" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
+                                 document.getElementById('logout-form').submit(); alert('로그아웃 되었습니다'); ">
                로그아웃
                 </a>
                 
@@ -70,7 +70,7 @@
                <a class="custom-btn btn-3" href="{{ url('/') }}"><span>Sport</span></a> 
                <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Club</span></a> 
                <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Game</span></a> 
-               <a class="custom-btn btn-3 right" href="{{ url('/create') }}"><span>Create</span></a> 
+               <a class="custom-btn btn-3 right" href="{{ url('/create') }}"><span>Mentor</span></a> 
         </div>
              
         

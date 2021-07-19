@@ -10,8 +10,9 @@
 <body>   
 
 <div class="mainl basicl">
-    <br> <a class="titletext">조회하신 팀 목록입니다</a>
-    
+    <div class="infosmalll">
+    <br> <a class="titletext">조회하신 팀 목록입니다</a><br>
+    <br><a style="font-size: 20px">원하시는 팀의 제목을 클릭하세요</a>
     <table class="list-table">
         <thead>
             <tr>
@@ -29,7 +30,13 @@
             @foreach ($team as $item)
             <tr>
                 <td width="100">{{$item -> class}}</td>
-                <td width="500"><a href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td>
+                @guest
+                    @if(Route::has('login'))
+                    <td width="500"><a class="maintablefont" href="{{ route('login') }}" onClick="alert('상세보기는 로그인이 필요합니다')">{{$item-> title}}</a></td>
+                    @endif
+               @else
+                <td width="500"><a class="maintablefont" href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td>
+                @endguest
                 {{-- <td width="500"><a href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td> --}}
                 <td width="200">{{$item -> address}}</td>
                 <td width="80">{{$item -> countm}}</td>
@@ -44,6 +51,7 @@
         </tbody>
     
       </table>
+</div>
 </div>
 @include("bottom")
 </body>

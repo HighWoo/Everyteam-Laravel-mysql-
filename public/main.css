@@ -14,6 +14,9 @@ a{
 	text-decoration:none;
   color: black;
 }
+
+
+
 /* 헤더 레이어 */
 .headerl {
     /* margin-left: 256px; */
@@ -324,14 +327,14 @@ display:inline-block;
 }
 .mainl.basicl{/*모든 기본레이어*/
   
-
+  background-color: #ffffff;
   text-align:center; 
   padding-top: 30px;
 }
 .infosmalll{
   width: max-content;
   height: max-content;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   display:inline-block;
 }
 
@@ -374,6 +377,7 @@ display:inline-block;
 }
 
 .ann_plusbtn{  /*공고출력창 더보기 버튼*/
+  line-height: 2.5;
   width: 50px;
   height: 30px;
   background-color: #f2d2b6;
@@ -410,6 +414,37 @@ display:inline-block;
 
 }
 
+/* 메인 공고출력 테이블 디자인 */
+.mlist-table {
+	margin-top: 5px;
+}
+.mlist-table thead th{
+
+
+	border-bottom:2px solid #f2ad94;
+	font-weight: bold;
+	font-size: 17px;
+
+}
+
+.mlist-table tbody td{
+
+	text-align:center;
+	padding:10px 0;
+  
+	border-bottom:2px solid #f2ad94; height:20px;
+
+	font-size: 14px ;
+ 
+}
+
+.maintablefont{
+  font-size: 1.1em;
+}
+.maintablefont:hover{
+  color: #fd7070;
+}
+
 
 /*공고출력 테이블 디자인*/
 
@@ -418,8 +453,8 @@ display:inline-block;
 }
 .list-table thead th{
 	height:40px;
-	border-top:2px solid rgb(2, 2, 2);
-	border-bottom:1px solid rgb(0, 0, 0);
+	border-top:2px solid #f2ad94;
+	border-bottom:2px solid #f2ad94;
 	font-weight: bold;
 	font-size: 17px;
 
@@ -428,9 +463,16 @@ display:inline-block;
 	text-align:center;
 	padding:10px 0;
   
-	border-bottom:1px solid rgb(0, 0, 0); height:20px;
+	border-bottom:1px solid #f2ad94; height:20px;
 	font-size: 14px ;
  
+}
+
+.mainsignuptext{
+  height: max-content;
+  width: max-content;
+  font-size: 20px;
+  text-align: left;
 }
 
 
@@ -505,13 +547,12 @@ display:inline-block;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background-color: #f2ad94;
   border :0;
-  
+  font-size: 18px;
 
 }
 .create_team_button:hover{
   background-color: #f28d77;
-  width:504px;
-  transition: all 1.5s ease;
+
 }
 .create_team_select{
   width:510px;

@@ -8,6 +8,11 @@
     @include('header')
 </head> 
 <body>   
+   
+
+     
+      
+     
 
 <div class="mainl basicl">
     <br> <a class="titletext">당신만의 팀을 생성하세요</a>
@@ -27,11 +32,12 @@
 </select><br>
 <input type="text" name="address" class="create_team_textbox" placeholder="모임장소(온라인은 '온라인'으로 작성해주세요)"><br>
 <input type="text" name="countm" class="create_team_textbox" placeholder="모집인원"><br>
-<textarea name="content" class="create_team_textarea"placeholder="상세내용을 입력해주세요" wrap="hard" ></textarea><br>
+<textarea name="content" class="create_team_textarea"placeholder="상세내용(마우스를 올려주세요)" wrap="hard" ></textarea><br>
 
-<input type="submit" class="create_team_button" value="저장">
+<input type="submit" class="create_team_button" value="생성하기">
 </form>
 </div>
+
 @include("bottom")
 </body>
 </html>

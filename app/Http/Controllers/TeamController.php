@@ -28,7 +28,8 @@ class TeamController extends Controller
         'Createdid'=>$request->user()->email,
     ]);
     
-    return redirect()->back();
+    //return redirect()->back();
+    return redirect('/allteams'); //생성하구 allteams로 이동
 
   
 }
@@ -38,7 +39,7 @@ public function maintable(){
   $ateam=DB::table('teams')
   ->select('title','id')
   ->orderBy('created_at','desc')
-  ->limit(6)
+  ->limit(7)
   ->get();
   $countuser=DB::table('users')
   ->count();
