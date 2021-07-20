@@ -22,7 +22,7 @@
 [Day11](#Day11)-auth학습,auth폴더 설정  
 [Day12](#Day12)-auth추가 학습 인증경로 수정 실패  
 [Day13](#Day13)-인증된 사용자만 진입할수 있는 페이지 설정/외래키학습,컨트롤러 라우트 복습 90%이상 이해  
-[Day14](#Day14)-
+[Day14](#Day14)-신청시스템,App테이블 개발/라라벨에 적용되는 sql 학습  
 <hr>
 
 # Day1 
@@ -372,8 +372,22 @@ https://jootc.com/p/201807211394
  외래키를 사용하여 생성  
  
  완성된 최종 DB구조  
- ![image](https://user-images.githubusercontent.com/75231868/126259355-8a26480f-498e-41ab-883b-ec91669a4c55.png)
+ ![image](https://user-images.githubusercontent.com/75231868/126259355-8a26480f-498e-41ab-883b-ec91669a4c55.png)  
+ 
+ 컴포넌트 내에 alert창 삽입  
+ 원하는 팀에 신청하는 시스템 완성  
+ 외래키를 적용한 이유는 후에 내가 만든팀 또는 내가 신청한 팀을 조회할때 조금더 유용하기 위함임  
+ confirm창을 이용하여 submit 전 한번 더 확인  
+ 중복 신청을 막는코드 작성  
+ buttom 에 깃허브 링크 연결  
+ teaminfo 출력창이 가운데 위치 하지 않은 문제 해결
 
 ## 학습Part  
 행안부 주소 db 사이트  
-https://www.juso.go.kr/addrlink/main.do?cPath=99MM
+https://www.juso.go.kr/addrlink/main.do?cPath=99MM  
+기존에 user테이블에 데이터를 넣는것 보다 더 빠르고 단순한 insert를 학습하여 app테이블에 적용    
+comfirm 창 적용방법 학습  
+2주동안 컴포넌트 라우트 부분을 학습한 결과 자유롭게 사용할 수 있게되었고  
+라우트 시스템의 편리성을 이해하게됨  
+
+<hr>
