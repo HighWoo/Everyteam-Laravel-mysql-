@@ -22,6 +22,7 @@
 [Day11](#Day11)-auth학습,auth폴더 설정  
 [Day12](#Day12)-auth추가 학습 인증경로 수정 실패  
 [Day13](#Day13)-인증된 사용자만 진입할수 있는 페이지 설정/외래키학습,컨트롤러 라우트 복습 90%이상 이해  
+[Day14](#Day14)-
 <hr>
 
 # Day1 
@@ -360,3 +361,17 @@ https://jootc.com/p/201807211394
 
 
 <hr>
+
+# Day14      
+(2021/07/20)
+## 개발part 
+팀을 신청 하는 테이블인 Apps 테이블 생성  
+ $table->foreignId('user_id')  
+            ->constrained()  
+            ->onDelete('cascade');  
+ 외래키를 사용하여 생성  
+ 
+ 완성된 최종 DB구조  
+ ![image](https://user-images.githubusercontent.com/75231868/126259355-8a26480f-498e-41ab-883b-ec91669a4c55.png)
+
+## 학습Part
