@@ -11,6 +11,12 @@
 </head>
 
 <body>
+           @if(session()->has('controller_alert'))
+            <script type="text/javascript">
+             alert('{{ session('controller_alert') }}');
+            </script>
+            @endif
+            
     <div id="headerl" class="headerl">
 
       <div id="Naviationl" class="Naviation left">

@@ -27,4 +27,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/allteams', [App\Http\Controllers\TeamController::class ,'bviewtable'])->name('allteam');
 Route::get('/teaminfo/{team}', [App\Http\Controllers\TeamController::class ,'show']);
 
-
+Route::post('/teaminfo',[App\Http\Controllers\Appcontroller::class ,'Apply'])->name('apps.apply');
