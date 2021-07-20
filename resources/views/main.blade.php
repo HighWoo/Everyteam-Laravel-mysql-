@@ -31,7 +31,7 @@
   </a>
  @endguest
   <a class="figuresmalll" href="{{ url('/') }}">
-    팀찾기
+    내가 신청한 팀
   </a>
   </div>
 <div class="mainl figure">
@@ -42,7 +42,7 @@
 모집중인 {{ $countteam }}개의 팀
 </a>
   <a class="figuresmalll" href="{{ url('/') }}">
-오늘의팀:00
+  내가 생성한 팀
   </a>
 </div>
 <div id="annl" class="mainl annmainl">
