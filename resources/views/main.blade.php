@@ -30,7 +30,7 @@
     팀 생성하기
   </a>
  @endguest
-  <a class="figuresmalll" href="{{ url('/') }}">
+  <a class="figuresmalll" href="{{ route('myappteam') }}">
     내가 신청한 팀
   </a>
   </div>
@@ -41,7 +41,7 @@
 <a class="figuresmalll" href="{{ url('/') }}">
 모집중인 {{ $countteam }}개의 팀
 </a>
-  <a class="figuresmalll" href="{{ url('/') }}">
+  <a class="figuresmalll" href="{{ route('mycreateteam') }}">
   내가 생성한 팀
   </a>
 </div>

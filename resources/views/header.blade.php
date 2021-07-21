@@ -34,7 +34,7 @@
     @else
             
             <a id="neviusertext" class="neviusertext"   >
-                {{ Auth::user()->name}}{{'님 안녕하세요' }}
+                {{Auth::user()->name}}{{'님 안녕하세요' }}
             </a>
 
             <a class="Loginbutton" href="">내정보</a>

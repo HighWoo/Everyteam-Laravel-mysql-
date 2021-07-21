@@ -15,12 +15,12 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
-            $table->char('title',50);
-            $table->char('class',50);
+            $table->char('title',20);
+            $table->char('class',20);
             $table->char('address',50);
             $table->longText('content');
             $table->integer('countm');
-            $table->char('Createdid',50);
+            $table->integer('Createdid');
             $table->timestamps();
         });
     }

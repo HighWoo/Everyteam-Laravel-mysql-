@@ -22,9 +22,15 @@ Auth::routes();
 Route::get('/create',[App\Http\Controllers\TeamController::class ,'create'])->name('teams.create');
 Route::post('/create',[App\Http\Controllers\TeamController::class ,'store'])->name('teams.store');
 Route::get('/', [App\Http\Controllers\TeamController::class ,'maintable']);
+Route::get('/home', [App\Http\Controllers\TeamController::class ,'maintable']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/allteams', [App\Http\Controllers\TeamController::class ,'bviewtable'])->name('allteam');
 Route::get('/teaminfo/{team}', [App\Http\Controllers\TeamController::class ,'show']);
 
 Route::post('/teaminfo',[App\Http\Controllers\Appcontroller::class ,'Apply'])->name('apps.apply');
+
+Route::get('/mycreateteam', [App\Http\Controllers\TeamController::class ,'mycreateteamtable'])->name('mycreateteam');
+Route::get('/myappteam', [App\Http\Controllers\TeamController::class ,'myappteamtable'])->name('myappteam');
+
+Route::get('/volunteer/{team}', [App\Http\Controllers\TeamController::class ,'volshow']);

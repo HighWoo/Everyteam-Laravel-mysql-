@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 use App\Models\Team; // 추가
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 class TeamController extends Controller
 {
+
+  
   public function create(){
       return view('team.create');
   }
@@ -25,7 +28,7 @@ class TeamController extends Controller
         'address'=>$request->address,
         'content'=>$request->content,
         'countm'=>$request->countm,
-        'Createdid'=>$request->user()->email,
+        'Createdid'=>$request->user()->id,
     ]);
     
     //return redirect()->back();
@@ -63,4 +66,26 @@ public function show(Team $team){
 
     return view('team.teaminfo',compact('team'));
   }
+
+//aaaaa
+  public function volshow(Team $team){
+    $voluser=DB::select('select users.id,users.name,users.email
+    from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
+    return view('team.volunteer',compact('team','voluser'));
+  }
+
+
+  public function mycreateteamtable(){
+    //$team = \App\Models\Team::all(); 
+    $mycteam=DB::select('select * from teams where Createdid = ? ', [Auth::user()->id]);
+    return view('team.mycreateteam',compact('mycteam'));
+  }
+  
+  public function myappteamtable(){
+   $myateam=DB::select('select teams.id,teams.title,teams.class,teams.address,teams.countm 
+   from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id]);
+   return view('team.myappteam',compact('myateam')); 
+  }
+ 
 }
+
