@@ -56,20 +56,20 @@ public function maintable(){
 public function bviewtable(){
 
     $team = \App\Models\Team::all(); 
-  
-  
+   
     return view('team.allteams',compact('team'));
   }
   
 
 public function show(Team $team){
-
+    
+   
     return view('team.teaminfo',compact('team'));
   }
 
 //aaaaa
   public function volshow(Team $team){
-    $voluser=DB::select('select users.id,users.name,users.email
+    $voluser=DB::select('select users.id,users.name,users.email,users.phonenum,users.kakao
     from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
     return view('team.volunteer',compact('team','voluser'));
   }
@@ -86,6 +86,8 @@ public function show(Team $team){
    from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id]);
    return view('team.myappteam',compact('myateam')); 
   }
+
+  
  
 }
 

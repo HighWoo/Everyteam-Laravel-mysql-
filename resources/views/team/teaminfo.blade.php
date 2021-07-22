@@ -46,6 +46,7 @@
       <table class="list-table">
         <thead>
             <tr>
+              
                  <th width="464">공고 게시일</th>
                  <th width="464">최종 수정일</th>
               </tr>
@@ -70,18 +71,20 @@
         </tr>
       </tbody>
     </thead>
+
       </table>
-
   
-
+     @if($team->Createdid == Auth::user()->id) 
+     본인이 생성한 팀입니다
+     @else
       <form name="forma" action="{{ route('apps.apply') }}" method="POST">
         @csrf
       <input type="hidden" name="teamid" value="{{$team -> id}}">
       <input type="hidden" name="userid" value="{{Auth::user()->id}}">
       <input type="button" class="create_team_button" value="신청하기" onclick="Click()">
-    
+      
       </form>
-
+@endif 
     </div>
     
 

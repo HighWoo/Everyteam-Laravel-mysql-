@@ -29,6 +29,8 @@ return [
         'string' => 'The :attribute must be between :min and :max characters.',
         'array' => 'The :attribute must have between :min and :max items.',
     ],
+    'phonenum' =>'올바르지 않은 형식의 전화번호 입니다', //
+    'kakao'=>'올바르지 않은 형식의 오픈카카오톡 링크입니다',
     'boolean' => 'The :attribute field must be true or false.',
     'confirmed' => ':attribute 가 같지 않습니다',
     'current_password' => 'The password is incorrect.',
@@ -48,7 +50,7 @@ return [
     'gt' => [
         'numeric' => 'The :attribute must be greater than :value.',
         'file' => 'The :attribute must be greater than :value kilobytes.',
-        'string' => 'The :attribute must be greater than :value characters.',
+        'string' => ':attribute 의 텍스트수는  :value 자 보다 작아야합니다.',
         'array' => 'The :attribute must have more than :value items.',
     ],
     'gte' => [

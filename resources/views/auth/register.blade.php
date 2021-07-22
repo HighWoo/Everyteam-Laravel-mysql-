@@ -21,6 +21,20 @@
       <br><strong>{{ $message }}</strong>
      </span>
     @enderror
+    <input id="kakao" type="text" placeholder="카카오 오픈카톡 링크(전화번호 공개거부시 대체 연락 수단입니다 )" class="logintextbox bottom @error('kakao') is-invalid @enderror" name="kakao" value="{{ old('kakao') }}" required autocomplete="phonenum" >
+    @error('kakao')
+            <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+         </span>
+      @enderror
+    {{--  --}}
+    <input id="phonenum" type="text" placeholder="전화번호(팀 신청시 생성자 에게 전달됩니다)" class="logintextbox bottom @error('phonenum') is-invalid @enderror" name="phonenum" value="{{ old('phonenum') }}" required autocomplete="phonenum" >
+    @error('phonenum')
+            <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+         </span>
+      @enderror
+    {{--  --}}
     <input id="password" type="password" placeholder="비밀번호" class="logintextbox bottom @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
    
     <input id="password-confirm" type="password" placeholder="비밀번호 재입력" class="logintextbox bottom" name="password_confirmation" required autocomplete="new-password">

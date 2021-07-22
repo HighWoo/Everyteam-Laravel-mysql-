@@ -10,7 +10,7 @@
 </head> 
 <script>
   function Click(){
-    if(confirm("정말 지원 하시겠습니까?")==true){
+    if(confirm("정말 삭제하시겠습니까? 삭제후에는 복구가 불가능합니다")==true){
       document.forma.submit();
     }
     else{
@@ -76,6 +76,7 @@
             <tr>
                  <th width="464">이름</th>
                  <th width="464">이메일</th>
+                 <th width="464">채팅방</th>
  
               </tr>
         <tbody>
@@ -83,6 +84,7 @@
             <tr>
                 <td width="464">{{$item -> name}}</td>
                 <td width="464">{{$item -> email}}</td>
+                <td width="464"><a href="{{$item -> kakao}}" target="_blank" >채팅입장하기</a></td>
             </tr>
            @endforeach 
     </thead>
@@ -90,11 +92,11 @@
       </table>
   
 
-      <form name="forma" action="{{ route('apps.apply') }}" method="POST">
+      <form name="forma" action="{{ route('apps.delete') }}" method="POST">
         @csrf
       <input type="hidden" name="teamid" value="{{$team -> id}}">
       <input type="hidden" name="userid" value="{{Auth::user()->id}}">
-      <input type="button" class="create_team_button" value="수락하기" onclick="Click()">
+      <input type="button" class="create_team_button" value="삭제" onclick="Click()">
       </form>
 
     </div>
