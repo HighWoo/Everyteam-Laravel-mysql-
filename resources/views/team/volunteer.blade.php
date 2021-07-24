@@ -9,9 +9,17 @@
     @include('header')
 </head> 
 <script>
-  function Click(){
+  function DClick(){
     if(confirm("정말 삭제하시겠습니까? 삭제후에는 복구가 불가능합니다")==true){
       document.forma.submit();
+    }
+    else{
+      return;
+    }
+  }
+  function EClick(){
+    if(confirm("정말 모집완료처리 하시겠습니까?\n모집완료를 하시면 더이상 공고모집글에 출력되지 않으며\n지원자를 받을 수 없습니다")==true){
+      document.forme.submit();
     }
     else{
       return;
@@ -92,13 +100,27 @@
       </table>
   
 
-      <form name="forma" action="{{ route('apps.delete') }}" method="POST">
+      <form name="forma" action="{{ route('apps.delend') }}" method="POST">
         @csrf
       <input type="hidden" name="teamid" value="{{$team -> id}}">
       <input type="hidden" name="userid" value="{{Auth::user()->id}}">
-      <input type="button" class="create_team_button" value="삭제" onclick="Click()">
+      <input type="hidden" name="buttonc" value="1">
+  
       </form>
 
+      <form name="forme" action="{{ route('apps.delend') }}" method="POST">
+        @csrf
+      <input type="hidden" name="teamid" value="{{$team -> id}}">
+      <input type="hidden" name="userid" value="{{Auth::user()->id}}">
+      <input type="hidden" name="buttonc" value="2">
+      
+      </form>
+      @if($team->end==0)
+      <button id="Dbutton" class="create_team_button" onclick="DClick()">삭제</button>
+      <button id="Ebutton" class="create_team_button" onclick="EClick()">모집완료</button>
+      @else
+      완료처리를 진행하신 공고입니다
+      @endif
     </div>
     
 

@@ -21,6 +21,7 @@ class CreateTeamsTable extends Migration
             $table->longText('content');
             $table->integer('countm');
             $table->integer('Createdid');
+            $table->boolean('end');
             $table->timestamps();
         });
     }

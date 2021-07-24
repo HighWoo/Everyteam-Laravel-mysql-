@@ -15,7 +15,8 @@ class Team extends Model
         'address',
         'content',
         'countm',
-        'Createdid'
+        'Createdid',
+        'end'
     ];
 }
 

@@ -81,8 +81,11 @@
         @csrf
       <input type="hidden" name="teamid" value="{{$team -> id}}">
       <input type="hidden" name="userid" value="{{Auth::user()->id}}">
-      <input type="button" class="create_team_button" value="신청하기" onclick="Click()">
-      
+         @if($userapp==0)
+          <input type="button" class="create_team_button" value="신청하기" onclick="Click()">
+         @else
+          이미 지원한 팀입니다
+          @endif
       </form>
 @endif 
     </div>

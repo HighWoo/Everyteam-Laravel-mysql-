@@ -20,10 +20,32 @@ class AppController extends Controller
  
 
 }
-public function delete(Request $request){
+public function delend(Request $request){
+    if($request->buttonc==1){
+        if(Auth::user()->id==$request->userid){
+        DB::delete('delete from teams where id = ? and Createdid = ?', [$request->teamid, $request->userid]);
+        return redirect('/mycreateteam')->with('controller_alert', '삭제처리가 되었습니다');
+        }
+        else
+        return redirect('/')->with('controller_alert', '잘못된 접근입니다');
+        }
+   else if($request->buttonc==2){
+        if(Auth::user()->id==$request->userid){
+        DB::update('update teams set end = 1 where id = ? and Createdid = ?', [$request->teamid, $request->userid]);
+        return redirect('/mycreateteam')->with('controller_alert', '모집완료 처리가 되었습니다');
+        }
+        else
+        return redirect('/')->with('controller_alert', '잘못된 접근입니다');
+}
+    else{
+        return redirect('/')->with('controller_alert', '에러입니다');
+    }
+    }
+
+public function end(Request $request){
     if(Auth::user()->id==$request->userid){
-    DB::delete('delete from teams where id = ? and Createdid = ?', [$request->teamid, $request->userid]);
-    return redirect('/mycreateteam')->with('controller_alert', '삭제처리가 되었습니다');
+    DB::update('update teams set end = 1 where id = ? and Createdid = ?', [$request->teamid, $request->userid]);
+    return redirect('/mycreateteam')->with('controller_alert', '모집완료 처리가 되었습니다');
     }
    else
    return redirect('/')->with('controller_alert', '잘못된 접근입니다');

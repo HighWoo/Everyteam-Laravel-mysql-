@@ -29,6 +29,7 @@ class TeamController extends Controller
         'content'=>$request->content,
         'countm'=>$request->countm,
         'Createdid'=>$request->user()->id,
+        'end'=>0,
     ]);
     
     //return redirect()->back();
@@ -41,6 +42,7 @@ public function maintable(){
   //$team = \App\Models\Team::all(); 
   $ateam=DB::table('teams')
   ->select('title','id')
+  ->where('end',0)
   ->orderBy('created_at','desc')
   ->limit(7)
   ->get();
@@ -62,12 +64,11 @@ public function bviewtable(){
   
 
 public function show(Team $team){
-    
-   
-    return view('team.teaminfo',compact('team'));
+    $userapp=DB::table('apps')->select('id')->where('user_id',Auth::user()->id)->where('team_id',$team -> id)->count();
+  return view('team.teaminfo',compact('team','userapp'));
   }
 
-//aaaaa
+//
   public function volshow(Team $team){
     $voluser=DB::select('select users.id,users.name,users.email,users.phonenum,users.kakao
     from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
@@ -82,7 +83,7 @@ public function show(Team $team){
   }
   
   public function myappteamtable(){
-   $myateam=DB::select('select teams.id,teams.title,teams.class,teams.address,teams.countm 
+   $myateam=DB::select('select teams.id,teams.title,teams.class,teams.address,teams.countm,teams.end 
    from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id]);
    return view('team.myappteam',compact('myateam')); 
   }

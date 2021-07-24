@@ -27,8 +27,10 @@
           </thead>
          
         <tbody>
+            
             @foreach ($team as $item)
             <tr>
+                @if($item->end==0)
                 <td width="100">{{$item -> class}}</td>
                 @guest
                     @if(Route::has('login'))
@@ -40,7 +42,7 @@
                 {{-- <td width="500"><a href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td> --}}
                 <td width="200">{{$item -> address}}</td>
                 <td width="80">{{$item -> countm}}</td>
- 
+              @endif
    
         
         

@@ -24,6 +24,7 @@
                  <th width="550">제목</th>
                  <th width="200">모임위치</th>
                  <th width="80">모집인원</th>
+                 <th width="80">완료여부</th>
               </tr>
           </thead>
         <tbody>
@@ -40,6 +41,7 @@
                 {{-- <td width="500"><a href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td> --}}
                 <td width="200">{{$item -> address}}</td>
                 <td width="80">{{$item -> countm}}</td>
+                <td width="80">@if($item->end==0)모집중 @elseif($item->end==1)모집완료 @else 에러 @endif</td>
         </tr>
             @endforeach 
         </tbody>
