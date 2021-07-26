@@ -33,7 +33,7 @@ class TeamController extends Controller
     ]);
     
     //return redirect()->back();
-    return redirect('/allteams'); //생성하구 allteams로 이동
+    return redirect('/allteams')->with('controller_alert', '생성이 완료되었습니다'); //생성하구 allteams로 이동
 
   
 }
@@ -74,7 +74,11 @@ public function show(Team $team){
     from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
     return view('team.volunteer',compact('team','voluser'));
   }
-
+  public function appshow(Team $team){ //
+    $voluser=DB::select('select users.id,users.name,users.email,users.phonenum,users.kakao
+    from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
+    return view('team.myappinfo',compact('team','voluser'));
+  }
 
   public function mycreateteamtable(){
     //$team = \App\Models\Team::all(); 

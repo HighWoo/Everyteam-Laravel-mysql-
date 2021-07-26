@@ -27,7 +27,7 @@
         @if (Route::has('login'))
         <a class="neviusertext fake">=============</a>
                 <a class="Loginbutton" href="{{ route('login') }}">로그인</a>
-                <a class="Loginbutton" href="{{ route('login') }}">회원가입</a>
+                <a class="Loginbutton" href="{{ route('register') }}">회원가입</a>
                
         @endif
 

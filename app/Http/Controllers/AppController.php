@@ -50,4 +50,14 @@ public function end(Request $request){
    else
    return redirect('/')->with('controller_alert', '잘못된 접근입니다');
 }
+
+public function appcancel(Request $request){
+    if(Auth::user()->id==$request->userid){
+        DB::delete('delete from apps where team_id = ? and user_id = ?', [$request->teamid, $request->userid]);
+        return redirect('/myappteam')->with('controller_alert', '지원이 취소 되었습니다');
+        }
+        else
+        return redirect('/')->with('controller_alert', '잘못된 접근입니다');
+}
+
 }

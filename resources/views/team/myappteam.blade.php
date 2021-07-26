@@ -36,7 +36,7 @@
                 <td width="500"><a class="maintablefont" href="{{ route('login') }}" onClick="alert('상세보기는 로그인이 필요합니다')">{{$item-> title}}</a></td>
                 @endif
                 @else
-                <td width="500"><a class="maintablefont" href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td>
+                <td width="500"><a class="maintablefont" href="/myappinfo/{{$item -> id}}">{{$item -> title}}</a></td>
                 @endguest
                 {{-- <td width="500"><a href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td> --}}
                 <td width="200">{{$item -> address}}</td>

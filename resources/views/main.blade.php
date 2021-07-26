@@ -24,15 +24,20 @@
   <a class="figuresmalll"  href="{{ route('login') }}" onclick="alert('팀 생성은 로그인이 필요합니다')" >
     팀 생성하기
   </a>
+  <a class="figuresmalll" href="{{ route('login') }}" onclick="alert('내가 신청한팀 확인은 로그인이 필요합니다')">
+    내가 신청한 팀
+  </a>
   @endif
   @else
   <a class="figuresmalll"  href="{{ url('/create') }} ">
     팀 생성하기
   </a>
- @endguest
   <a class="figuresmalll" href="{{ route('myappteam') }}">
     내가 신청한 팀
   </a>
+ @endguest
+
+  
   </div>
 <div class="mainl figure">
 <a class="figuresmalll" href="{{ url('/') }}">
@@ -40,10 +45,20 @@
 </a>
 <a class="figuresmalll" href="{{ url('/') }}">
 모집중인 {{ $countteam }}개의 팀
+
 </a>
-  <a class="figuresmalll" href="{{ route('mycreateteam') }}">
+@guest
+@if (Route::has('login'))
+  <a class="figuresmalll" href="{{ route('login') }}" onclick="alert('내가 생성한 팀 확인은 로그인이 필요합니다')">
   내가 생성한 팀
   </a>
+  @endif
+  @else
+  <a class="figuresmalll" href="{{ route('mycreateteam') }}">
+    내가 생성한 팀
+    </a>
+    @endguest
+ 
 </div>
 <div id="annl" class="mainl annmainl">
 <div id="annsml" class="annsmalll">

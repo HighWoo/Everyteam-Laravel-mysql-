@@ -31,8 +31,9 @@ Route::get('/teaminfo/{team}', [App\Http\Controllers\TeamController::class ,'sho
 
 Route::post('/teaminfo',[App\Http\Controllers\Appcontroller::class ,'Apply'])->name('apps.apply');
 Route::post('/volunteer',[App\Http\Controllers\Appcontroller::class ,'delend',])->name('apps.delend');
-
+Route::post('/myappinfo',[App\Http\Controllers\Appcontroller::class ,'appcancel',])->name('apps.cancel');
 Route::get('/mycreateteam', [App\Http\Controllers\TeamController::class ,'mycreateteamtable'])->name('mycreateteam');
 Route::get('/myappteam', [App\Http\Controllers\TeamController::class ,'myappteamtable'])->name('myappteam');
 
 Route::get('/volunteer/{team}', [App\Http\Controllers\TeamController::class ,'volshow']);
+Route::get('/myappinfo/{team}', [App\Http\Controllers\TeamController::class ,'appshow']);
