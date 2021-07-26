@@ -48,10 +48,11 @@ public function maintable(){
   ->get();
   $countuser=DB::table('users')
   ->count();
-  $countteam=DB::table('teams')
-  ->count();
+  $countteam=DB::table('teams')->where('end',0)->count();
+
+  $countendteam=DB::table('teams')->where('end',1)->count();
  
-  return view('main',compact('ateam','countuser','countteam'));
+  return view('main',compact('ateam','countuser','countteam','countendteam'));
 
 }
 

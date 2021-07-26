@@ -16,48 +16,33 @@
     <img src ="/image/mainimage.png" alt="faild">
 </div>
 <div class="mainl figure">
-  <a class="figuresmalll" href="{{ url('/') }}">
-    EveryTeam 도우미
+  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+    Study
   </a>
-  @guest
-  @if (Route::has('login'))
-  <a class="figuresmalll"  href="{{ route('login') }}" onclick="alert('팀 생성은 로그인이 필요합니다')" >
-    팀 생성하기
+  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+    Sport
   </a>
-  <a class="figuresmalll" href="{{ route('login') }}" onclick="alert('내가 신청한팀 확인은 로그인이 필요합니다')">
-    내가 신청한 팀
+  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+    Club
   </a>
-  @endif
-  @else
-  <a class="figuresmalll"  href="{{ url('/create') }} ">
-    팀 생성하기
+  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+    Game
   </a>
-  <a class="figuresmalll" href="{{ route('myappteam') }}">
-    내가 신청한 팀
+  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+    Mentor
   </a>
- @endguest
+
+  
+
 
   
   </div>
 <div class="mainl figure">
-<a class="figuresmalll" href="{{ url('/') }}">
-{{ $countuser }}명의 회원
+<a class="figuresmalll_secondline" href="{{ url('/') }}">
+현재 Everyteam 에는  <span style="color:#e0997f;font-weight: bold">{{ $countuser }}명의 회원</span>과 현재<span style="color:#e0997f;font-weight: bold"> 
+ 모집중인 {{ $countteam }}개의팀</span> 
+<br> <span style="color:#e0997f;font-weight: bold;">매칭이 완료된 {{ $countendteam }}개의팀</span>이 있습니다
 </a>
-<a class="figuresmalll" href="{{ url('/') }}">
-모집중인 {{ $countteam }}개의 팀
-
-</a>
-@guest
-@if (Route::has('login'))
-  <a class="figuresmalll" href="{{ route('login') }}" onclick="alert('내가 생성한 팀 확인은 로그인이 필요합니다')">
-  내가 생성한 팀
-  </a>
-  @endif
-  @else
-  <a class="figuresmalll" href="{{ route('mycreateteam') }}">
-    내가 생성한 팀
-    </a>
-    @endguest
  
 </div>
 <div id="annl" class="mainl annmainl">

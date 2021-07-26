@@ -300,8 +300,20 @@ display:inline-block;
   
 
 }
-.figuresmalll{
-  width: 303.5px;
+.figuresmalll_secondline{
+  width: 929.7px;
+  height: 100px;
+  background-color: white;
+  display:inline-block;
+  border:2px solid #f2ad94;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2;
+  cursor: pointer;
+
+}
+.figuresmalll_firstline{
+  width: 178.4px;
   height: 100px;
   background-color: white;
   display:inline-block;
