@@ -71,15 +71,26 @@
     </div>
     
     <div id="menul" class="menul">
+        @guest
+        @if (Route::has('login'))
         <div id="menubl" class="menubuttonsl">
-               <a class="custom-btn btn-3" href="{{ url('/') }}"><span>Study</span></a> 
-               <a class="custom-btn btn-3" href="{{ url('/') }}"><span>Sport</span></a> 
-               <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Club</span></a> 
-               <a class="custom-btn btn-3 " href="{{ url('/') }}"><span>Game</span></a> 
-               <a class="custom-btn btn-3 right" href="{{ url('/create') }}"><span>Mentor</span></a> 
+               <a class="custom-btn btn-3" href="{{ url('/') }}"><span>도움말</span></a> 
+               <a class="custom-btn btn-3 " href="{{ url('/allteams') }}"><span>팀목록</span></a> 
+               <a class="custom-btn btn-3" href="{{ route('login') }}" onclick="alert('팀을 생성하시려면 로그인이 필요합니다')"><span>팀생성</span></a> 
+               <a class="custom-btn btn-3" href="{{ route('login') }}" onclick="alert('신청한팀 확인은 로그인이 필요합니다')"><span>신청한팀</span></a> 
+               <a class="custom-btn btn-3 right" href="{{ route('login') }}" onclick="alert('생성한팀 확인은 로그인이 필요합니다')"><span>생성한팀</span></a> 
+              
         </div>
-             
-        
+        @endif
+        @else
+        <div id="menubl" class="menubuttonsl">
+            <a class="custom-btn btn-3" href="{{ url('/') }}"><span>도움말</span></a> 
+            <a class="custom-btn btn-3" href="{{ url('/create') }}"><span>팀생성</span></a> 
+            <a class="custom-btn btn-3 " href="{{ route('myappteam') }}"><span>신청한팀</span></a> 
+            <a class="custom-btn btn-3 " href="{{ route('mycreateteam')}}"><span>생성한팀</span></a> 
+            <a class="custom-btn btn-3 right" href="{{ url('/allteams') }}"><span>팀목록</span></a> 
+       </div>
+        @endguest
         
     </div>
     

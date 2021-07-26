@@ -89,6 +89,7 @@ public function show(Team $team){
   public function myappteamtable(){
    $myateam=DB::select('select teams.id,teams.title,teams.class,teams.address,teams.countm,teams.end 
    from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id]);
+
    return view('team.myappteam',compact('myateam')); 
   }
 

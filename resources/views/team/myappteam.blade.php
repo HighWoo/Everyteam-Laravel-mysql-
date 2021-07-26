@@ -30,6 +30,7 @@
         <tbody>
             @foreach ($myateam as $item)
             <tr>
+             
                 <td width="100">{{$item -> class}}</td>
                 @guest
                 @if(Route::has('login'))
