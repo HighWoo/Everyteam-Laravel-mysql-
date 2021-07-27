@@ -537,6 +537,7 @@ day21 개발사항-검색 시스템 개발
 계속 오류발생 links가 제대로 출력되지 않음  
 ![image](https://user-images.githubusercontent.com/75231868/127119160-2a261a08-0395-48e6-bcc8-b65b8f2c1015.png)
 -> 페이지네이션 버튼을 라라벨에서 제공하는 것을 사용하지 않고 직접 개발  
+![image](https://user-images.githubusercontent.com/75231868/127149810-bd779285-6795-439a-bb12-a5bcf5c9bc70.png)
 
 페이지 네이션이 필요한 모든 페이지에 작성완료  
 기존 외래키 주소 호출방식에서 조인 방식으로 바꿈  
