@@ -58,9 +58,11 @@ public function maintable(){
 
 public function bviewtable(){
 
-    $team = \App\Models\Team::all(); 
+   $team = DB::table('teams')->select('*')->where('end',0)->paginate(2);
+   //$team = \App\Models\Team::all(); 
    
     return view('team.allteams',compact('team'));
+
   }
   
 
@@ -83,14 +85,18 @@ public function show(Team $team){
 
   public function mycreateteamtable(){
     //$team = \App\Models\Team::all(); 
-    $mycteam=DB::select('select * from teams where Createdid = ? ', [Auth::user()->id]);
+
+    //$mycteam=DB::select('select * from teams where Createdid = ? ', [Auth::user()->id]);
+    $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->paginate(5);
     return view('team.mycreateteam',compact('mycteam'));
+  
   }
   
   public function myappteamtable(){
-   $myateam=DB::select('select teams.id,teams.title,teams.class,teams.address,teams.countm,teams.end 
-   from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id]);
-
+//$myateam=AA::select('select teams.id,teams.title,teams.class,teams.address,teams.countm,teams.end 
+ //from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id])->paginate(2);
+$myateam=DB::table('teams')->join('apps','teams.id','=','apps.team_id')->select('teams.*')->where('apps.user_id',Auth::user()->id)
+->paginate(5);
    return view('team.myappteam',compact('myateam')); 
   }
 

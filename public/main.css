@@ -615,3 +615,20 @@ display:inline-block;
 .bottomtext:hover{
   color: #f28d77;
 }
+
+.buttonpn{
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: solid 1px #000000;
+}
+
+.buttonpn.previous{
+  margin-right: 20px;
+}
+
+.buttonpn:hover{
+ 
+  color: #f28d77;
+  border-bottom: solid 2px #f28d77;
+}
+

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @include('header')
-</head> 
-<body>   
+ 
+   
 
+</head> 
+
+<body>   
+    
 <div class="mainl basicl">
     <div class="infosmalll">
     <br> <a class="titletext">조회하신 팀 목록입니다</a><br>
@@ -49,12 +55,31 @@
         </tr>
             @endforeach 
 
-      
+     
         </tbody>
     
       </table>
+ 
+</div>
+   
+   
+</div>
+<div class="mainl basicl">
+<div class="infosmalll">
+  @if($team->currentPage()==$team->firstItem())
+   <a class="buttonpn previous" href=""onclick="alert('첫 페이지 입니다')"><-이전</a>
+  @else
+   <a class="buttonpn previous" href="allteams?page={{ $team->currentPage()-1 }}"><-이전</a>
+ @endif
+ @if($team->currentPage()==$team->lastPage())
+ <a class="buttonpn " href=""onclick="alert('마지막 페이지 입니다')">다음-></a>
+@else
+<a class="buttonpn " href="allteams?page={{ $team->currentPage()+1 }}">다음-></a>
+@endif
 </div>
 </div>
+
 @include("bottom")
+
 </body>
 </html>

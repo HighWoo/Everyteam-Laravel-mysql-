@@ -49,6 +49,20 @@
       </table>
 </div>
 </div>
+<div class="mainl basicl">
+    <div class="infosmalll">
+      @if($myateam->currentPage()==$myateam->firstItem()+1)
+       <a class="buttonpn previous" href=""onclick="alert('첫 페이지 입니다')"><-이전</a>
+      @else
+       <a class="buttonpn previous" href="myappteam?page={{ $myateam->currentPage()-1 }}"><-이전</a>
+     @endif
+     @if($myateam->currentPage()==$myateam->lastPage())
+     <a class="buttonpn " href=""onclick="alert('마지막 페이지 입니다')">다음-></a>
+    @else
+    <a class="buttonpn " href="myappteam?page={{ $myateam->currentPage()+1 }}">다음-></a>
+    @endif
+    </div>
+    </div>
 @include("bottom")
 </body>
 </html>
