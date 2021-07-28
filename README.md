@@ -562,6 +562,6 @@ aws서버구축 사이트 자체를 올리는것은 성공/db연동 실패
 aws외의 여러가지 서버를 찾아보았지만 aws가 가장 괜찮다고 판단  
 mac위주의 설명이라 쉽지않음  
 외국 영상들을 찾아서 학습  
-
+elastic beanstalk을 활용하여 개발하기로 결정  
 day23 https://youtu.be/ISVaMijczKc
 <hr>
