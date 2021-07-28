@@ -60,7 +60,7 @@
     <div id="searchlayout" class="searchl">
     <form>
         <div id="smallsearchlayout" class="searchsl">
-    <INPUT type="text" name="Searchtext" placeholder="검색어를 입력하세요" class="search"/>
+    <INPUT type="text" name="Searchtext" placeholder="제목으로 검색하세요" class="search"/>
 
     {{-- <input type="submit" class="searchbutton" value=""> --}}
      <a  class="searchbutton" href=""></a>
