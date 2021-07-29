@@ -37,3 +37,7 @@ Route::get('/myappteam', [App\Http\Controllers\TeamController::class ,'myappteam
 
 Route::get('/volunteer/{team}', [App\Http\Controllers\TeamController::class ,'volshow']);
 Route::get('/myappinfo/{team}', [App\Http\Controllers\TeamController::class ,'appshow']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
