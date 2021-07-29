@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Team; // 추가
 use Illuminate\Http\Request;
 use DB;
+use App\Models\App; 
 use Auth;
 class TeamController extends Controller
 {
@@ -100,6 +101,12 @@ $myateam=DB::table('teams')->join('apps','teams.id','=','apps.team_id')->select(
    return view('team.myappteam',compact('myateam')); 
   }
 
+  
+
+
+
+
+  
   
  
 }
