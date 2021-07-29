@@ -34,6 +34,7 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day20](#Day20)-지원취소 기능 개발/메인 디자인 재 변경(버튼배치,count출력)  
 [Day21](#Day21)-페이지네이션  
 [Day22](#Day22)-배포/서버구축 학습  
+[Day23](#Day23)-배포완료  
 <hr>
 
 # Day1 
@@ -568,3 +569,49 @@ mac위주의 설명이라 쉽지않음
 elastic beanstalk을 활용하여 개발하기로 결정  
 day23 https://youtu.be/ISVaMijczKc
 <hr>
+
+# Day23    
+(2021/07/29)  
+## 개발Part
+서버 여는데 성공
+
+방법-aws Elastic Beanstalk 접속  
+애플리케이션과 환경 생성  
+환경-구성-소프트웨어 편집-문서루트 를 /public 으로 수정  
+데이터베이스-편집-아이디:root 비밀번호:1234567890 설정 후  
+.env 파일 수정  
+DB_HOST=db엔드포인트 입력  
+DB_PORT=3306  
+DB_DATABASE=  db 정보에서 name 입력  
+DB_USERNAME=  사용자이름  
+DB_PASSWORD= 비밀번호  
+
+.ebextensions/init.config 파일 생성  
+
+container_commands:  
+  01_drop_tables:  
+    command:  
+      "php artisan migrate:fresh"  
+
+  02_initdb:  
+    command:   
+      "php artisan migrate"  
+      
+.ebextensions/Nginx/nginx.conf  파일 생성  
+파일은 Woofile안에 있음  
+
+.platform/nginx/conf.d/elasticbeanstalk/laravel.conf 생성  
+
+location / {  
+    try_files $uri $uri/ /index.php?$query_string;  
+    gzip_static on;  
+}  
+
+
+완료
+
+<hr>
+
+
+
+
