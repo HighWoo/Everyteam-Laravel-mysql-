@@ -14,20 +14,34 @@ a{
 	text-decoration:none;
   color: black;
 }
-
-
+@font-face {
+  font-family: 'EliceDigitalBaeum_Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* 헤더 레이어 */
 .headerl {
     /* margin-left: 256px; */
     width: 100%;
-    height: 60px;
+    
   
     /* border: solid 2px #f2d2b6; */
-    border-top:solid 2px #f2ad94;
-    border-bottom:solid 2px #f2ad94;
+    border-top:solid 2px #c5c5c5;
+
 
   }
+.headerl.top{
+  height: 60px;
+    border-bottom:solid 2px #c5c5c5;
+}
    
   
 /* 네비게이션 바 */
@@ -51,19 +65,20 @@ a{
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
-    
-    color: #f2ad94;
+    font-family: 'GmarketSansMedium';
+    color: #0EC779;
     text-shadow: 2px 1px 1px rgb(255, 255, 255);
-    line-height: 2.5;
-    margin-left:1%;
-    margin-right: 35%;
+    line-height: 2.7;
+    margin-left:3%;
+    margin-right: 4%;
   }
 .Logo:hover{
-  color:#fd7070;
+  color:#28E094;
 }
 .neviusertext{
   margin-right: 15px;
   color: #000000;
+  font-family: 'EliceDigitalBaeum_Regular';
 
 }
 .neviusertext.fake{
@@ -76,7 +91,7 @@ a{
     height:37.5px;
 	font-size:18px;
 	font-weight: bold;
-  
+  font-family: 'EliceDigitalBaeum_Regular';
 	color:#000000;
   border-radius:1000px;
     border: solid 1px #ffffff;
@@ -89,7 +104,7 @@ a{
 }
 .Loginbutton:hover{
   cursor: pointer;
-	color:#f28d77;
+	color:#0EC779;
   
 }
 
@@ -99,7 +114,6 @@ a{
 .searchl {
   width: 100%;
   height: max-content;
-  padding: 20px 0;
   background-color: white;
   object-fit: contain;
   text-align: center;
@@ -110,7 +124,7 @@ a{
   display:inline-block;
 
   text-align: center;
-  border: solid 3px #f2ad94 ;
+  margin-top: 10px;
 
   border-right: none;
 
@@ -119,25 +133,38 @@ a{
 .search{
   border:none;
   width: 700px;
-  height: 60px;
-  margin: 0px 0px 0px 0px;
+  height: 50px;
+  font-family: 'EliceDigitalBaeum_Regular';
+  margin: 3px 0px 15px 0px;
   background-color: #ffffff;
-  font-size:20px;
+  border: solid 3px #0EC779 ;
+  font-size:18px;
   font-weight: bold;
   padding-left: 20px;
 }
 /* 검색 버튼 */
 .searchbutton{
-
-  border-right:solid 3px #f28d77;
- 
-  background: url( "image/sbutton.png" ) no-repeat; 
-
+  width: 80px;
+  height: 40px;
+  border:solid 2px #0EC779;
+  font-family: 'EliceDigitalBaeum_Regular';
+  font-weight: bold;
+  font-size: 17px;
   cursor: pointer;
-  padding: 19.2px 27px 19.2px 27px;
+  margin-left: 10px;
   background-color: #ffffff;
+  border-radius:4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
 }
+
+.searchbutton:hover{
+  background-color: #0EC779;
+  color: #ffffff;
+}
+
+
+
 
 /* .searchbutton{
   background-image: 'public/image/sbutton.png';
@@ -284,44 +311,53 @@ display:inline-block;
   text-align: center;
 
 }
-.mainl.imagel {/*메인프레임 사진레이어*/
-  display:inline-block;
-  object-fit: contain;
-  background-color: #ffffff;
-  margin-top:20px;
-
-}
 /* 메인프레임 숫자출력 레이어 */
 .mainl.figure{ 
 
   object-fit: contain;
   background-color: #ffffff;
-  margin-top:20px;
+
+  border-bottom:2px solid #c5c5c5 ;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #f8f8f8;
+}
+.mainl.figure2{
   
 
+    object-fit: contain;
+    background-color: #ffffff;
+    margin-top:20px;
+  
+  
+  
 }
 .figuresmalll_secondline{
   width: 929.7px;
-  height: 100px;
+  height: 50px;
   background-color: white;
   display:inline-block;
-  border:2px solid #f2ad94;
+  border:2px solid #c5c5c5;
   text-align: center;
   font-size: 1.5em;
   line-height: 2;
   cursor: pointer;
-
+  font-family: 'EliceDigitalBaeum_Regular';
+  border-radius: 15px;
 }
 .figuresmalll_firstline{
   width: 178.4px;
   height: 100px;
+  font-family: 'EliceDigitalBaeum_Regular';
+  font-weight: bold;
   background-color: white;
   display:inline-block;
-  border:2px solid #f2ad94;
+  border:2px solid #c5c5c5;
   text-align: center;
   font-size: 1.5em;
   line-height: 4;
   cursor: pointer;
+  border-radius: 15px;
 }
 .figuresmalll:hover{
   background-color: #f8f8f8;
@@ -355,20 +391,58 @@ display:inline-block;
 .annl { /* 공고 출력 테이블 레이어 */
   
   width: 435px;
-  height: 400px;
+  height: 350px;
   object-fit: contain;
   background-color: #ffffff;
-  border:2px solid #f2ad94;
-  float: left;
+  border:2px solid #c5c5c5;
+  float: left;  
+  border-radius:30px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  padding-top: 20px;
 }
 .annl.left {
   margin-right:56px;
+}
+.annl.box{
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  text-align: right;
+}
+.annl.box.left{
+  margin-right:56px;
+  background-color: rgb(255, 255, 255);
 }
 .annl:hover{
   background-color: #f8f8f8;
 
 }
 
+.annltext{
+  font-size: 25px;
+  font-family: 'EliceDigitalBaeum_Regular';
+  margin-right: 30px;
+}
+
+.annltextbutton{
+ padding: 10px 60px 10px 60px;
+ background-color: #ffffff;
+ border:2px solid #0EC779;
+ border-radius:15px;
+ font-family: 'EliceDigitalBaeum_Regular';
+ font-weight: bold;
+ margin-right: 30px;
+ /* margin-left: 280px; */
+}
+
+.annltextbutton:hover{
+  color: #ffffff;
+  background-color: #0EC779;
+ 
+}
+
+.annltext.class{
+  font-size: 20px;
+}
 .annlbar {
   width: 435px;
   height:55px;
@@ -585,7 +659,7 @@ display:inline-block;
   background-color: #f8f8f8;
   margin-top:20px;
   text-align: center;
-  border-top: solid 2px #f2d2b6;
+  border-top: solid 2px #c5c5c5;
 }
 
 .bottomsmalll{
@@ -603,6 +677,7 @@ display:inline-block;
    margin-right: 50px;
    font-size: 1em;
    margin-bottom: 30px;
+   font-family: 'EliceDigitalBaeum_Regular';
 }
 .bottomtext.right{
   margin-right: 0;
@@ -610,10 +685,11 @@ display:inline-block;
 .emailtext{
   font-size: 0.8em;
   margin-right: 30px;
-
+    font-family: 'EliceDigitalBaeum_Regular';
+  
 }
 .bottomtext:hover{
-  color: #f28d77;
+  color: #0EC779;
 }
 
 .buttonpn{
@@ -630,5 +706,22 @@ display:inline-block;
  
   color: #f28d77;
   border-bottom: solid 2px #f28d77;
+}
+
+.topmenubuttons{
+  width: 80px;
+  height:37.5px;
+font-size:19px;
+font-weight: bold;
+color:#3a3939;
+  text-align: center;
+  line-height: 0.5;
+  margin-right: 20px;
+  font-family: 'EliceDigitalBaeum_Regular';
+ 
+}
+
+.topmenubuttons:hover{
+  color: #0EC779;
 }
 

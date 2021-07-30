@@ -12,40 +12,46 @@
 
     
 
-<div id="mainimagel" class="mainl imagel">
-    <img src ="/image/mainimage.png" alt="faild">
-</div>
+
 <div class="mainl figure">
   <a class="figuresmalll_firstline" href="{{ url('/') }}">
-    Study
+    스터디
   </a>
   <a class="figuresmalll_firstline" href="{{ url('/') }}">
-    Sport
+    스포츠
   </a>
   <a class="figuresmalll_firstline" href="{{ url('/') }}">
-    Club
+    동아리
   </a>
   <a class="figuresmalll_firstline" href="{{ url('/') }}">
-    Game
+    게임
   </a>
   <a class="figuresmalll_firstline" href="{{ url('/') }}">
-    Mentor
+    멘토
   </a>
-
-  
-
-
-  
   </div>
-<div class="mainl figure">
-<a class="figuresmalll_secondline" href="{{ url('/') }}">
-현재 Everyteam 에는  <span style="color:#e0997f;font-weight: bold">{{ $countuser }}명의 회원</span>과 현재<span style="color:#e0997f;font-weight: bold"> 
- 모집중인 {{ $countteam }}개의팀</span> 
-<br> <span style="color:#e0997f;font-weight: bold;">매칭이 완료된 {{ $countendteam }}개의팀</span>이 있습니다
+
+
+<div class="mainl figure2">
+<a class="figuresmalll_secondline" href="{{ url('/') }}"> Everyteam을 <span style="color:#0EC779;font-weight: bold">{{ $countuser }}명이</span> 이용하고 있습니다.
 </a>
  
 </div>
-<div id="annl" class="mainl annmainl">
+</div>
+<div class="mainl figure2">
+<a class="figuresmalll_secondline" href="{{ url('/') }}">
+  모집중인 <span style="color:#0EC779;font-weight: bold">  {{ $countteam }}개의팀</span>을 만나보세요.
+</a>
+ 
+</div>
+</div>
+<div class="mainl figure2">
+<a class="figuresmalll_secondline" href="{{ url('/') }}">
+매칭이 완료된 <span style="color:#0EC779;font-weight: bold;">{{ $countendteam }}개의팀</span>이 있습니다 팀을 생성해보세요
+</a>
+ 
+</div>
+{{-- <div id="annl" class="mainl annmainl">
 <div id="annsml" class="annsmalll">
     <div id="newann" class="annl left">
       <a  class="ann_title" href="{{ route('allteam')}}">&nbsp;&nbsp;새로 올라온 팀을 확인하세요!</a>
@@ -90,8 +96,8 @@
             </tbody>
         
           </table>
-    </div>
-    <div id="customann" class="annl">
+    </div> --}}
+    {{-- <div id="customann" class="annl">
       @guest
       @if (Route::has('login'))
       <a  class="ann_title" href="">&nbsp;&nbsp;회원들만 사용하실 수 있는 서비스</a>
@@ -130,7 +136,63 @@
         
     </div>
     @endguest
+    
+  </div> --}}
+  @if($countteam%2==1)
+  <script>
+    {{ $countbox=$countteam-1 }}
+    </script>
+  @else
+  <script>
+    {{ $countbox=$countteam }}
+    </script>
+  @endif
+
+  @for($i=0;$i<$countbox-1;$i++)
+  @if($countbox==0||$i==6)
+  @break
+  @endif
+  <div id="annl" class="mainl annmainl">
+    <div id="annsml" class="annsmalll">
+      
+      <div id="annsml" class="annl box left">
+       
+        <a class="annltext">{{ $ateam[$i]->title }}</a><br>
+        <a class="annltext class">{{ $ateam[$i]->class }}</a>
+        <a class="annltext class">{{ $ateam[$i]->address }}</a><br>
+        <a class="annltext class">{{ $ateam[$i]->created_at }}</a><br><br><br><br><br>
+       
+        @guest
+      @if (Route::has('login'))
+      <a class="annltextbutton" href="{{ route('login') }}" onclick="alert('상세보기는 로그인이 필요합니다')">더보기</a>
+      @endif
+      @else
+        <a class="annltextbutton" href="/teaminfo/{{ $ateam[$i]->id }}">더보기</a>
+    @endguest
+      </div>
+      <div id="annsml" class="annl box">
+        <a class="annltext">{{ $ateam[$i+1]->title }}</a><br>
+        <a class="annltext class">{{ $ateam[$i+1]->class }}</a>
+        <a class="annltext class">{{ $ateam[$i+1]->address }}</a><br>
+        <a class="annltext class">{{ $ateam[$i+1]->created_at }}</a><br><br><br><br><br>
+
+        @guest
+        @if (Route::has('login'))
+        <a class="annltextbutton" href="{{ route('login') }}" onclick="alert('상세보기는 로그인이 필요합니다')">더보기</a>
+        @endif
+        @else
+          <a class="annltextbutton" href="/teaminfo/{{ $ateam[$i+1]->id }}">더보기</a>
+      @endguest
+     
+        <script>
+          {{ $i++ }}
+          </script>
+     
+      </div>
+    </div>
   </div>
+  @endfor
+
 </div>
 
 @include('bottom')

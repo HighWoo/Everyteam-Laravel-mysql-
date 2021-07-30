@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @include('header')
- 
+    
    
 
 </head> 
@@ -17,7 +17,7 @@
     
 <div class="mainl basicl">
     <div class="infosmalll">
-    <br> <a class="titletext">조회하신 팀 목록입니다</a><br>
+    <br> <a class="titletext">검색 결과 입니다</a><br>
     <br><a style="font-size: 20px">원하시는 팀의 제목을 클릭하세요</a>
     <table class="list-table">
         <thead>
@@ -34,7 +34,7 @@
          
         <tbody>
             
-            @foreach ($team as $item)
+            @foreach ($searchval as $item)
             <tr>
                 @if($item->end==0)
                 <td width="100">{{$item -> class}}</td>
@@ -66,15 +66,15 @@
 </div>
 <div class="mainl basicl">
 <div class="infosmalll">
-  @if($team->currentPage()==1)
+  @if($searchval->currentPage()==1)
    <a class="buttonpn previous" href=""onclick="alert('첫 페이지 입니다')"><-이전</a>
   @else
-   <a class="buttonpn previous" href="allteams?page={{ $team->currentPage()-1 }}"><-이전</a>
+ <a class="buttonpn previous" href="search?_token=LThFZkp7rJwfO0Ms8jgHLUf0u9OxNHfIUZdyzvVn&Searchtext={{ $searchtext }}&page={{ $searchval->currentPage()-1 }}"><-이전</a>
  @endif
- @if($team->currentPage()==$team->lastPage())
+ @if($searchval->currentPage()==$searchval->lastPage())
  <a class="buttonpn " href=""onclick="alert('마지막 페이지 입니다')">다음-></a>
 @else
-<a class="buttonpn " href="allteams?page={{ $team->currentPage()+1 }}">다음-></a>
+<a class="buttonpn " href="search?_token=LThFZkp7rJwfO0Ms8jgHLUf0u9OxNHfIUZdyzvVn&Searchtext={{ $searchtext }}&page={{ $searchval->currentPage()+1 }}">다음-></a>
 @endif
 </div>
 </div>

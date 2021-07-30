@@ -42,7 +42,7 @@ public function maintable(){
 
   //$team = \App\Models\Team::all(); 
   $ateam=DB::table('teams')
-  ->select('title','id')
+  ->select('title','id','class','address','created_at')
   ->where('end',0)
   ->orderBy('created_at','desc')
   ->limit(7)
@@ -65,7 +65,22 @@ public function bviewtable(){
     return view('team.allteams',compact('team'));
 
   }
-  
+
+
+public function searchtable(Request $request){
+    if($request->Searchtext==null){
+      return back()->with('controller_alert', '검색어가 없습니다');
+    }
+    else{
+    $searchtext=$request->Searchtext;
+    $searchval=DB::table('teams')->select('*')->where('title','like','%'.$request->Searchtext.'%')->paginate(2);
+    
+    return view('search',compact('searchval','searchtext'));  
+    }
+  }
+
+
+
 
 public function show(Team $team){
     $userapp=DB::table('apps')->select('id')->where('user_id',Auth::user()->id)->where('team_id',$team -> id)->count();
@@ -88,7 +103,7 @@ public function show(Team $team){
     //$team = \App\Models\Team::all(); 
 
     //$mycteam=DB::select('select * from teams where Createdid = ? ', [Auth::user()->id]);
-    $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->paginate(5);
+    $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->paginate(2);
     return view('team.mycreateteam',compact('mycteam'));
   
   }
