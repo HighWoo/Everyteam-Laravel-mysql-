@@ -35,6 +35,7 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day21](#Day21)-페이지네이션  
 [Day22](#Day22)-배포/서버구축 학습  
 [Day23](#Day23)-배포완료  
+[Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
 <hr>
 
 # Day1 
@@ -614,5 +615,24 @@ app컨트롤러를 읽지못해 전부 team컨트롤러로 보내는 작업
 <hr>
 
 
+# Day24    
+(2021/07/30)  
+## 개발Part  
+1차 테스트
+디자인 문제관련-차차 해결할 예정  
+휴대폰 번호 박스 따로따로 입력하게 해달라는 의견-추후 수정  
+모집인원과 지원자수를 바로 볼수있게 해달라는 의견-추후 수정  
+메인색이 붉은색 보다는 녹색이 어울린다는 의견-수렴 수정완료 
+글씨체의 가독성이 떨어진다는 의견-수렴 수정완료  
+중단 메뉴바가 필요없을것 같다는 의견- 수렴 정정완료 상단으로 배치  
 
+최신 팀을 기존의 테이블 형태 대신 박스형태로 수정  
+검색기능 구현  
+메인 화면 디자인 재구성  
+![image](https://user-images.githubusercontent.com/75231868/127660436-603feef0-b026-4b4d-b48b-3bbca82060d3.png)  
+![image](https://user-images.githubusercontent.com/75231868/127660516-08504b42-bb3f-439a-a16d-442de60201bb.png)
+
+aws서버 작동시 css구현 안되는 현상-쿠키삭제  
+
+<hr>
 
