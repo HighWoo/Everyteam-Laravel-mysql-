@@ -665,7 +665,7 @@ login css중복코드 전부 상속화
 띄어쓰기 관계 없이 검색 가능하게 수정  
 ![image](https://user-images.githubusercontent.com/75231868/127760110-2d095e06-5695-4df4-a830-235fac806d66.png)  
 ![image](https://user-images.githubusercontent.com/75231868/127760121-a9a7f8c6-bdae-4d1d-9435-54b79476a61d.png)
-
+Replace 함수 사용 검색창에 입력한 검색어와,찾는 데이터베이스의 제목 모두 Replace 처리하여 띄어쓰기 무관  
 <hr>
 
 
