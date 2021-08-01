@@ -37,6 +37,7 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day23](#Day23)-배포완료  
 [Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
 [Day25](#Day25)-서버정리/정크코드 정리
+[Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/정크코드 정리  
 <hr>
 
 # Day1 
@@ -647,3 +648,18 @@ aws서버 작동시 css구현 안되는 현상-쿠키삭제
 @buttom 글씨체 적용  
 기존 출력 테이블 대신 박스 형태로 출력하는 방식을 설계  
 서버 과금으로 인한 서버정리  
+
+<hr>
+
+# Day26    
+(2021/08/01)  
+## 개발Part  
+회원가입 전화번호 숫자 제한 코드 작성  
+오류내역 한글화  
+login css중복코드 전부 상속화  
+로그인 회원가입 새 디자인 적용  
+
+![image](https://user-images.githubusercontent.com/75231868/127758548-566dac7e-c120-423f-8c0c-1a8fadcbf1c7.png)  
+![image](https://user-images.githubusercontent.com/75231868/127758556-f0bde71d-224d-48e8-8ce1-0cd96d722408.png)  
+
+
