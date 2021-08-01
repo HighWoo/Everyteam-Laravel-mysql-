@@ -72,9 +72,12 @@ public function searchtable(Request $request){
       return back()->with('controller_alert', '검색어가 없습니다');
     }
     else{
-    $searchtext=$request->Searchtext;
-    $searchval=DB::table('teams')->select('*')->where('title','like','%'.$request->Searchtext.'%')->paginate(2);
+      $searchtext=$request->Searchtext;
+   
+    //$searchtext=$request->Searchtext;
     
+    //$searchval=DB::table('teams')->select('*')->where('title','like','%'.$searchtext.'%')->paginate(2);
+    $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(2);
     return view('search',compact('searchval','searchtext'));  
     }
   }

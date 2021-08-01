@@ -1,70 +1,90 @@
+
+@font-face {
+    font-family: 'EliceDigitalBaeum_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .loginmainl {
+    /* margin-left: 256px; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+   background-color: #ffffff;
+
+   object-fit: contain;
+
+  }
+
 .loginl{
     width: 574px;
-    height: 695px;
+    height: max-content;
     padding: 17px 6.7px 0.4px 22px;
-    background-color: #f2d2b6;
-    margin: 142px 673px 0px 673px;
+    background-color: #f8f8f8;
+    border:solid 2px #c5c5c5;
+    /* margin: 142px 673px 0px 673px; */
+    margin-top: 142px;
+    text-align: left;
+    display:inline-block;
+}
+.loginl.register{
+    margin-top: 50px;
 }
 .loginLogo {
-    width: 134px;
-    height: 47px;
-    font-family:Georgia;
+
+    font-family: 'GmarketSansMedium';
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-    color: #000000;
+    color: #0EC779;
     text-shadow: 2px 1px 1px rgb(255, 255, 255);
     line-height: 2;
-    margin: 0;
-  
     text-decoration:none; 
     
   }
 .logintext{
-    width: 134px;
-    height: 47px;
-    font-family:Georgia;
+
+    font-family: 'EliceDigitalBaeum_Regular';
     font-size: 20px;
     font-weight: bold;
     text-align: left;
     color: #000000;
-    text-shadow: 2px 1px 1px rgb(255, 255, 255);
-    line-height: 2;
-    margin-left: 3px;
-    margin-right: 400px;
-    text-decoration:none; 
+
 }
 
 
-.easyloginbutton{
-    width: max-content;
-    height: max-content;
-    border: none;
-    margin-left: 30px;
-    background-color: #f2d2b6;
-    cursor: pointer;
-    
-}
-.easyloginbutton.bottom{
-    margin-top: 15px;
-}
 
 .logintextbox{
     width: 480px;
     height: 67.5px;
+    border:solid 2px #c5c5c5;
     font-size: 20px;
+    margin-top: 50px;
     margin-left: 40px;
+    padding-left: 10px;
     border-radius: 5px;
+    font-family: 'GmarketSansMedium';
 }
 .logintextbox.bottom{
-    margin-top: 20px;
+    margin-top: 40px;
 }
+.logintextbox.bottom.register{
+    margin-top:20px
+}
+
 .findpass{
     width: 277.3px;
     height: 30.6px;
- 
+    font-family: 'EliceDigitalBaeum_Regular';
     margin-left: 305px;
-    font-family: Roboto;
+
     font-size: 20px;
     font-weight: normal;
     font-stretch: normal;
@@ -74,22 +94,31 @@
     text-align: center;
     color: #000000;
 }
-
+.findpass:hover{
+    color:#0EC779
+}
 .loginbutton{
   width: 480px;
   height: 67.5px;
-  margin: 4.4px 39.3px 13.5px 40px;
-  padding: 20px 200px 18.5px 200    px;
-  border-radius: 5px;
-  background-color: #f28d77;
+  margin: 40px 39.3px 13.5px 40px;
+  font-family: 'EliceDigitalBaeum_Regular';
+  font-weight: bold;
+  border-radius: 10px;
+  border:solid 2px #0EC779;
+  background-color: #ffffff;
   font-size: 20px;
   cursor: pointer;
   
 }
+.loginbutton:hover{
+    color: #ffffff;
+    background-color: #0EC779;
+}
 
 .loginbutton.register
 {
-    width: 490px;
+
+    width: 480px;
 }
 
 

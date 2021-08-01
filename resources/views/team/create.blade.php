@@ -19,7 +19,7 @@
     
 <form action="{{ route('teams.store') }}" method="POST">
     @csrf
-<input type="text" name="title" class="create_team_textbox" placeholder="제목"><br>
+<input type="text" name="title" maxlength="20" class="create_team_textbox" placeholder="제목"><br>
 
 <select name="class" class="create_team_select">
     <option selected disabled value="">분류/유형을 선택해주세요</option>

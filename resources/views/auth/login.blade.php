@@ -1,12 +1,12 @@
 @extends('layouts.app')
 <link rel="stylesheet" type="text/css" href="login.css" />
 @section('content')
+<div class="loginmainl">
 <div class="loginl">
-    <a class="loginLogo" href="{{ url('/') }}">에브리팀</a><br>
-    <a class="logintext">간편로그인</a>
-    <button type="button" class="easyloginbutton" onclick="/"><img src="/image/instar.png"></button>
-    <button type="button" class="easyloginbutton bottom" onclick="/"><img src="/image/google.png"></button>
-    <br><br><br><a class="logintext">계정로그인</a>
+    <a class="loginLogo" href="{{ url('/') }}">EveryTeam</a><br>
+    {{-- <button type="button" class="easyloginbutton" onclick="/"><img src="/image/instar.png"></button>
+    <button type="button" class="easyloginbutton bottom" onclick="/"><img src="/image/google.png"></button> --}}
+    <br><br><br><a class="logintext">이메일로그인</a>
     <form method="POST" action="{{ route('login') }}">
         @csrf
     <input id="email" type="email" placeholder="이메일을 입력하세요"class="logintextbox @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -33,7 +33,7 @@
     </button>
     {{-- <a class="logintext">처음 방문하시나요?</a> --}}
     <a class="findpass" href="{{ route('register') }}">
-         회원가입을 하시겠어요?
+         회원가입이 필요하세요?
     </a>
 
     </form>
@@ -104,5 +104,6 @@
             </div>
         </div>
     </div> --}}
+</div>
 </div>
 @endsection

@@ -1,11 +1,17 @@
 @extends('layouts.app')
-
+<script>
+    function numberMaxLength(e){
+        if(e.value.length > e.maxLength){
+            e.value = e.value.slice(0, e.maxLength);
+        }
+    }
+</script>
 @section('content')
 <link rel="stylesheet" type="text/css" href="login.css" />
+<div class="loginmainl">
+<div class="loginl register">
 
-<div class="loginl">
-
-    <a class="loginLogo" href="{{ url('/') }}">에브리팀</a><br>
+    <a class="loginLogo" href="{{ url('/') }}">EveryTeam</a><br>
     <a class="logintext">회원가입</a><br><br>
     <form method="POST" action="{{ route('register') }}">
         @csrf
@@ -15,39 +21,40 @@
           <strong>{{ $message }}</strong>
          </span>
       @enderror
-    <input id="email" type="email" placeholder="이메일" class="logintextbox bottom @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+    <input id="email" type="email" placeholder="이메일" class="logintextbox bottom register @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
     @error('email')
       <span class="invalid-feedback" role="alert">
       <br><strong>{{ $message }}</strong>
      </span>
     @enderror
-    <input id="kakao" type="text" placeholder="카카오 오픈카톡 링크(전화번호 공개거부시 대체 연락 수단입니다 )" class="logintextbox bottom @error('kakao') is-invalid @enderror" name="kakao" value="{{ old('kakao') }}" required autocomplete="phonenum" >
+    <input id="kakao" type="text" placeholder="카카오 오픈카톡 링크(연락수단 입니다)" class="logintextbox bottom register @error('kakao') is-invalid @enderror" name="kakao" value="{{ old('kakao') }}" required autocomplete="phonenum" >
     @error('kakao')
             <span class="invalid-feedback" role="alert">
           <strong>{{ $message }}</strong>
          </span>
       @enderror
     {{--  --}}
-    <input id="phonenum" type="text" placeholder="전화번호(팀 신청시 생성자 에게 전달됩니다)" class="logintextbox bottom @error('phonenum') is-invalid @enderror" name="phonenum" value="{{ old('phonenum') }}" required autocomplete="phonenum" >
+    <input id="phonenum" type="number"  maxlength="11"   placeholder="전화번호(비공개)" class="logintextbox bottom register @error('phonenum') is-invalid @enderror" name="phonenum" value="{{ old('phonenum') }}" required autocomplete="phonenum" oninput="numberMaxLength(this);">
     @error('phonenum')
             <span class="invalid-feedback" role="alert">
-          <strong>{{ $message }}</strong>
+                <br><strong>{{ $message }}</strong>
          </span>
       @enderror
     {{--  --}}
-    <input id="password" type="password" placeholder="비밀번호" class="logintextbox bottom @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+    <input id="password" type="password" placeholder="비밀번호" class="logintextbox bottom register @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
    
-    <input id="password-confirm" type="password" placeholder="비밀번호 재입력" class="logintextbox bottom" name="password_confirmation" required autocomplete="new-password">
+    <input id="password-confirm" type="password" placeholder="비밀번호 재입력" class="logintextbox bottom register" name="password_confirmation" required autocomplete="new-password">
     @error('password')
     <span class="invalid-feedback" role="alert">
         <br><strong>{{ $message }}</strong>
     </span>
     @enderror
-    <br><br><br><br><br>
+    
     <button type="submit" class="loginbutton register">
         {{ __('회원가입') }}
     </button>
 </form>
+</div>
 </div>
 @endsection
 
