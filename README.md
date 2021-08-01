@@ -36,7 +36,7 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day22](#Day22)-배포/서버구축 학습  
 [Day23](#Day23)-배포완료  
 [Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
-[Day25](#Day25)-서버정리/정크코드 정리
+[Day25](#Day25)-서버정리/정크코드 정리  
 [Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/정크코드 정리  
 <hr>
 
