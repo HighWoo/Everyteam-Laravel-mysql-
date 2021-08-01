@@ -37,7 +37,7 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day23](#Day23)-배포완료  
 [Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
 [Day25](#Day25)-서버정리/정크코드 정리  
-[Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/정크코드 정리  
+[Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/띄어쓰기해도 검색가능하게 수정/정크코드 정리  
 <hr>
 
 # Day1 
@@ -661,5 +661,11 @@ login css중복코드 전부 상속화
 
 ![image](https://user-images.githubusercontent.com/75231868/127758548-566dac7e-c120-423f-8c0c-1a8fadcbf1c7.png)  
 ![image](https://user-images.githubusercontent.com/75231868/127758556-f0bde71d-224d-48e8-8ce1-0cd96d722408.png)  
+
+띄어쓰기 사용해도 검색 가능하게 수정  
+![image](https://user-images.githubusercontent.com/75231868/127760110-2d095e06-5695-4df4-a830-235fac806d66.png)  
+![image](https://user-images.githubusercontent.com/75231868/127760121-a9a7f8c6-bdae-4d1d-9435-54b79476a61d.png)
+
+<hr>
 
 
