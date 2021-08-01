@@ -36,6 +36,8 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day22](#Day22)-배포/서버구축 학습  
 [Day23](#Day23)-배포완료  
 [Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
+[Day25](#Day25)-서버정리/정크코드 정리  
+[Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/띄어쓰기해도 검색가능하게 수정/정크코드 정리  
 <hr>
 
 # Day1 
@@ -635,4 +637,35 @@ app컨트롤러를 읽지못해 전부 team컨트롤러로 보내는 작업
 aws서버 작동시 css구현 안되는 현상-쿠키삭제  
 
 <hr>
+
+# Day25    
+(2021/07/31)  
+## 개발Part  
+정크코드 정리  
+검색시스템 개발 마무리  
+검색창에서 페이지네이트를 적용하여도 깨지지 않게 구현  
+로고 재 디자인  
+@buttom 글씨체 적용  
+기존 출력 테이블 대신 박스 형태로 출력하는 방식을 설계  
+서버 과금으로 인한 서버정리  
+
+<hr>
+
+# Day26    
+(2021/08/01)  
+## 개발Part  
+회원가입 전화번호 숫자 제한 코드 작성  
+오류내역 한글화  
+login css중복코드 전부 상속화  
+로그인 회원가입 새 디자인 적용  
+
+![image](https://user-images.githubusercontent.com/75231868/127758548-566dac7e-c120-423f-8c0c-1a8fadcbf1c7.png)  
+![image](https://user-images.githubusercontent.com/75231868/127758556-f0bde71d-224d-48e8-8ce1-0cd96d722408.png)  
+
+띄어쓰기 관계 없이 검색 가능하게 수정  
+![image](https://user-images.githubusercontent.com/75231868/127760110-2d095e06-5695-4df4-a830-235fac806d66.png)  
+![image](https://user-images.githubusercontent.com/75231868/127760121-a9a7f8c6-bdae-4d1d-9435-54b79476a61d.png)
+
+<hr>
+
 
