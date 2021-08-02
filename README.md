@@ -38,6 +38,7 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
 [Day25](#Day25)-서버정리/정크코드 정리  
 [Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/띄어쓰기해도 검색가능하게 수정/정크코드 정리  
+[Day27](#Day27)-  
 <hr>
 
 # Day1 
@@ -667,5 +668,22 @@ login css중복코드 전부 상속화
 ![image](https://user-images.githubusercontent.com/75231868/127760121-a9a7f8c6-bdae-4d1d-9435-54b79476a61d.png)
 Replace 함수 사용 검색창에 입력한 검색어와,찾는 데이터베이스의 제목 모두 Replace 처리하여 띄어쓰기 무관  
 <hr>
+
+# Day27    
+(2021/08/02)  
+## 개발Part
+팀 생성화면 재디자인  
+![image](https://user-images.githubusercontent.com/75231868/127812400-5c41a05b-6a6c-406a-890b-46a529344bbd.png)
+![image](https://user-images.githubusercontent.com/75231868/127812528-718fa410-a474-4db4-b0c0-fbd0af2be79a.png)
+
+카카오 주소연동 시스템 추가  
+온라인/비 온라인을 선택하여 비온라인 선택시 주소입력 창이 뜨도록 설계  
+  
+주소를 입력하지 않았을때 경고창 뜨면서 생성안됨    
+(라라벨 블레이드를 사용하여 하고 싶었지만 블레이드를 사용하면 입력창이 전부 초기화 되어버림)  
+체크 함수를 생성하니 그전에 input 박스에 적용한 require 속성이 작동하지 않아서  
+주소를 제외한 나머지 옵션들도 입력하지 않을시 경고창 뜨는 함수 적용  
+  
+메인주소와 상세주소를 입력받아 합한 뒤 데이터베이스에 address 속성에 저장  
 
 
