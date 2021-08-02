@@ -38,7 +38,7 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
 [Day25](#Day25)-서버정리/정크코드 정리  
 [Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/띄어쓰기해도 검색가능하게 수정/정크코드 정리  
-[Day27](#Day27)-  
+[Day27](#Day27)-카카오 주소 시스템 연동/aws 학습  
 <hr>
 
 # Day1 
