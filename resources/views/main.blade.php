@@ -159,8 +159,8 @@
        
         <a class="annltext">{{ $ateam[$i]->title }}</a><br>
         <a class="annltext class">{{ $ateam[$i]->class }}</a>
-        <a class="annltext class">{{ $ateam[$i]->address }}</a><br>
-        <a class="annltext class">{{ $ateam[$i]->created_at }}</a><br><br><br><br><br>
+        <a class="annltext class">{{ \Illuminate\Support\Str::limit($ateam[$i]->address, 11, $end='') }}</a><br>
+        <a class="annltext class">{{ \Illuminate\Support\Str::limit($ateam[$i]->created_at, 11, $end='') }}</a><br><br><br><br><br>
        
         @guest
       @if (Route::has('login'))
@@ -171,10 +171,11 @@
     @endguest
       </div>
       <div id="annsml" class="annl box">
+        
         <a class="annltext">{{ $ateam[$i+1]->title }}</a><br>
         <a class="annltext class">{{ $ateam[$i+1]->class }}</a>
-        <a class="annltext class">{{ $ateam[$i+1]->address }}</a><br>
-        <a class="annltext class">{{ $ateam[$i+1]->created_at }}</a><br><br><br><br><br>
+        <a class="annltext class" >{{\Illuminate\Support\Str::limit($ateam[$i+1]->address, 11, $end='') }}</a><br>
+        <a class="annltext class">{{\Illuminate\Support\Str::limit($ateam[$i+1]->created_at, 11, $end='') }}</a><br><br><br><br><br>
 
         @guest
         @if (Route::has('login'))

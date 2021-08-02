@@ -23,10 +23,11 @@ class TeamController extends Controller
     //$team->Createdid=$request->user()->email;
     //$team->save();
 //테이블 삽입 방법 2
+
     Team::create([
         'title'=>$request->title,
         'class'=>$request->class,
-        'address'=>$request->address,
+        'address'=>$request->addressbase.' '.$request->addressdetail,
         'content'=>$request->content,
         'countm'=>$request->countm,
         'Createdid'=>$request->user()->id,
@@ -47,6 +48,9 @@ public function maintable(){
   ->orderBy('created_at','desc')
   ->limit(7)
   ->get();
+
+
+
   $countuser=DB::table('users')
   ->count();
   $countteam=DB::table('teams')->where('end',0)->count();
@@ -59,7 +63,7 @@ public function maintable(){
 
 public function bviewtable(){
 
-   $team = DB::table('teams')->select('*')->where('end',0)->paginate(2);
+   $team = DB::table('teams')->select('*')->where('end',0)->paginate(10);
    //$team = \App\Models\Team::all(); 
    
     return view('team.allteams',compact('team'));
@@ -77,7 +81,7 @@ public function searchtable(Request $request){
     //$searchtext=$request->Searchtext;
     
     //$searchval=DB::table('teams')->select('*')->where('title','like','%'.$searchtext.'%')->paginate(2);
-    $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(2);
+    $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(10);
     return view('search',compact('searchval','searchtext'));  
     }
   }
@@ -106,7 +110,7 @@ public function show(Team $team){
     //$team = \App\Models\Team::all(); 
 
     //$mycteam=DB::select('select * from teams where Createdid = ? ', [Auth::user()->id]);
-    $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->paginate(2);
+    $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->paginate(10);
     return view('team.mycreateteam',compact('mycteam'));
   
   }
@@ -115,7 +119,7 @@ public function show(Team $team){
 //$myateam=AA::select('select teams.id,teams.title,teams.class,teams.address,teams.countm,teams.end 
  //from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id])->paginate(2);
 $myateam=DB::table('teams')->join('apps','teams.id','=','apps.team_id')->select('teams.*')->where('apps.user_id',Auth::user()->id)
-->paginate(5);
+->paginate(10);
    return view('team.myappteam',compact('myateam')); 
   }
 
