@@ -688,3 +688,10 @@ Replace 함수 사용 검색창에 입력한 검색어와,찾는 데이터베이
 글자수 제한 코드 활용 메인화면에 주소의 일부만 나오게 설정  
 \Illuminate\Support\Str::limit($ateam[$i]->created_at, 11, $end='')
 
+## 학습part
+https://gun0912.tistory.com/45 
+aws과금방지  
+db설정 백업기간0일   
+범용sds 20기가  
+Multi-AZ와 고성능 I/O인 Provisioned IOPS Storate를 사용하지 않도록 설정  
+
