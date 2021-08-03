@@ -1,7 +1,7 @@
 # TeamMatching-v2
 
 # aws를 이용해 서버 여는데 성공 
-http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
+과금으로 인해 서버 일시중단  
 
 ### 기존에 만들었던 [TeamMatching](https://github.com/highcowoo/TeamMatching-project)을 더 전문적인 개발도구를 활용하여 최종적으로 서버까지 여는것이 목표임 
 ### 개발언어는 php사용 프레임워크는 라라벨 사용 매일 라라벨에 대한 학습과 개발을 진행  
@@ -38,7 +38,8 @@ http://wooeveryteamf-env.eba-zpir8wxz.ap-northeast-2.elasticbeanstalk.com/
 [Day24](#Day24)-1차 테스트/디자인변경/검색기능추가    
 [Day25](#Day25)-서버정리/정크코드 정리  
 [Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/띄어쓰기해도 검색가능하게 수정/정크코드 정리  
-[Day27](#Day27)-  
+[Day27](#Day27)-카카오 주소 시스템 연동/aws 학습  
+[Day28](#Day28)-테이블 관련 작업
 <hr>
 
 # Day1 
@@ -687,4 +688,35 @@ Replace 함수 사용 검색창에 입력한 검색어와,찾는 데이터베이
 메인주소와 상세주소를 입력받아 합한 뒤 데이터베이스에 address 속성에 저장  
 글자수 제한 코드 활용 메인화면에 주소의 일부만 나오게 설정  
 \Illuminate\Support\Str::limit($ateam[$i]->created_at, 11, $end='')
+
+## 학습part
+https://gun0912.tistory.com/45 
+https://librewiki.net/wiki/%EC%95%84%EB%A7%88%EC%A1%B4_%EC%9B%B9_%EC%84%9C%EB%B9%84%EC%8A%A4/Free_Tier_%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD  
+
+aws과금방지  
+db설정 백업기간0일   
+범용sds 20기가  
+Multi-AZ와 고성능 I/O인 Provisioned IOPS Storate를 사용하지 않도록 설정  
+
+<hr>  
+
+# Day28    
+(2021/08/03)  
+## 개발Part  
+팀 목록에서 팀 제목이 아닌 해당열을 클릭하면 상세정보 확인  
+페이지 네이트 버튼 으로 재생성  
+팀 목록 테이블 재 디자인  
+팀 목록 최신순으로 나열되는 코드 추가  
+상세내용 페이지 글자수 넘어가는 오류 해결  
+팀 출력페이지 개선  
+![image](https://user-images.githubusercontent.com/75231868/127963798-89129cdf-ebbe-41b3-a065-adca8b40bcca.png)  
+로그인을 하지 않으면 접근할 수 없는 페이지에 로그인 경고코드가 있는것을 발견-> 삭제  
+카카오 지도 api사용위해 가입  
+테이블 정리  
+
+<>
+
+
+
+
 
