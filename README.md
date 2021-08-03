@@ -690,6 +690,8 @@ Replace 함수 사용 검색창에 입력한 검색어와,찾는 데이터베이
 
 ## 학습part
 https://gun0912.tistory.com/45 
+https://librewiki.net/wiki/%EC%95%84%EB%A7%88%EC%A1%B4_%EC%9B%B9_%EC%84%9C%EB%B9%84%EC%8A%A4/Free_Tier_%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD  
+
 aws과금방지  
 db설정 백업기간0일   
 범용sds 20기가  
