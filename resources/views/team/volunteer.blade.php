@@ -28,58 +28,51 @@
   </script>
 
 <body>   
-
 <div class="mainl basicl">
+  
     <div class="infosmalll">
-    <br> <a class="titletext">팀 정보</a>
+    <br> 
     
-    <table class="list-table">
+    
+
+    <div class="teaminfotextboxl">
+      <a class="figuresmalll_secondline volinfotitle ">{{$team -> title}}</a>
+    <div class="teaminfotextbox">{{$team -> content}}</div>
+    <a class="figuresmalll_secondline volinfotitle add">{{$team -> address}}</a>
+    </div>
+
+
+    <div class="teaminfotextboxl">
+   
+    <table class="vollist-table">
         <thead>
             <tr>
-                 <th width="100">분류</th>
-                 <th width="500">제목</th>
-                 <th width="250">모임위치</th>
-                 <th width="80">모집인원</th>
+                 <th width="80">분류</th>
+                 <th width="400">모임위치</th>
+                 <th width="160">생성일자</th>
+                 <th width="160">수정일자</th>
+                 <th width="70">모집인원</th>
+                 <th width="60">상태</th>
+               
               </tr>
         <tbody>
             <tr>
-                <td width="100">{{$team -> class}}</td>
-                <td width="500">{{$team -> title}}</td>
-                <td width="250">{{$team -> address}}</td>
-                <td width="80">{{$team -> countm}}</td>
+                <td width="80">{{$team -> class}}</td>
+ 
+                <td width="400">{{$team -> address}}</td>
+                <td width="160">{{$team -> created_at}}</td>
+                <td width="160">{{$team -> updated_at}}</td>
+                <td width="70">{{$team -> countm}}</td>
+                <td width="60">@if($team->end==0)모집중 @elseif($team->end==1)모집완료 @else 에러 @endif</td>
+          
             </tr>
        </thead>
         </tbody>
      </table>
-      <table class="list-table">
-        <thead>
-            <tr>
-                 <th width="464">공고 게시일</th>
-                 <th width="464">최종 수정일</th>
-              </tr>
-        <tbody>
-        
-            <tr>
-                <td width="464">{{$team -> created_at}}</td>
-                <td width="464">{{$team -> updated_at}}</td>
-        </tr>
-    </thead>
-        </tbody>
-      </table>
+    </div>
 <div class="teaminfotextboxl">
-      <table class="list-table">
-        <thead>
-            <tr>
-                 <th width="930">상세내용</th>
-              </tr>
-      <tbody>
-            <tr>
-               <td><div class="teaminfotextbox">{{$team -> content}}</div></td> 
-        </tr>
-      </tbody>
-    </thead>
-      </table>
-      <table class="list-table">
+  
+      <table class="vollist-table">
         <thead>
             <tr>
                  <th width="464">이름</th>

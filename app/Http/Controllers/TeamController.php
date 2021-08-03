@@ -63,7 +63,7 @@ public function maintable(){
 
 public function bviewtable(){
 
-   $team = DB::table('teams')->select('*')->where('end',0)->paginate(10);
+   $team = DB::table('teams')->select('*')->where('end',0)->orderBy('created_at','desc')->paginate(10);
    //$team = \App\Models\Team::all(); 
    
     return view('team.allteams',compact('team'));

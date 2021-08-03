@@ -333,7 +333,7 @@ display:inline-block;
   
 }
 .figuresmalll_secondline{
-  width: 929.7px;
+  width: 930px;
   height: 50px;
   background-color: white;
   display:inline-block;
@@ -345,6 +345,19 @@ display:inline-block;
   font-family: 'EliceDigitalBaeum_Regular';
   border-radius: 15px;
 }
+.figuresmalll_secondline.volinfotitle{
+  color: #0EC779;
+  font-weight: bold;
+  margin-top: 30px;
+  cursor:default;
+  border:none;
+  font-size: 1.7em;
+}
+.figuresmalll_secondline.volinfotitle.add{
+  font-size: 1.2em;
+}
+
+
 .figuresmalll_firstline{
   width: 178.4px;
   height: 100px;
@@ -479,6 +492,7 @@ display:inline-block;
   outline: 0;
   cursor: pointer;
   border: solid 1px #ffffff;
+
 }
 .ann_plusbtn:hover{
 	background:#f28d77;
@@ -517,7 +531,7 @@ display:inline-block;
 
 	text-align:center;
 	padding:10px 0;
-  
+
 	border-bottom:2px solid #f2ad94; height:20px;
 
 	font-size: 14px ;
@@ -527,22 +541,45 @@ display:inline-block;
 .maintablefont{
   font-size: 1.1em;
 }
-.maintablefont:hover{
-  color: #fd7070;
+
+.vollist-table {
+	margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'EliceDigitalBaeum_Regular';
+
 }
+.vollist-table thead th{
+  border-top:2px solid #0EC779;
+	border-bottom:2px solid #0EC779;
+	font-weight: bold;
+	font-size: 17px;
+
+}
+
+.vollist-table tbody td{
+
+	text-align:center;
+	padding:10px 0;
+
+	border-bottom:2px solid #c5c5c5; height:20px;
+
+	font-size: 14px ;
+ 
+}
+
 
 
 /*공고출력 테이블 디자인*/
 
 .list-table {
 	margin-top: 50px;
-
+  font-family: 'EliceDigitalBaeum_Regular';
 }
 .list-table thead th{
 	height:40px;
-
-	border-top:3px solid #f2ad94;
-	border-bottom:3px solid #f2ad94;
+  
+	border-top:3px solid #0EC779;
+	border-bottom:3px solid #0EC779;
 	font-weight: bold;
 	font-size: 17px;
 
@@ -551,11 +588,18 @@ display:inline-block;
 	text-align:center;
 	padding:10px 0;
 
-	border-bottom:1px solid #f2ad94; height:20px;
+	border-bottom:1px solid #c5c5c5; height:20px;
 	font-size: 14px ;
  
 }
+.list-table tbody tr{
+  cursor: pointer;
+}
 
+.list-table tbody tr:hover{
+background-color:#b2f5bb;
+
+}
 .mainsignuptext{
   height: max-content;
   width: max-content;
@@ -570,19 +614,23 @@ display:inline-block;
   height: max-content;
   background-color: rgb(255, 255, 255);
   text-align: center;
- 
-
+  border: solid 2px #c5c5c5;
+  border-radius: 15px;
+  margin-top: 20px;
 }
 .teaminfotextbox{
   width: max-content;
   height: max-content;
   text-align:left;
   font-family:dotum;
-  font-size: 28px ;
+  font-size: 24px ;
   background-color: rgb(255, 255, 255);
   padding: 15px 30px;
   display: inline-block;
   white-space: pre-wrap;
+  width: 580px;
+  font-family: 'EliceDigitalBaeum_Regular';
+
 }
 
 /* 
@@ -590,12 +638,16 @@ display:inline-block;
 
 .titletext{
   width: 100%;
-  font-family: 'EliceDigitalBaeum_Regular';
+  font-family: 'GmarketSansMedium';
   color: #000000;
   font-size: 35px;
 
   
 
+}
+.stitletext{
+  font-family: 'EliceDigitalBaeum_Regular';
+  font-size: 20px;
 }
 
 .create_team_textbox{
@@ -630,7 +682,6 @@ display:inline-block;
 }
 .create_team_textarea:focus{
   border: solid 2px #0EC779;
-  width: 700px;
   height: 500px;
 }
 .create_team_radiobox{
@@ -743,8 +794,11 @@ display:inline-block;
 
 .buttonpn{
   font-weight: bold;
+  font-family: 'EliceDigitalBaeum_Regular';
   font-size: 20px;
-  border-bottom: solid 1px #000000;
+  border: solid 1px #0EC779;
+  padding: 1px;
+  border-radius: 5px;
 }
 
 .buttonpn.previous{
@@ -753,8 +807,8 @@ display:inline-block;
 
 .buttonpn:hover{
  
-  color: #f28d77;
-  border-bottom: solid 2px #f28d77;
+  color: #ffffff;
+  background-color: #0EC779;
 }
 
 .topmenubuttons{

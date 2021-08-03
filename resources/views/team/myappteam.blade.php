@@ -15,34 +15,27 @@
         
   
     <br> <a class="titletext"> {{Auth::user()->name}}님 이 신청하신 팀입니다 </a><br>
-    <br><a style="font-size: 20px">상세보기를 원하시면 팀의 제목을 클릭하세요</a>
+    <br><a class="stitletext">팀을 클릭하시면 상세정보를 볼수있어요</a>
     @endauth
     <table class="list-table">
         <thead>
             <tr>
                  <th width="100">분류</th>
-                 <th width="550">제목</th>
-                 <th width="200">모임위치</th>
-                 <th width="80">모집인원</th>
-                 <th width="80">완료여부</th>
+                 <th width="350">제목</th>
+                 <th width="410">모임위치</th>
+                 <th width="70">모집인원</th>
+                 <th width="70">상태</th>
               </tr>
           </thead>
         <tbody>
             @foreach ($myateam as $item)
-            <tr>
-             
+            <tr onClick="location.href='/myappinfo/{{$item -> id}}'">
+                
                 <td width="100">{{$item -> class}}</td>
-                @guest
-                @if(Route::has('login'))
-                <td width="500"><a class="maintablefont" href="{{ route('login') }}" onClick="alert('상세보기는 로그인이 필요합니다')">{{$item-> title}}</a></td>
-                @endif
-                @else
-                <td width="500"><a class="maintablefont" href="/myappinfo/{{$item -> id}}">{{$item -> title}}</a></td>
-                @endguest
-                {{-- <td width="500"><a href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td> --}}
-                <td width="200">{{$item -> address}}</td>
-                <td width="80">{{$item -> countm}}</td>
-                <td width="80">@if($item->end==0)모집중 @elseif($item->end==1)모집완료 @else 에러 @endif</td>
+                <td width="350">{{$item -> title}}</a></td>
+                <td width="410">{{$item -> address}}</td>
+                <td width="70">{{$item -> countm}}</td>
+                <td width="70">@if($item->end==0)모집중 @elseif($item->end==1)모집완료 @else 에러 @endif</td>
         </tr>
             @endforeach 
         </tbody>
