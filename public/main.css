@@ -349,6 +349,7 @@ display:inline-block;
   color: #0EC779;
   font-weight: bold;
   margin-top: 30px;
+  margin-bottom: 30px;
   cursor:default;
   border:none;
   font-size: 1.7em;
@@ -540,6 +541,7 @@ display:inline-block;
 
 .maintablefont{
   font-size: 1.1em;
+  font-weight: bold;
 }
 
 .vollist-table {
@@ -617,12 +619,12 @@ background-color:#b2f5bb;
   border: solid 2px #c5c5c5;
   border-radius: 15px;
   margin-top: 20px;
+  font-family: 'EliceDigitalBaeum_Regular';
 }
 .teaminfotextbox{
   width: max-content;
   height: max-content;
   text-align:left;
-  font-family:dotum;
   font-size: 24px ;
   background-color: rgb(255, 255, 255);
   padding: 15px 30px;
@@ -630,7 +632,31 @@ background-color:#b2f5bb;
   white-space: pre-wrap;
   width: 580px;
   font-family: 'EliceDigitalBaeum_Regular';
+  border-bottom:solid 2px #c5c5c5;
+  border-top:solid 2px #c5c5c5;
 
+}
+.teaminfotextboxl.map{
+  width: 500px;
+  height: 400px;
+
+  border-radius: 15px;
+  display: inline-block;
+ 
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.teaminfotextboxl.map:hover{
+  border: solid 2px #0EC779;
+  
+}
+.mapdot{
+  width:150px;
+  text-align:center;
+  padding:6px 0;
+  color: #0EC779;
+  font-weight: bold;
+  font-size: 17px ;
 }
 
 /* 
@@ -638,10 +664,10 @@ background-color:#b2f5bb;
 
 .titletext{
   width: 100%;
-  font-family: 'GmarketSansMedium';
+  font-family: 'EliceDigitalBaeum_Regular';
   color: #000000;
   font-size: 35px;
-
+  font-weight: bold;
   
 
 }
@@ -662,6 +688,11 @@ background-color:#b2f5bb;
   padding-left: 5px;
   margin-bottom: 40px;
 }
+.create_team_textbox.countm{
+  width:80px;
+  text-align: center;
+  padding-left: 12px;
+}
 .create_team_textbox:focus{
   border: solid 2px #0EC779;
 }
@@ -679,6 +710,9 @@ background-color:#b2f5bb;
   border: solid 2px #c5c5c5;
   padding-left: 5px;
 
+}
+.create_team_textarea.modify{
+  height: 500px;
 }
 .create_team_textarea:focus{
   border: solid 2px #0EC779;

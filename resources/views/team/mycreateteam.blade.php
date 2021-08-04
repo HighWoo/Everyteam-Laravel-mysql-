@@ -11,9 +11,14 @@
 
 <div class="mainl basicl">
     <div class="infosmalll">
+    @if($mycteamcount==0)
     @auth
-        
-  
+    <br> <a class="titletext"> {{Auth::user()->name}}님은 아직 생성하신 팀이 없네요 </a><br>
+    <br><a class="stitletext">팀을 생성해보세요</a>
+    <br><input type="button" class="create_team_button" value="팀 생성하기" onclick = "location.href = '{{ url('/create') }}'">
+    @endauth
+    @else
+    @auth
     <br> <a class="titletext"> {{Auth::user()->name}}님 이 생성하신 팀입니다 </a><br>
     <br><a class="stitletext">팀을 클릭하시면 상세정보를 볼수있어요</a>
     @endauth
@@ -57,8 +62,10 @@
      @else
     <a class="buttonpn " href="mycreateteam?page={{ $mycteam->currentPage()+1 }}">다음-></a>
      @endif
+       @endif
     </div>
     </div>
+  
 @include("bottom")
 </body>
 </html>

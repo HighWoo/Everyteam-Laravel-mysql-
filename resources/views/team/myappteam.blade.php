@@ -11,9 +11,14 @@
 
 <div class="mainl basicl">
     <div class="infosmalll">
+        @if($myateamcount==0)
+        @auth
+        <br> <a class="titletext"> {{Auth::user()->name}}님은 아직 신청하신 팀이 없네요 </a><br>
+        <br><a class="stitletext">팀목록에서 신청을 해보세요</a>
+        <br><input type="button" class="create_team_button" value="팀 보러가기" onclick = "location.href = '{{ url('/allteams') }}'">
+        @endauth
+        @else
     @auth
-        
-  
     <br> <a class="titletext"> {{Auth::user()->name}}님 이 신청하신 팀입니다 </a><br>
     <br><a class="stitletext">팀을 클릭하시면 상세정보를 볼수있어요</a>
     @endauth
@@ -53,6 +58,7 @@
      <a class="buttonpn " href=""onclick="alert('마지막 페이지 입니다')">다음-></a>
     @else
     <a class="buttonpn " href="myappteam?page={{ $myateam->currentPage()+1 }}">다음-></a>
+    @endif
     @endif
     </div>
     </div>

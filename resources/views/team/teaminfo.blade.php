@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/main.css" />
+
+    
     @include('header')
 </head> 
 <script>
@@ -20,13 +22,48 @@
   </script>
 
 <body>   
+ 
+  
 
 <div class="mainl basicl">
     <div class="infosmalll">
     <br><div class="teaminfotextboxl">
       <a class="figuresmalll_secondline volinfotitle ">{{$team -> title}}</a>
     <div class="teaminfotextbox">{{$team -> content}}</div>
+    
+
+    @if($team -> address=='온라인')
+    <a class="figuresmalll_secondline volinfotitle add">온라인 활동 입니다</a>
+    @else
     <a class="figuresmalll_secondline volinfotitle add">{{$team -> address}}</a>
+    <div id="map"  class="teaminfotextboxl map" ></div>
+  
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=416edf074c64349156ba0521803d55da&libraries=services"></script>
+    <script>
+     // 카카오맵api스크립트
+     var mapContainer = document.getElementById('map'),
+    mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), 
+        level: 3 
+    };   
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+var geocoder = new kakao.maps.services.Geocoder();
+geocoder.addressSearch('{{$team -> address}}', function(result, status) {
+     if (status === kakao.maps.services.Status.OK) {
+        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: coords
+        });
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div class="mapdot">여기서 만나요!</div>'
+        });
+        infowindow.open(map, marker);
+        map.setCenter(coords);
+    } 
+});    
+    </script>
+    @endif
     </div>
 
 
@@ -37,8 +74,8 @@
             <tr>
                  <th width="80">분류</th>
                  <th width="400">모임위치</th>
-                 <th width="160">생성일자</th>
-                 <th width="160">수정일자</th>
+                 <th width="160">생성</th>
+                 <th width="160">수정</th>
                  <th width="70">모집인원</th>
                  <th width="60">상태</th>
                

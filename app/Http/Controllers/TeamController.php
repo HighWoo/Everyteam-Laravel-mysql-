@@ -82,7 +82,8 @@ public function searchtable(Request $request){
     
     //$searchval=DB::table('teams')->select('*')->where('title','like','%'.$searchtext.'%')->paginate(2);
     $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(10);
-    return view('search',compact('searchval','searchtext'));  
+    $searchcount=$searchval->count();
+    return view('search',compact('searchval','searchtext','searchcount'));  
     }
   }
 
@@ -111,7 +112,8 @@ public function show(Team $team){
 
     //$mycteam=DB::select('select * from teams where Createdid = ? ', [Auth::user()->id]);
     $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->paginate(10);
-    return view('team.mycreateteam',compact('mycteam'));
+    $mycteamcount=$mycteam->count();
+    return view('team.mycreateteam',compact('mycteam','mycteamcount'));
   
   }
   
@@ -120,7 +122,8 @@ public function show(Team $team){
  //from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id])->paginate(2);
 $myateam=DB::table('teams')->join('apps','teams.id','=','apps.team_id')->select('teams.*')->where('apps.user_id',Auth::user()->id)
 ->paginate(10);
-   return view('team.myappteam',compact('myateam')); 
+$myateamcount=$myateam->count();
+   return view('team.myappteam',compact('myateam','myateamcount')); 
   }
 
   
