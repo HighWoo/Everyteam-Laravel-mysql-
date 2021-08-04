@@ -39,7 +39,8 @@
 [Day25](#Day25)-서버정리/정크코드 정리  
 [Day26](#Day26)-로그인 폰번호 글자수 제한/오류메시지 한글화/띄어쓰기해도 검색가능하게 수정/정크코드 정리  
 [Day27](#Day27)-카카오 주소 시스템 연동/aws 학습  
-[Day28](#Day28)-테이블 관련 작업
+[Day28](#Day28)-테이블 관련 작업  
+[Day29](#Day29)-카카오 지도 api연동/글 수정기능 추가  
 <hr>
 
 # Day1 
@@ -714,7 +715,35 @@ Multi-AZ와 고성능 I/O인 Provisioned IOPS Storate를 사용하지 않도록 
 카카오 지도 api사용위해 가입  
 테이블 정리  
 
-<>
+<hr>  
+
+# Day29    
+(2021/08/03)  
+## 개발Part  
+카카오 지도 api 추가  
+추후 서버에 적용할때는 카카오개발자 사이트에서 새로 도메인 등록,앱키 발급  
+출력화면 변경  
+![image](https://user-images.githubusercontent.com/75231868/128152096-663e1810-4b1e-4b51-a819-24a917c43994.png)  
+
+출력할 자료가 없을 시 테이블을 띄웠던 기존과 달리 빈창과 문구를 띄우게 수정
+![image](https://user-images.githubusercontent.com/75231868/128152243-9072660e-85bf-4301-8bd8-f0e37b0277b1.png)  
+
+수정화면 추가  
+![image](https://user-images.githubusercontent.com/75231868/128152453-1daf5077-5664-477e-9a54-a101d264d878.png)  
+![image](https://user-images.githubusercontent.com/75231868/128152505-fefcbc1e-206f-4e25-bb09-e0dd3e3ad340.png)
+수정 완료 버튼은 텍스트 박스 내의 내용이 변화가 생길때  
+자동으로 나오게 설정  
+주소 수정시 다시 카카오 주소api로 연동하여 수정  
+온라인 버튼 클릭시 온라인으로 변경 가능  
+모집 완료 처리한 팀은 수정할 수 없게 설정  
+
+## 학습part  
+도서를 빌려와서 aws 학습중  
+s3버킷도 닫고 모든 스냅샷 기록도 삭제했는데  
+왜 put 숫자는 늘어만 가는거니.. 3일째 고민중  
+
+<hr>
+
 
 
 
