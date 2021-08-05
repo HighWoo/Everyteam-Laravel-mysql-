@@ -99,8 +99,35 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
       <input type="hidden" name="teamid" value="{{$team -> id}}">
       <input type="hidden" name="userid" value="{{Auth::user()->id}}">
       </form>
+ 
+        {{-- 넘버 오픈에 동의했을때 --}}
+        @if($numopen[0]->numopen==1) 
+        <div class="teaminfotextboxl">
+          <br>
+        <a class="stitletext kakao">전화번호</a>
+        <a class="figuresmalll_secondline volinfotitle">{{$teamleaderinfo[0]->phonenum}}</a>
+        </div>
+        <div class="teaminfotextboxl">
+          <br>
+        <a class="stitletext kakao">카카오톡 오픈채팅</a>
+        <a class="figuresmalll_secondline volinfotitle add">{{$teamleaderinfo[0]->kakao}}</a>
+        <a class="create_team_button" onclick="window.open('{{$teamleaderinfo[0]->kakao}}')">채팅방입장하기</a><br><br>
+      </div>
+         {{-- 넘버 오픈에 동의하지 않았을 때 --}}
+        @elseif($numopen[0]->numopen==0)
+        <div class="teaminfotextboxl">
+          <a class="stitletext kakao">카카오톡 오픈채팅</a>
+        <a class="figuresmalll_secondline volinfotitle add">{{$teamleaderinfo[0]->kakao}}</a>
+        <a class="create_team_button" href="{{$teamleaderinfo[0]->kakao}}">채팅방입장하기</a><br><br>
+        </div>
+        @else
+        <div class="teaminfotextboxl">
+        에러입니다
+      </div>
+        @endif
+      </div>
       @if($team->end==0)
-      <button id="Cbutton" class="create_team_button" onclick="CClick()">지원취소</button>
+      <br><button id="Cbutton" class="create_team_button" onclick="CClick()">지원취소</button>
       @else
       <a class="figuresmalll_secondline volinfotitle add">모집 완료된 팀은 지원취소를 하실 수 없습니다<br>걱정마세요 팀마스터도 더이상 개인정보를 열람할 수 없습니다</a>
 

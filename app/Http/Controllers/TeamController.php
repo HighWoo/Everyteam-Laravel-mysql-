@@ -32,6 +32,7 @@ class TeamController extends Controller
         'countm'=>$request->countm,
         'Createdid'=>$request->user()->id,
         'end'=>0,
+        'numopen'=>$request->numopen,
     ]);
     
     //return redirect()->back();
@@ -97,14 +98,14 @@ public function show(Team $team){
 
 //
   public function volshow(Team $team){
-    $voluser=DB::select('select users.id,users.name,users.email,users.phonenum,users.kakao
+    $voluser=DB::select('select users.id,users.name,users.kakao
     from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
     return view('team.volunteer',compact('team','voluser'));
   }
   public function appshow(Team $team){ //
-    $voluser=DB::select('select users.id,users.name,users.email,users.phonenum,users.kakao
-    from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
-    return view('team.myappinfo',compact('team','voluser'));
+    $numopen=DB::table('teams')->select('numopen')->where('id',$team->id)->get();
+    $teamleaderinfo=DB::table('users')->select('phonenum','kakao')->where('id',$team->Createdid)->get();
+    return view('team.myappinfo',compact('team','teamleaderinfo','numopen'));
   }
 
   public function mycreateteamtable(){

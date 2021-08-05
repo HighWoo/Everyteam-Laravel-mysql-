@@ -36,7 +36,7 @@
             @foreach ($mycteam as $item)
         <tr onClick="location.href='/volunteer/{{$item -> id}}'">
                 <td width="100">{{$item -> class}}</td>
-                <td width="350">{{$item -> title}}</td>
+                <td width="350"><a class="maintablefont">{{$item -> title}}</a></td>
                 <td width="410">{{$item -> address}}</td>
                 <td width="70">{{$item -> countm}}</td>
                 <td width="70">@if($item->end==0)모집중 @elseif($item->end==1)모집완료 @else 에러 @endif</td>

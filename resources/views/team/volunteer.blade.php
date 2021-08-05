@@ -129,7 +129,7 @@
 
 
     <div class="teaminfotextboxl">
-   
+      <br><a class="stitletext">상세정보 입니다</a>
     <table class="vollist-table">
         <thead>
             <tr>
@@ -159,18 +159,21 @@
 <div class="teaminfotextboxl">
   
       <table class="vollist-table">
+
         <thead>
+          <br><a class="stitletext">지원자목록 입니다<br>지원자가 연락이 없을때 채팅을 사용해주세요</a>
             <tr>
                  <th width="464">이름</th>
-                 <th width="464">이메일</th>
+                 
                  <th width="464">채팅방</th>
  
               </tr>
         <tbody>
             @foreach ($voluser as $item)
             <tr>
+              
                 <td width="464">{{$item -> name}}</td>
-                <td width="464">{{$item -> email}}</td>
+          
                 <td width="464"><a href="{{$item -> kakao}}" target="_blank" >채팅입장하기</a></td>
             </tr>
            @endforeach 

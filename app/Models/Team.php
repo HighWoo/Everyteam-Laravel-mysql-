@@ -16,7 +16,8 @@ class Team extends Model
         'content',
         'countm',
         'Createdid',
-        'end'
+        'end',
+        'numopen'
     ];
 }
 

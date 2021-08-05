@@ -73,6 +73,11 @@ function Checkform() {
         createform.content.focus();
         return; 
     }
+    else if(createform.numopen.value == ""){
+        alert("전화번호 공개 여부를 체크해주세요"); 
+        createform.numopen.focus();
+        return; 
+    }
     else{
         document.createform.submit();
     }
@@ -122,6 +127,13 @@ function Checkform() {
 <input type="number" name="countm" class="create_team_textbox"  ><br>
 <a class="create_team_infotext">팀의 상세내용을 입력해 주세요</a><br>
 <textarea name="content" class="create_team_textarea" wrap="hard"  ></textarea><br>
+
+<br><a class="create_team_infotext">전화번호를 공개하시겠어요?</a><br>
+<div class=create_team_radiobox >
+<input class="create_team_radio" type="radio" name="numopen" value="1"> 네
+<input class="create_team_radio right" type="radio" name="numopen" value="0">아니오
+</div><br>
+
 
 <input type="button" class="create_team_button" value="생성하기" onclick="Checkform()">
 </form>

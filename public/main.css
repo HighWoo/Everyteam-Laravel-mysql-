@@ -621,6 +621,7 @@ background-color:#b2f5bb;
   margin-top: 20px;
   font-family: 'EliceDigitalBaeum_Regular';
 }
+
 .teaminfotextbox{
   width: max-content;
   height: max-content;
@@ -674,6 +675,12 @@ background-color:#b2f5bb;
 .stitletext{
   font-family: 'EliceDigitalBaeum_Regular';
   font-size: 20px;
+}
+.stitletext.kakao{
+  font-weight: bold;
+  color: black;
+  background-color:#28E094;
+  border: solid 1px black;
 }
 
 .create_team_textbox{
@@ -734,6 +741,11 @@ background-color:#b2f5bb;
 .create_team_radiobox.addressbox{
   height: max-content;
 }
+.create_team_checkbox{
+  width: 15px;
+  height: 15px;
+ 
+}
 
 .create_team_radio{
 
@@ -764,6 +776,7 @@ background-color:#b2f5bb;
   font-size: 18px;
   font-family: 'EliceDigitalBaeum_Regular';
   font-weight: bold;
+  cursor: pointer;
 }
 .create_team_button:hover{
   color: #ffffff;

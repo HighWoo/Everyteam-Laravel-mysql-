@@ -22,7 +22,7 @@ class CreateAppsTable extends Migration
             $table->foreignId('team_id')
             ->constrained()
             ->onDelete('cascade');
-        
+          
         });
     }
 

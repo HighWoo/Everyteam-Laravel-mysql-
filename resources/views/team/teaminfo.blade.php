@@ -104,8 +104,10 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
       <input type="hidden" name="teamid" value="{{$team -> id}}">
       <input type="hidden" name="userid" value="{{Auth::user()->id}}">
          @if($userapp==0)
+           <a class="figuresmalll_secondline volinfotitle add">신청하시면 연락처를 확인할 수 있어요</a>
           <input type="button" class="create_team_button" value="신청하기" onclick="Click()">
          @else
+         
           <a class="figuresmalll_secondline volinfotitle add">이미 지원한 팀입니다</a>
           @endif
       </form>
