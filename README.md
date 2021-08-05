@@ -41,6 +41,7 @@
 [Day27](#Day27)-카카오 주소 시스템 연동/aws 학습  
 [Day28](#Day28)-테이블 관련 작업  
 [Day29](#Day29)-카카오 지도 api연동/글 수정기능 추가  
+[Day30](#Day30)-팀을 생성할때 번호공개 여부를 정할수 있는기능 추가/지원자 목록 정리
 <hr>
 
 # Day1 
@@ -744,6 +745,28 @@ s3버킷도 닫고 모든 스냅샷 기록도 삭제했는데
 
 <hr>
 
+# Day30    
+(2021/08/04)  
+## 개발Part  
+지원자목록에 문구 추가와 이메일 항목 제거  
+![image](https://user-images.githubusercontent.com/75231868/128310747-aed8ac5a-9993-43a8-b860-b22b11197406.png)  
+
+Team 컨트롤러에 정크코드 제거  
+
+전화번호 공개여부 선택항목 추가  
+![image](https://user-images.githubusercontent.com/75231868/128310939-d9e751bc-9999-4f96-b2b0-d8f663ec5055.png)
+
+공개를 하였더라도 신청 전에는 번호를 알 수 없음  
+![image](https://user-images.githubusercontent.com/75231868/128311052-7f68a9ac-a74d-4f9a-b303-668175454dd5.png)
+
+지원하면 팀장 연락처 공개 팀 생성시 번호 공개여부를 아니오에 체크하면 하단에 카카오톡 오픈채팅만 나옴  
+![image](https://user-images.githubusercontent.com/75231868/128311174-f8b517f9-80f2-45e8-b971-8ebb8bb68812.png)
+
+## 학습part 
+학습은 aws인프라 구축 학습중  
+도서명:aws인프라구축 가이드 (지은이-김담형)  
+
+<hr>
 
 
 
