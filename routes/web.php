@@ -27,7 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/allteams', [App\Http\Controllers\TeamController::class ,'bviewtable'])->name('allteam');
 Route::get('/teaminfo/{team}', [App\Http\Controllers\TeamController::class ,'show']);
-
+Route::get('/teamclass/{class}', [App\Http\Controllers\TeamController::class ,'classshow']);
 
 //앱컨트롤러
 Route::post('/teaminfo',[App\Http\Controllers\AppController::class ,'Apply'])->name('apps.apply');
@@ -43,5 +43,6 @@ Route::get('/myappteam', [App\Http\Controllers\TeamController::class ,'myappteam
 
 Route::get('/volunteer/{team}', [App\Http\Controllers\TeamController::class ,'volshow']);
 Route::get('/myappinfo/{team}', [App\Http\Controllers\TeamController::class ,'appshow']);
+
 
 Route::get('/search',[App\Http\Controllers\TeamController::class ,'searchtable'])->name('team.search');

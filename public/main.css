@@ -373,6 +373,11 @@ display:inline-block;
   cursor: pointer;
   border-radius: 15px;
 }
+.figuresmalll_firstline:hover{
+  background-color: #0EC779;
+  border:2px solid #c5c5c5;
+  color: #ffffff;
+}
 .figuresmalll:hover{
   background-color: #f8f8f8;
 }
@@ -418,18 +423,19 @@ display:inline-block;
 .annl.left {
   margin-right:56px;
 }
+
 .annl.box{
   height: 250px;
   background-color: rgb(255, 255, 255);
   text-align: right;
 }
+
 .annl.box.left{
   margin-right:56px;
   background-color: rgb(255, 255, 255);
 }
-.annl:hover{
+.annl.box:hover{
   background-color: #f8f8f8;
-
 }
 
 .annltext{

@@ -82,7 +82,7 @@ public function searchtable(Request $request){
     //$searchtext=$request->Searchtext;
     
     //$searchval=DB::table('teams')->select('*')->where('title','like','%'.$searchtext.'%')->paginate(2);
-    $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(10);
+    $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(1);
     $searchcount=$searchval->count();
     return view('search',compact('searchval','searchtext','searchcount'));  
     }
@@ -98,7 +98,7 @@ public function show(Team $team){
 
 //
   public function volshow(Team $team){
-    $voluser=DB::select('select users.id,users.name,users.kakao
+    $voluser=DB::select('select users.id,users.name,users.kakao,apps.created_at
     from users,apps where apps.team_id = ? and users.id = apps.user_id ', [$team -> id]);
     return view('team.volunteer',compact('team','voluser'));
   }
@@ -107,12 +107,20 @@ public function show(Team $team){
     $teamleaderinfo=DB::table('users')->select('phonenum','kakao')->where('id',$team->Createdid)->get();
     return view('team.myappinfo',compact('team','teamleaderinfo','numopen'));
   }
+  
+  public function classshow($class){ //
+    $classval=DB::table('teams')->select('*')->where('class',$class)->paginate(2);
+    $classcount=$classval->count();
+    $classname=$class;
+    return view('team.teamclass',compact('classval','classcount','classname'));
+    }
+
 
   public function mycreateteamtable(){
     //$team = \App\Models\Team::all(); 
 
     //$mycteam=DB::select('select * from teams where Createdid = ? ', [Auth::user()->id]);
-    $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->paginate(10);
+    $mycteam=DB::table('teams')->select('*')->where('Createdid',Auth::user()->id)->orderBy('created_at','desc')->paginate(10);
     $mycteamcount=$mycteam->count();
     return view('team.mycreateteam',compact('mycteam','mycteamcount'));
   
@@ -122,7 +130,7 @@ public function show(Team $team){
 //$myateam=AA::select('select teams.id,teams.title,teams.class,teams.address,teams.countm,teams.end 
  //from teams,apps where apps.user_id = ? and teams.id = apps.team_id ', [Auth::user()->id])->paginate(2);
 $myateam=DB::table('teams')->join('apps','teams.id','=','apps.team_id')->select('teams.*')->where('apps.user_id',Auth::user()->id)
-->paginate(10);
+->orderBy('apps.created_at','desc')->paginate(10);
 $myateamcount=$myateam->count();
    return view('team.myappteam',compact('myateam','myateamcount')); 
   }

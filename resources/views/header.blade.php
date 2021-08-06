@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="/main.css" />
    
     <title>Document</title>
 </head>
@@ -51,7 +51,7 @@
         @guest
         @if (Route::has('login'))
         <a class="neviusertext fake">=============</a>
-        <a class="topmenubuttons" href="{{ url('/') }}">고객지원</a> 
+        <a class="topmenubuttons" href="{{ url('https://open.kakao.com/o/svoduBpd') }}" target="_blank">고객지원</a> 
                 <a class="Loginbutton" href="{{ route('login') }}">로그인</a>
                 <a class="Loginbutton" href="{{ route('register') }}">회원가입</a>
                
@@ -63,8 +63,8 @@
                 {{Auth::user()->name}}{{'님 안녕하세요' }}
             </a>
            
-            <a class="Loginbutton" href="">내정보</a>
-            <a class="topmenubuttons" href="{{ url('/') }}">고객지원</a> 
+          
+            <a class="topmenubuttons" href="{{ url('https://open.kakao.com/o/svoduBpd') }} "target="_blank">고객지원</a> 
                 <a class="Loginbutton" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit(); alert('로그아웃 되었습니다'); ">

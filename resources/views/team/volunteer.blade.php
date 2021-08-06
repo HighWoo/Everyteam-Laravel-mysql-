@@ -164,7 +164,7 @@
           <br><a class="stitletext">지원자목록 입니다<br>지원자가 연락이 없을때 채팅을 사용해주세요</a>
             <tr>
                  <th width="464">이름</th>
-                 
+                 <th width="464">신청시간</th>
                  <th width="464">채팅방</th>
  
               </tr>
@@ -173,8 +173,9 @@
             <tr>
               
                 <td width="464">{{$item -> name}}</td>
-          
-                <td width="464"><a href="{{$item -> kakao}}" target="_blank" >채팅입장하기</a></td>
+                <td width="464">{{$item -> created_at}}</td>
+               
+                <td width="464"><a class="create_team_button" href="{{$item -> kakao}}" target="_blank" >채팅입장하기</a></td>
             </tr>
            @endforeach 
     </thead>

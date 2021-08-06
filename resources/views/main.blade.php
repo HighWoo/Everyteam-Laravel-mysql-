@@ -14,19 +14,19 @@
 
 
 <div class="mainl figure">
-  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+  <a class="figuresmalll_firstline" href="/teamclass/study">
     스터디
   </a>
-  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+  <a class="figuresmalll_firstline" href="/teamclass/sport">
     스포츠
   </a>
-  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+  <a class="figuresmalll_firstline" href="/teamclass/club">
     동아리
   </a>
-  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+  <a class="figuresmalll_firstline" href="/teamclass/game">
     게임
   </a>
-  <a class="figuresmalll_firstline" href="{{ url('/') }}">
+  <a class="figuresmalll_firstline" href="/teamclass/mentor">
     멘토
   </a>
   </div>
@@ -39,15 +39,15 @@
 </div>
 </div>
 <div class="mainl figure2">
-<a class="figuresmalll_secondline" href="{{ url('/') }}">
+<a class="figuresmalll_secondline" href="{{ url('/allteams') }}">
   모집중인 <span style="color:#0EC779;font-weight: bold">  {{ $countteam }}개의팀</span>을 만나보세요.
 </a>
  
 </div>
 </div>
 <div class="mainl figure2">
-<a class="figuresmalll_secondline" href="{{ url('/') }}">
-매칭이 완료된 <span style="color:#0EC779;font-weight: bold;">{{ $countendteam }}개의팀</span>이 있습니다 팀을 생성해보세요
+<a class="figuresmalll_secondline" href="{{ url('/create') }}">
+매칭이 완료된 <span style="color:#0EC779;font-weight: bold;" >{{ $countendteam }}개의팀</span>이 있습니다 팀을 생성해보세요
 </a>
  
 </div>
