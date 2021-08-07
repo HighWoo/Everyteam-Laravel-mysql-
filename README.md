@@ -795,8 +795,8 @@ css오류 수정
 
 <hr>
 
-# Day31    
-(2021/08/06 휴가기간)  
+# Day32    
+(2021/08/07 휴가기간)  
 ## 개발Part  
 팀에 신청한 신청자 수를 볼수 있는 코드추가  
 ![image](https://user-images.githubusercontent.com/75231868/128586088-78c8c719-9390-4a35-9716-30ea399dde6a.png)  
