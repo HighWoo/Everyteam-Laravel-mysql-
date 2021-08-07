@@ -72,8 +72,9 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
                  <th width="80">분류</th>
                  <th width="400">모임위치</th>
                  <th width="160">생성</th>
-                 <th width="160">수정</th>
-                 <th width="70">모집인원</th>
+                 <th width="115">모집인원</th>
+                 <th width="115">지원인원</th>
+           
                  <th width="60">상태</th>
                
               </tr>
@@ -83,8 +84,9 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
  
                 <td width="400">{{$team -> address}}</td>
                 <td width="160">{{$team -> created_at}}</td>
-                <td width="160">{{$team -> updated_at}}</td>
-                <td width="70">{{$team -> countm}}</td>
+        
+                <td width="115">{{$team -> countm}}</td>
+                <td width="115">{{$appcount}}</td>
                 <td width="60">@if($team->end==0)모집중 @elseif($team->end==1)모집완료 @else 에러 @endif</td>
           
             </tr>
@@ -111,14 +113,14 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
           <br>
         <a class="stitletext kakao">카카오톡 오픈채팅</a>
         <a class="figuresmalll_secondline volinfotitle add">{{$teamleaderinfo[0]->kakao}}</a>
-        <a class="create_team_button" onclick="window.open('{{$teamleaderinfo[0]->kakao}}')">채팅방입장하기</a><br><br>
+        <a class="create_team_button" onclick="window.open('{{$teamleaderinfo[0]->kakao}}')"  target="_blank">채팅방입장하기</a><br><br>
       </div>
          {{-- 넘버 오픈에 동의하지 않았을 때 --}}
         @elseif($numopen[0]->numopen==0)
         <div class="teaminfotextboxl">
           <a class="stitletext kakao">카카오톡 오픈채팅</a>
         <a class="figuresmalll_secondline volinfotitle add">{{$teamleaderinfo[0]->kakao}}</a>
-        <a class="create_team_button" href="{{$teamleaderinfo[0]->kakao}}">채팅방입장하기</a><br><br>
+        <a class="create_team_button" href="{{$teamleaderinfo[0]->kakao}}"  target="_blank">채팅방입장하기</a><br><br>
         </div>
         @else
         <div class="teaminfotextboxl">

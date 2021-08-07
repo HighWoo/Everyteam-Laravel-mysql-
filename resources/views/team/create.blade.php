@@ -10,7 +10,7 @@
 </head> 
 <body>   
    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-   {{-- 다음 주소 프로그램 --}}
+   {{-- 다음 주소 api --}}
    <script>   
        function sample6_execDaumPostcode() {
            new daum.Postcode({
@@ -124,7 +124,7 @@ function Checkform() {
 </div><br>
 
 <a class="create_team_infotext">모집 인원 수를 입력해 주세요</a><br>
-<input type="number" name="countm" class="create_team_textbox"  ><br>
+<input type="number" name="countm" class="create_team_textbox" placeholder="숫자만 입력하세요" ><br>
 <a class="create_team_infotext">팀의 상세내용을 입력해 주세요</a><br>
 <textarea name="content" class="create_team_textarea" wrap="hard"  ></textarea><br>
 

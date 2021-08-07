@@ -129,7 +129,7 @@
 
 
     <div class="teaminfotextboxl">
-      <br><a class="stitletext">상세정보 입니다</a>
+      <br><a class="stitletext">상세정보</a>
     <table class="vollist-table">
         <thead>
             <tr>
@@ -161,7 +161,7 @@
       <table class="vollist-table">
 
         <thead>
-          <br><a class="stitletext">지원자목록 입니다<br>지원자가 연락이 없을때 채팅을 사용해주세요</a>
+          <br><a class="stitletext">지원자목록<br>지원자가 연락이 없을때 채팅을 사용해주세요</a>
             <tr>
                  <th width="464">이름</th>
                  <th width="464">신청시간</th>
@@ -169,6 +169,14 @@
  
               </tr>
         <tbody>
+            @if($voluser==null)
+            
+          </thead>
+        </tbody>
+      </table>
+      <a class="figuresmalll_secondline volinfotitle add">지원자가 없습니다</a>
+            @else
+
             @foreach ($voluser as $item)
             <tr>
               
@@ -178,9 +186,13 @@
                 <td width="464"><a class="create_team_button" href="{{$item -> kakao}}" target="_blank" >채팅입장하기</a></td>
             </tr>
            @endforeach 
-    </thead>
+          </thead>
         </tbody>
       </table>
+            @endif
+            
+   
+    
   
 
       <form name="forma" action="{{ route('apps.delend') }}" method="POST">

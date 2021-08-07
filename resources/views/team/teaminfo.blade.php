@@ -75,8 +75,8 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
                  <th width="80">분류</th>
                  <th width="400">모임위치</th>
                  <th width="160">생성</th>
-                 <th width="160">수정</th>
-                 <th width="70">모집인원</th>
+                 <th width="115">모집인원</th>
+                 <th width="115">신청인원</th>
                  <th width="60">상태</th>
                
               </tr>
@@ -86,8 +86,9 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
  
                 <td width="400">{{$team -> address}}</td>
                 <td width="160">{{$team -> created_at}}</td>
-                <td width="160">{{$team -> updated_at}}</td>
-                <td width="70">{{$team -> countm}}</td>
+                <td width="115">{{$team -> countm}}명</td>
+                <td width="115">{{$appcount}}명</td>
+            
                 <td width="60">@if($team->end==0)모집중 @elseif($team->end==1)모집완료 @else 에러 @endif</td>
           
             </tr>

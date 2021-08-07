@@ -66,6 +66,9 @@ public function bviewtable(){
 
    $team = DB::table('teams')->select('*')->where('end',0)->orderBy('created_at','desc')->paginate(10);
    //$team = \App\Models\Team::all(); 
+
+ 
+
    
     return view('team.allteams',compact('team'));
 
@@ -92,8 +95,15 @@ public function searchtable(Request $request){
 
 
 public function show(Team $team){
+
+
+    $appcount=DB::table('apps')->select('id')->where('team_id',$team -> id)->count();
+
     $userapp=DB::table('apps')->select('id')->where('user_id',Auth::user()->id)->where('team_id',$team -> id)->count();
-  return view('team.teaminfo',compact('team','userapp'));
+    
+   
+
+  return view('team.teaminfo',compact('team','userapp','appcount'));
   }
 
 //
@@ -103,9 +113,11 @@ public function show(Team $team){
     return view('team.volunteer',compact('team','voluser'));
   }
   public function appshow(Team $team){ //
+    
+    $appcount=DB::table('apps')->select('id')->where('team_id',$team -> id)->count();
     $numopen=DB::table('teams')->select('numopen')->where('id',$team->id)->get();
     $teamleaderinfo=DB::table('users')->select('phonenum','kakao')->where('id',$team->Createdid)->get();
-    return view('team.myappinfo',compact('team','teamleaderinfo','numopen'));
+    return view('team.myappinfo',compact('team','teamleaderinfo','numopen','appcount'));
   }
   
   public function classshow($class){ //
