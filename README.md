@@ -43,7 +43,7 @@
 [Day29](#Day29)-카카오 지도 api연동/글 수정기능 추가  
 [Day30](#Day30)-팀을 생성할때 번호공개 여부를 정할수 있는기능 추가/지원자 목록 정리  
 [Day31](#Day31)-신청시간자동생성/정렬수정/항목별 검색기능추가   
-[Day32](#Day32)-휴가기간/신청자 수 알수 있는 코드추가,
+[Day32](#Day32)-휴가기간/신청자 수 알수 있는 코드추가,지원자 없을때 알림추가  
 <hr>
 
 # Day1 
@@ -800,6 +800,9 @@ css오류 수정
 ## 개발Part  
 팀에 신청한 신청자 수를 볼수 있는 코드추가  
 ![image](https://user-images.githubusercontent.com/75231868/128586088-78c8c719-9390-4a35-9716-30ea399dde6a.png)  
+
+지원자가 없을때 지원자가 없다는 문구 출력  
+![image](https://user-images.githubusercontent.com/75231868/128586154-1a0da1ba-4aa9-46a9-a63b-df67e9a7bfd1.png)  
 
 
 <hr>
