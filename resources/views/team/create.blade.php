@@ -10,35 +10,26 @@
 </head> 
 <body>   
    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-   {{-- 다음 주소 api --}}
    <script>   
        function sample6_execDaumPostcode() {
            new daum.Postcode({
                oncomplete: function(data) {
                    document.getElementById("sample6_address").value = data.roadAddress; 
                    document.getElementById("sample6_detailAddress").focus();
-
-                   
                }
-               
            }).open();
-          
        }
-     
    </script>
-       {{-- 아니오 클릭시 주소 div생성 --}}
        <script language="javascript" type="text/javascript">
        function setDisplay(){
     if($('input:radio[id=aaa]').is(':checked')){
         document.getElementById("sample6_address").value="온라인";
         $('#test').hide();
     }else{
-        
         $('#test').show();
         document.getElementById("sample6_address").value=null;
     }
 }
-   //주소 입력 체크
 function Checkform() { 
   
     if(createform.title.value == ""){
@@ -82,13 +73,7 @@ function Checkform() {
         document.createform.submit();
     }
 }
-
-
-    </script>
-      {{--  --}}
-
-
-     
+ </script>
 
 <div class="mainl basicl">
     <br> <a class="titletext">팀을 생성하세요</a><br><br><br>

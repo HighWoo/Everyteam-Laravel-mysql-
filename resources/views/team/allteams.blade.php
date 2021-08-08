@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @include('header')
- 
-   
-
 </head> 
-
 <body>   
-    
 <div class="mainl basicl">
     <div class="infosmalll">
     <br> <a class="titletext">EveryTeam</a><br>
@@ -26,13 +19,9 @@
                  <th width="400">제목</th>
                  <th width="400">주소</th>
                  <th width="100">모집인원</th>
-               
-        
               </tr>
           </thead>
-         
         <tbody>
-            
             @foreach ($team as $item)
             @guest
             @if(Route::has('login'))
@@ -43,24 +32,13 @@
             @endguest
                 <td width="100">{{$item -> class}}</td>
                 <td width="400"><a class="maintablefont">{{$item -> title}}</a></td>
-                {{-- <td width="500"><a href="/teaminfo/{{$item -> id}}">{{$item -> title}}</a></td> --}}
                 <td width="400">{{$item -> address}}</td>
                 <td width="100">{{$item -> countm}}</td>
-     
-   
-        
-        
         </tr>
             @endforeach 
-
-     
         </tbody>
-    
       </table>
- 
 </div>
-   
-   
 </div>
 <div class="mainl basicl">
 <div class="infosmalll">
@@ -76,8 +54,6 @@
 @endif
 </div>
 </div>
-
 @include("bottom")
-
 </body>
 </html>

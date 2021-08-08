@@ -79,8 +79,7 @@
     @endguest
       </div>
     </div>
-   
-            {{-- <a  class="Loginbutton" href="{{ route('login') }}">Login</a> --}}
+
   
 
     
@@ -90,13 +89,10 @@
         <div id="smallsearchlayout" class="searchsl">
     <INPUT type="text" name="Searchtext" placeholder="제목으로 검색하세요" class="search"/>
 
-    {{-- <input type="submit" class="searchbutton" value=""> --}}
       
      <input type="submit" class="searchbutton" value="검색">
         </div>
     </form>
-        {{-- <a  class="searchbutton" href="">Search</a> --}}
-        {{-- <img src="image/sbutton.png"> --}}
     </div>
     
 

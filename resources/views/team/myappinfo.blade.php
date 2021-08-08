@@ -17,9 +17,7 @@
       return;
     }
   }
-
   </script>
-
 <body>   
 
   <div class="mainl basicl">
@@ -27,8 +25,6 @@
     <br><div class="teaminfotextboxl">
       <a class="figuresmalll_secondline volinfotitle ">{{$team -> title}}</a>
     <div class="teaminfotextbox">{{$team -> content}}</div>
-    
-
     @if($team -> address=='온라인')
     <a class="figuresmalll_secondline volinfotitle add">온라인 활동 입니다</a>
     @else
@@ -63,7 +59,6 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
     @endif
     </div>
 
-
     <div class="teaminfotextboxl">
    
     <table class="vollist-table">
@@ -74,34 +69,27 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
                  <th width="160">생성</th>
                  <th width="115">모집인원</th>
                  <th width="115">지원인원</th>
-           
                  <th width="60">상태</th>
                
               </tr>
         <tbody>
             <tr>
                 <td width="80">{{$team -> class}}</td>
- 
                 <td width="400">{{$team -> address}}</td>
                 <td width="160">{{$team -> created_at}}</td>
-        
                 <td width="115">{{$team -> countm}}</td>
                 <td width="115">{{$appcount}}</td>
                 <td width="60">@if($team->end==0)모집중 @elseif($team->end==1)모집완료 @else 에러 @endif</td>
-          
             </tr>
        </thead>
         </tbody>
      </table>
     </div>
-  
-
       <form name="formc" action="{{ route('apps.cancel') }}" method="POST">
         @csrf
       <input type="hidden" name="teamid" value="{{$team -> id}}">
       <input type="hidden" name="userid" value="{{Auth::user()->id}}">
       </form>
- 
         {{-- 넘버 오픈에 동의했을때 --}}
         @if($numopen[0]->numopen==1) 
         <div class="teaminfotextboxl">
@@ -132,14 +120,9 @@ geocoder.addressSearch('{{$team -> address}}', function(result, status) {
       <br><button id="Cbutton" class="create_team_button" onclick="CClick()">지원취소</button>
       @else
       <a class="figuresmalll_secondline volinfotitle add">모집 완료된 팀은 지원취소를 하실 수 없습니다<br>걱정마세요 팀마스터도 더이상 개인정보를 열람할 수 없습니다</a>
-
       @endif
-
-    
-
 </div>
 </div>
 @include("bottom")
 </body>
-
 </html>
