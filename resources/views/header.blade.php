@@ -29,7 +29,7 @@
         <a class="topmenubuttons" href="{{ route('login') }}" onclick="alert('팀을 생성하시려면 로그인이 필요합니다')">팀생성</a> 
         <a class="topmenubuttons" href="{{ route('login') }}" onclick="alert('신청한팀 확인은 로그인이 필요합니다')">신청한팀</a> 
         <a class="topmenubuttons" href="{{ route('login') }}" onclick="alert('생성한팀 확인은 로그인이 필요합니다')">생성한팀</a> 
-            
+        <a class="topmenubuttons" href="{{ url('https://github.com/highcowoo/Everyteam/blob/main/Instruction.md') }}" target="_blank">이용안내</a> 
    
       @endif
       @else
@@ -39,7 +39,7 @@
           <a class="topmenubuttons" href="{{ url('/create') }}">팀생성</a> 
           <a class="topmenubuttons" href="{{ route('myappteam') }}">신청한팀</a> 
           <a class="topmenubuttons" href="{{ route('mycreateteam')}}">생성한팀</a> 
-          
+          <a class="topmenubuttons" href="{{ url('https://github.com/highcowoo/Everyteam/blob/main/Instruction.md') }}" target="_blank">이용안내</a> 
    
       @endguest   
     

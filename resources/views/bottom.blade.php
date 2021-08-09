@@ -17,7 +17,7 @@
      
          <a class="bottomtext" href="">이용약관</a>
         
-         <a class="bottomtext"href="">개인정보처리방침</a>
+         <a class="bottomtext" href="{{ url('https://github.com/highcowoo/Everyteam/blob/main/Instruction.md') }}" target="_blank">사용법안내</a> 
     
          <a class="bottomtext" href="{{ url('https://open.kakao.com/o/svoduBpd') }}" target="_blank">고객센터</a>
       
