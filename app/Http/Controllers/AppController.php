@@ -62,4 +62,8 @@ class AppController extends Controller
         return redirect('/')->with('controller_alert', '잘못된 접근입니다');
     }
     
+    public function infomod(Request $request){
+     DB::update('update users set kakao = ? where id = ?', [$request->kakao,Auth::user()->id]);
+     return redirect('/')->with('controller_alert', '수정이 완료 되었습니다');
+    }
 }

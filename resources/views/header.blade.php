@@ -51,6 +51,7 @@
         @guest
         @if (Route::has('login'))
         <a class="neviusertext fake">=============</a>
+
         <a class="topmenubuttons" href="{{ url('https://open.kakao.com/o/svoduBpd') }}" target="_blank">고객지원</a> 
                 <a class="Loginbutton" href="{{ route('login') }}">로그인</a>
                 <a class="Loginbutton" href="{{ route('register') }}">회원가입</a>
@@ -63,7 +64,7 @@
                 {{Auth::user()->name}}{{'님 안녕하세요' }}
             </a>
            
-          
+            <a class="topmenubuttons" href="{{ url('/myinformation') }}">내정보</a> 
             <a class="topmenubuttons" href="{{ url('https://open.kakao.com/o/svoduBpd') }} "target="_blank">고객지원</a> 
                 <a class="Loginbutton" href="{{ route('logout') }}"
                    onclick="event.preventDefault();

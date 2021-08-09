@@ -16,6 +16,8 @@ class TeamController extends Controller
 
 
   public function store(Request $request){ //팀 생성
+    $teamcreatenum=DB::table('teams')->select('id')->where('Createdid',Auth::user()->id)->where('end',0)->count();
+    if($teamcreatenum<2){
     Team::create([
         'title'=>$request->title,
         'class'=>$request->class,
@@ -26,7 +28,11 @@ class TeamController extends Controller
         'end'=>0,
         'numopen'=>$request->numopen,
     ]);
-    return redirect('/allteams')->with('controller_alert', '생성이 완료되었습니다');
+    return redirect('/mycreateteam')->with('controller_alert', '생성이 완료되었습니다');
+  }
+  else{
+    return redirect('/')->with('controller_alert', '팀을 더이상 생성할 수 없습니다\n동시모집은 2개까지만 가능하며\n추가 모집을 원하실경우 삭제/모집완료 처리 해주세요');
+  }
 }
 
 

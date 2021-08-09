@@ -27,12 +27,14 @@
      </span>
     @enderror
     <input id="kakao" type="text" placeholder="카카오 오픈카톡 링크(연락수단 입니다)" class="logintextbox bottom register @error('kakao') is-invalid @enderror" name="kakao" value="{{ old('kakao') }}" required autocomplete="phonenum" >
+    <br><a class="logintext">[방이름은 본인의 이름/1대1 채팅방으로 생성]</a>
+    <a class="logintext howmadekakao" href="{{ url('https://tv.kakao.com/v/390647067') }} "target="_blank">오픈카톡 생성방법</a>
     @error('kakao')
             <span class="invalid-feedback" role="alert">
           <strong>{{ $message }}</strong>
          </span>
       @enderror
-    <input id="phonenum" type="number"  maxlength="11"   placeholder="전화번호(비공개)" class="logintextbox bottom register @error('phonenum') is-invalid @enderror" name="phonenum" value="{{ old('phonenum') }}" required autocomplete="phonenum" oninput="numberMaxLength(this);">
+    <input id="phonenum" type="number"  maxlength="11"   placeholder="전화번호(선택공개)" class="logintextbox bottom register @error('phonenum') is-invalid @enderror" name="phonenum" value="{{ old('phonenum') }}" required autocomplete="phonenum" oninput="numberMaxLength(this);">
     @error('phonenum')
             <span class="invalid-feedback" role="alert">
                 <br><strong>{{ $message }}</strong>

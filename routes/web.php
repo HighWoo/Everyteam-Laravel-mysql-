@@ -34,6 +34,10 @@ Route::post('/teaminfo',[App\Http\Controllers\AppController::class ,'Apply'])->n
 Route::post('/volunteer',[App\Http\Controllers\AppController::class ,'delend',])->name('apps.delend');
 Route::post('/myappinfo',[App\Http\Controllers\AppController::class ,'appcancel',])->name('apps.cancel');
 
+Route::get('/myinformation', function () {
+    return view('myinformation');
+});
+Route::post('/myinformation',[App\Http\Controllers\AppController::class ,'infomod',])->name('user.infomod');
 
 
 
