@@ -53,6 +53,7 @@
 ### 팀을 삭제하는 방법입니다 단 모집이 완료된 팀은 삭제가 불가능 합니다
 
 [![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)](https://youtu.be/u70sMe7fPNY)
+
 <hr>
 
 # 팀에지원하기
