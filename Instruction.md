@@ -55,11 +55,11 @@
 [![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)](https://youtu.be/u70sMe7fPNY)
 <hr>
 
-## 팀에지원하기
-### 지원,지원취소
+# 팀에지원하기
+## 지원,지원취소
 [![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)](https://youtu.be/7yKpDSESoMI)
 
-### 주의사항  
+## 주의사항  
 팀에 지원을 해야만 팀장이 공개한 연락처가 보입니다  
 팀장이 모집 완료 처리를 한 팀에는 지원취소를 할 수 없습니다
 
