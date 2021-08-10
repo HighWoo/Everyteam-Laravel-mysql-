@@ -11,7 +11,7 @@
 ## 회원가입 방법(중요!)
 ### 하단은 회원가입 방볍입니다 
 
-
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
 <hr>
 
 
