@@ -8,6 +8,10 @@
 ### 사용자 인증 시스템이 없습니다  
 사업자 등록시에만 휴대폰 번호 인증이 가능하여 인증 시스템이 없습니다 참고하여 주세요  
 <br>
+## 회원가입 방법(중요!)
+### 하단은 회원가입 방볍입니다 
+<iframe width="1066" height="600" src="https://www.youtube.com/embed/ozv4q2ov3Mk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 ## 팀 생성방법  
 ### 모집을 원하시는 팀을 생성하실 수 있습니다  
-
+<br>
