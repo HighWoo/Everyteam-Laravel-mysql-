@@ -848,7 +848,7 @@ Elastic Beanstalk 사용하여 간단하게 처리하기로 결정
 # Day35    
 (2021/08/10)  
 ## 개발Part  
-[설명서 작성](Instruction.md)
+[설명서 작성](Instruction.md)  
 반복 테스트  
 모든 페이지네이션 10으로 설정  
 내일 마무리 테스트 후 서버 개설 예정  
