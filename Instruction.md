@@ -33,7 +33,8 @@ https://youtu.be/El2cp7IRDZs
 <hr>
 
 
-## 팀원모집하기
+# 팀원모집하기
+## 팀 생성
 ### 모집을 원하시는 팀을 생성하실 수 있습니다  
 https://youtu.be/TsF3mJ2cfd8
  
