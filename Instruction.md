@@ -56,7 +56,7 @@
 <hr>
 
 
-# 팀에지원하기
+# 팀에지원하기  
 ## 지원,지원취소
 [![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)](https://youtu.be/7yKpDSESoMI)
 
@@ -66,7 +66,7 @@
 <hr>
 
 
-# 내정보수정
+# 내정보수정  
 ## 수정하기
 [![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)](https://youtu.be/ZwcuLtmwGi8)
 
