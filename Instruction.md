@@ -23,6 +23,4 @@
 
 
 
-  {% include youtube.html id="유튜브동영상url" %}  
-
 
