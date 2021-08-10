@@ -1,4 +1,5 @@
 # Welcome to EveryTeam 
+![image](https://user-images.githubusercontent.com/75231868/128675948-a0ed42e1-b44a-420e-a413-deb7bd0a7e65.png)
 ## 공지사항
 ### 현재 팀 동시생성은 2개 까지만 가능합니다
 연속된 생성 방지를 위해 생성완료.삭제 처리되지 않은 팀은 2개까지만 생성할 수 있습니다  
