@@ -15,9 +15,6 @@
         <br><strong>{{ "$message" }}</strong><br>
     </span>
     @enderror
-    <a class="findpass" href="{{ route('password.request') }}">
-        비밀번호를 잊으셨나요?
-    </a>
     <button type="submit" class="loginbutton">
         로그인
     </button>

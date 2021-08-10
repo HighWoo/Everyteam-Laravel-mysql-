@@ -49,7 +49,7 @@
     <input type="text" name="phone" maxlength="20" class="create_team_textbox" value="{{Auth::user()->phonenum}}" readonly><br>
     <a class="create_team_infotext">오픈카톡 링크</a><br>
     <a class="create_team_infotext">수정 후 엔터를 누르시면 수정완료 버튼이 보입니다</a><br>
-    <input type="text" name="kakao" maxlength="20" class="create_team_textbox" value="{{Auth::user()->kakao}}" onchange="showm()"><br>
+    <input type="text" name="kakao" class="create_team_textbox" value="{{Auth::user()->kakao}}" onchange="showm()"><br>
   </form>
 
   <div id="show" style="display:none">

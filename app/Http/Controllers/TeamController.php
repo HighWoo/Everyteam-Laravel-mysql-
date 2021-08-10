@@ -92,7 +92,7 @@ public function show(Team $team){//상세정보 출력
   }
   
   public function classshow($class){ //팀 분류출력
-    $classval=DB::table('teams')->select('*')->where('class',$class)->paginate(2);
+    $classval=DB::table('teams')->select('*')->where('class',$class)->orderBy('created_at','desc')->paginate(10 );
     $classcount=$classval->count();
     $classname=$class;
     return view('team.teamclass',compact('classval','classcount','classname'));
