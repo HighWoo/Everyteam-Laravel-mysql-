@@ -1,6 +1,6 @@
 # 에브리팀
 ![image](https://user-images.githubusercontent.com/75231868/128675948-a0ed42e1-b44a-420e-a413-deb7bd0a7e65.png)
-<iframe width="100%" height="600" src="https://www.youtube.com/embed/HF8mouev8-A" frameborder="0" allowfullscreen></iframe>
+
 
 # aws를 이용해 서버 여는데 성공 
 
