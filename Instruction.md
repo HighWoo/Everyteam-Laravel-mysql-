@@ -38,7 +38,7 @@
 # 팀원모집하기
 ## 팀 생성
 ### 모집을 원하시는 팀을 생성하실 수 있습니다  
-https://youtu.be/TsF3mJ2cfd8
+[![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)](https://youtu.be/TsF3mJ2cfd8)
  
 ## 팀 수정방법 
 ### 내가 생성한 팀을 수정할 수 있습니다  
