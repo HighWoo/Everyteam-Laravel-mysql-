@@ -63,7 +63,7 @@ public function searchtable(Request $request){//검색어 출력
     }
     else{
       $searchtext=$request->Searchtext;
-    $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(1);
+    $searchval=DB::table('teams')->select('*')->WhereRaw('REPLACE (title," ","") LIKE "%'.str_replace(' ','%',$searchtext).'%"')->paginate(10);
     $searchcount=$searchval->count();
     return view('search',compact('searchval','searchtext','searchcount'));  
     }
@@ -92,7 +92,7 @@ public function show(Team $team){//상세정보 출력
   }
   
   public function classshow($class){ //팀 분류출력
-    $classval=DB::table('teams')->select('*')->where('class',$class)->orderBy('created_at','desc')->paginate(10 );
+    $classval=DB::table('teams')->select('*')->where('class',$class)->orderBy('created_at','desc')->paginate(10);
     $classcount=$classval->count();
     $classname=$class;
     return view('team.teamclass',compact('classval','classcount','classname'));
