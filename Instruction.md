@@ -23,6 +23,6 @@
 
 
 
-<iframe width="100%" height="600" src="https://www.youtube.com/embed/HF8mouev8-A" frameborder="0" allowfullscreen></iframe>
+  {% include youtube.html id="유튜브동영상url" %}  
 
 
