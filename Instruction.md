@@ -24,9 +24,9 @@
 
 # 회원가입방법
 ## 하단은 회원가입 방법 영상 입니다 
-![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)
-[![예제](http://img.youtube.com/vi/RlQEoJaLQRA/0.jpg)](https://youtu.be/RlQEoJaLQRA?t=0s) 
-https://youtu.be/El2cp7IRDZs
+[![Frame 10](https://user-images.githubusercontent.com/75231868/128814204-bbd222f9-b7e9-44c3-8a01-d6878685c990.png)](https://youtu.be/El2cp7IRDZs)
+
+
 
 ## 회원가입주의사항 
 - 올바른 정보를 입력해주셔야 활동이 가능합니다  
