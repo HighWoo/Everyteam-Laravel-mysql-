@@ -6,7 +6,7 @@ www.everyteam.co.kr
 
 # aws를 이용해 서버 여는데 성공 
 
-과금으로 인해 서버 일시중단  
+
 
 
 ### 기존에 만들었던 [TeamMatching](https://github.com/highcowoo/TeamMatching-project)을 더 전문적인 개발도구를 활용하여 최종적으로 서버까지 여는것이 목표임 
