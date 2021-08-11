@@ -1,10 +1,12 @@
 # 에브리팀
-![image](https://user-images.githubusercontent.com/75231868/128675948-a0ed42e1-b44a-420e-a413-deb7bd0a7e65.png)
+[![image](https://user-images.githubusercontent.com/75231868/128675948-a0ed42e1-b44a-420e-a413-deb7bd0a7e65.png)](http://www.everyteam.co.kr/)  
+상단 로고 누르면 이동해요  
+www.everyteam.co.kr  
 
 
 # aws를 이용해 서버 여는데 성공 
 
-과금으로 인해 서버 일시중단  
+
 
 
 ### 기존에 만들었던 [TeamMatching](https://github.com/highcowoo/TeamMatching-project)을 더 전문적인 개발도구를 활용하여 최종적으로 서버까지 여는것이 목표임 
@@ -50,6 +52,8 @@
 [Day32](#Day32)-휴가기간/신청자 수 알수 있는 코드추가,지원자 없을때 알림추가  
 [Day33](#Day33)-휴가기간/코드정리  
 [Day34](#Day34)-백업다운로드/생성제한/내정보출력()/기능개발 마무리  
+[Day35](#Day35)-테스트/설명서,영상제작/서버 준비  
+[Day36](#Day36)-서버 개설/마무리  
 <hr>
 
 # Day1 
@@ -843,3 +847,28 @@ Elastic Beanstalk 사용하여 간단하게 처리하기로 결정
 기능개발 마무리 이번주간은 개인테스트 후 서버를 열어 테스트 할 예정  
 
 <hr>
+
+# Day35    
+(2021/08/10)  
+## 개발Part  
+[설명서 작성](Instruction.md)  
+반복 테스트  
+모든 페이지네이션 10으로 설정  
+내일 마무리 테스트 후 서버 개설 예정  
+
+<hr>
+
+# Day36  
+(2021/08/11)
+## 개발part  
+아이콘 생성  
+title전부 수정  
+  
+개발마무리  
+도메인을 구매하여 사이트를 개설  
+서버비용이 예측 불가능해서 지속적으로 확인,차차 사용자수를 늘려갈 예정  
+
+
+<hr>
+
+# 끝
